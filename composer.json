@@ -68,5 +68,10 @@
     "test": [
       "phpcs"
     ]
+  },
+  "autoload": {
+    "psr-4": {
+      "jeyofdev\\wp\\yoga\\ahana\\": "web/app/themes/yogaahana/class/"
+    }
   }
 }

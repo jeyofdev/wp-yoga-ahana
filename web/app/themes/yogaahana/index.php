@@ -1,6 +1,6 @@
 <?php
 
-use Timber\Timber;
+use jeyofdev\wp\yoga\ahana\extending\Timber;
 
 
 
