@@ -12,14 +12,17 @@ web/.htaccess
 
 # Logs
 *.log
+yarn.lock
+web/app/themes/yogaahana/ressources/yarn.*
 
 # Dotenv
 .env
 .env.*
 !.env.example
 
-# Composer
+# Dependency Manager
 /vendor
+/web/app/themes/yogaahana/ressources/node_modules
 
 # WP-CLI
 wp-cli.local.yml
