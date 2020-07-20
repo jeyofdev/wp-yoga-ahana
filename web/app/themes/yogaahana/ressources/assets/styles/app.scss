@@ -1,3 +1,58 @@
-body {
-    background: rgb(203, 209, 235);
+// variable overrides
+$owl-image-path: "~owl.carousel/src/img/" !default;
+
+
+
+// lib
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~jquery-nice-select/scss/nice-select";
+@import "~magnific-popup/src/css/main";
+@import "~slicknav/scss/slicknav.scss";
+@import "~animate.css/animate.min.css";
+
+
+
+// custom
+@import "app/variables";
+@import "app/mixins";
+
+
+
+// app
+@import "app/default";
+@import "app/helper";
+@import "app/loader";
+@import "app/header";
+@import "app/infor-model";
+@import "app/slider";
+@import "app/search";
+@import "app/about";
+@import "app/classes";
+@import "app/trainer";
+@import "app/review";
+@import "app/event";
+@import "app/pricing";
+@import "app/signup";
+@import "app/gallery";
+@import "app/footer";
+@import "app/other-page";
+@import "app/about-page";
+@import "app/classes-details";
+@import "app/trainer-details";
+@import "app/event-details";
+@import "app/blog-page";
+@import "app/blog-details";
+@import "app/contact";
+
+
+
+/* ----------------
+    Responsive
+----------------- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
 }

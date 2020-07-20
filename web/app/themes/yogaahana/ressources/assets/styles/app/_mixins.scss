@@ -1,0 +1,107 @@
+// opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// transition
+@mixin transition($args...) {
+    transition: $args;
+}
+
+// border radius
+@mixin border-radius($man) {
+    border-radius: $man;
+}
+
+// Flexbox display
+@mixin flexbox() {
+    display: flex;
+}
+
+// justify-content
+@mixin justify-content($justify) {
+    justify-content: $justify;
+}
+
+// align-content
+@mixin align-content($align) {
+    align-content: $align;
+}
+
+// Cross-axis Alignment
+@mixin align-items($align) {
+    align-items: $align;
+}
+
+
+// transform
+// Browser Prefixes
+@mixin transform($transforms) {
+    transform: $transforms;
+}
+
+// Translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// TranslateY
+@mixin translateY ($y) {
+    @include transform(translateY($y));
+}
+
+// TranslateY
+@mixin translateX ($x) {
+    @include transform(translateX($x));
+}
+
+// Box shadows
+@mixin box-shadow($shadow...) {
+    box-shadow: $shadow;
+}
+
+
+
+@mixin background($imgpath,$position: center,$size: cover,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+
+@mixin transform_time($total_time) {
+    transition: $total_time;
+}
+
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin transition($args: all .6s ease 0s) {
+    transition: $args;
+}
+
+@mixin keyframes ($animation-name) {
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
