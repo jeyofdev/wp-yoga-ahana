@@ -4,7 +4,7 @@ namespace jeyofdev\wp\yoga\ahana\extending;
 
 use Timber\Timber as TimberTimber;
 use jeyofdev\wp\yoga\ahana\Context;
-use jeyofdev\wp\yoga\ahana\extending\Site;
+
 
 
 /**
@@ -15,6 +15,7 @@ class Timber extends TimberTimber
     public function __construct()
     {
         parent::__construct();
+        Twig::init();
 
         return [
             new Site(),
