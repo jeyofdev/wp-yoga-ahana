@@ -2,6 +2,7 @@
 
 namespace jeyofdev\wp\yoga\ahana;
 
+use Timber\Menu;
 use jeyofdev\wp\yoga\ahana\extending\Site;
 
 
@@ -22,7 +23,9 @@ class Context {
     {
         add_filter("timber/context", function ($context) {
             $this->context = $context;
+
             $this->add("site", new Site());
+            $this->add("menu", new Menu("primary"));
 
             return $this->context;
         });

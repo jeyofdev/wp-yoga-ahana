@@ -4,6 +4,8 @@ namespace jeyofdev\wp\yoga\ahana\extending;
 
 use Timber\Site as TimberSite;
 use jeyofdev\wp\yoga\ahana\inc\Assets;
+use jeyofdev\wp\yoga\ahana\inc\Menus;
+use jeyofdev\wp\yoga\ahana\inc\Supports;
 
 
 
@@ -16,5 +18,7 @@ class Site extends TimberSite
     {
         parent::__construct();
         Assets::init();
+        Supports::init();
+        Menus::init();
     }
 }

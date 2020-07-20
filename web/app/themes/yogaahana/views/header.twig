@@ -1,1 +1,13 @@
-<nav>Nav</nav>
+<header class="header-section bg-primary">
+    <div class="header-bottom">
+        <div class="container">
+            <ul class="main-menu">
+                {% for item in menu.items %}
+                    <li class="{{ item.classes|join(' ') }}">
+                        <a href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</header>

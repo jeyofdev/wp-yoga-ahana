@@ -140,10 +140,6 @@
             font-weight: 600;
             text-transform: uppercase;
             color: $white_color;
-
-            &.active {
-                border-bottom: 2px solid $white_color;
-            }
         }
 
         &:hover {
@@ -152,6 +148,10 @@
                 opacity: 1;
                 margin-top: 20px;
             }
+        }
+
+        &.current-menu-item a {
+            border-bottom: 2px solid $white_color;
         }
     }
 
