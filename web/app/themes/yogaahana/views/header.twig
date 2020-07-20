@@ -1,5 +1,11 @@
 <header class="header-section bg-primary">
     <div class="header-bottom">
+        {% if theme.theme_mod('logo_header') is not empty %}
+            <a href="{{ site.url }}" class="site-logo">
+                <img src="{{ theme.theme_mod('logo_header') }}" alt="logo">
+            </a>
+        {% endif %}
+
         <div class="container">
             <ul class="main-menu">
                 {% for item in menu.items %}
