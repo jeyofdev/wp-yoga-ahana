@@ -1,4 +1,25 @@
-<header class="header-section bg-primary">
+<header class="header-section bg-primary position-relative">
+    <div class="header-top">
+        <div class="row m-0">
+            <div class="col-md-6 d-none d-md-block p-0">
+                <div class="header-info">
+                    <i class="material-icons">map</i>
+                    <p>{{ format_city(",") }}</p>
+                </div>
+                <div class="header-info">
+                    <i class="material-icons">phone</i>
+                    <p>{{ club_settings.phone|format_phone_number }}</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-left text-md-right p-0">
+                <div class="header-info d-none d-md-inline-flex">
+                    <i class="material-icons">alarm_on</i>
+                    <p>{{ format_opening_hours() }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="header-bottom">
         {% if theme.theme_mod('logo_header') is not empty %}
             <a href="{{ site.url }}" class="site-logo">

@@ -4,6 +4,7 @@ namespace jeyofdev\wp\yoga\ahana;
 
 use Timber\Menu;
 use jeyofdev\wp\yoga\ahana\extending\Site;
+use jeyofdev\wp\yoga\ahana\options\ClubSettings;
 
 
 
@@ -26,6 +27,12 @@ class Context {
 
             $this->add("site", new Site());
             $this->add("menu", new Menu("primary"));
+            $this->add("club_settings", [
+                "phone" => get_option(ClubSettings::PHONE),
+                "address" => get_option(ClubSettings::ADDRESS),
+                "city" => get_option(ClubSettings::CITY),
+                "opening_hours" => get_option(ClubSettings::OPENING_HOURS)
+            ]);
 
             return $this->context;
         });
