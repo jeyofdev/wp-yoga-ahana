@@ -1,0 +1,13 @@
+/* ------------------
+    Club Settings
+------------------ */
+.settings_page_club_settings .form-table tbody tr td > span {
+    display: block;
+    margin-bottom: 10px;
+
+    .opening-hours-subtitle {
+        display: block;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+    }
+}

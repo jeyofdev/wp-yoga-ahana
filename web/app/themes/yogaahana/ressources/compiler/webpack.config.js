@@ -27,7 +27,8 @@ module.exports = (options) => {
         devtool: dev ? devtool : false,
         context: path.resolve(context),
         entry: {
-            'styles/app': dev ? [hmr, entry.styles] : entry.styles,
+            'styles/app': dev ? [hmr, entry.stylesApp] : entry.stylesApp,
+            'styles/admin': dev ? [hmr, entry.stylesAdmin] : entry.stylesAdmin,
             'scripts/app': dev ? [hmr, entry.scripts] : entry.scripts
         },
         output: {

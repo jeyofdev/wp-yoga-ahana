@@ -20,5 +20,9 @@ class Assets {
             wp_enqueue_script("script", get_template_directory_uri() . "/assets/scripts/app.js", [], true, true);
             wp_enqueue_style("styles", get_template_directory_uri() . "/assets/styles/app.css", [], true);
         });
+
+        add_action("admin_enqueue_scripts", function () {
+            wp_enqueue_style("admin_styles", get_template_directory_uri() . "/assets/styles/admin.css", [], true);
+        });
     }
 }

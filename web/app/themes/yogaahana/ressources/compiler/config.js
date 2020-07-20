@@ -1,7 +1,8 @@
 module.exports = {
     context: 'assets',
     entry: {
-        styles: './styles/app.scss',
+        stylesApp: './styles/app.scss',
+        stylesAdmin: './styles/admin.scss',
         scripts: './scripts/app.js'
     },
     devtool: 'cheap-module-eval-source-map',

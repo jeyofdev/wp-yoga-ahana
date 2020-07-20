@@ -1,4 +1,5 @@
 {
     "scripts/app.js": "scripts/app.js",
+    "styles/admin.css": "styles/admin.css",
     "styles/app.css": "styles/app.css"
 }
