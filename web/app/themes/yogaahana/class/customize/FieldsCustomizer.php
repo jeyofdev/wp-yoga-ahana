@@ -138,11 +138,18 @@ class FieldsCustomizer
     private function set_sections () : array
     {
         $sections = [
+			// Add topbar header section
+            "top_bar_header_section" => [
+                "title" => esc_html__("Topbar", "ahana"),
+				"panel" => "header_option",
+				"priority" => 10
+			],
+
 			// Add logo header section
             "logo_header_section" => [
                 "title" => esc_html__("Logo", "ahana"),
 				"panel" => "header_option",
-				"priority" => 10
+				"priority" => 20
             ]
 		];
 
@@ -159,13 +166,23 @@ class FieldsCustomizer
     private function set_fields () : array
     {
 		$fields = [
+			// Show or hide the header topbar
+            [
+                "type"        => "toggle",
+				"settings"    => "topbar_header_toogle",
+				"description" => esc_html__("show or hide the header topbar.", "ahana"),
+				"label"       => esc_html__("Topbar", "ahana"),
+                "section"     => "top_bar_header_section",
+				"default"     => '1'
+			],
+
 			// Add the logo of the header
 			[
                 "type"        => "image",
                 "settings"    => "logo_header",
 				"label"       => esc_html__("Logo", "ahana"),
                 "section"     => "logo_header_section",
-                "default"     => '',
+                "default"     => ''
             ]
 		];
 
