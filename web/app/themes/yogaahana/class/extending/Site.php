@@ -9,6 +9,7 @@ use jeyofdev\wp\yoga\ahana\inc\Supports;
 use jeyofdev\wp\yoga\ahana\customize\Customizer;
 use jeyofdev\wp\yoga\ahana\inc\Images;
 use jeyofdev\wp\yoga\ahana\inc\Settings;
+use jeyofdev\wp\yoga\ahana\inc\Users;
 
 
 
@@ -25,6 +26,7 @@ class Site extends TimberSite
         Supports::init();
         Menus::init();
         Images::init();
+        Users::init();
 
         return new Customizer();
     }

@@ -9,6 +9,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9">
+                    <!-- Content -->
 					<div class="blog-details">
 						<div class="blog-preview">
 							{% if post.thumbnail.src is not null %}
@@ -32,6 +33,24 @@
 									<a href="#"><i class="fa fa-linkedin"></i></a>
 								</div>
 							</div> #}
+						</div>
+                    </div>
+
+                    <!-- Author -->
+					<div class="blog-author-card">
+						<div class="blog-author">
+                            {{ get_avatar(130) | raw }}
+
+							<div class="ba-text">
+								<h3>{{ post.author.first_name ~ " " ~ post.author.last_name }}</h3>
+								<p>{{ post.author.description }}</p>
+								<div class="ba-social">
+                                    {{ add_author_social("facebook", "fab fa-facebook-f")|raw }}
+                                    {{ add_author_social("instagram", "fab fa-instagram")|raw }}
+                                    {{ add_author_social("twitter", "fab fa-twitter")|raw }}
+                                    {{ add_author_social("linkedin", "fab fa-linkedin-in")|raw }}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

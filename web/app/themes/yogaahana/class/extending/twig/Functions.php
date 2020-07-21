@@ -163,4 +163,51 @@ class Functions
             return $output;
         }));
     }
+
+
+
+    /**
+     * Retrieve the avatar <img> tag for a user, email address, MD5 hash, comment, or post
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */
+    public static function get_avatar (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("get_avatar", function (?int $size = 100, ?array $args = [], ?string $default = '', ?string $alt = '') {
+            return get_avatar(get_the_author_meta('ID'), $size, $default, $alt, $args);
+        }));
+    }
+
+
+
+    /**
+     * Display social media links of an article author
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */
+    public static function add_author_social (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("add_author_social", function (string $social, string $icon) {
+            $post = Timber::get_post();
+            $user = $post->author();
+
+            $urls = [
+                "facebook" => "https://www.facebook.com/",
+                "instagram" => "https://www.instagram.com/",
+                "twitter" => "https://twitter.com/",
+                "linkedin" => "https://www.linkedin.com/"
+            ];
+
+            if (!empty($social)) {
+                if (!empty($user->$social)) {
+                    $url = $urls[$social] . $user->$social;
+                    return '<a href="' . $url . '" target="_blank"><i class="' . $icon . '"></i></a>';
+                }
+            }                   
+        }));
+    }
 }

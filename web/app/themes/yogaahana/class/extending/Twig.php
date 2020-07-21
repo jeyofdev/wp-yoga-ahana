@@ -41,6 +41,8 @@ class Twig extends TimberTwig
 		Functions::format_opening_hours($twig);
 		Functions::category_by_post($twig);
 		Functions::paginate_links_posts_list($twig);
+		functions::get_avatar($twig);
+		Functions::add_author_social($twig);
 		
 		return $twig;
     }
