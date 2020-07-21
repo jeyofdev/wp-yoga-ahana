@@ -2,11 +2,12 @@
 
 namespace jeyofdev\wp\yoga\ahana\extending\twig;
 
+use \DateTime;
+use Timber\Post;
 use Twig\Environment;
 use Twig\TwigFunction;
 use jeyofdev\wp\yoga\ahana\extending\Timber;
 use jeyofdev\wp\yoga\ahana\options\ClubSettings;
-use \DateTime;
 
 
 
@@ -107,6 +108,28 @@ class Functions
             if ($currentDay === "Sunday") {
                 return sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]);
             }
+        }));
+    }
+
+
+
+    /**
+     * Display the categories associated with an article
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */
+    public static function category_by_post (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("category_by_post", function (Post $post) {
+            $categories = [];
+
+            foreach ($post->categories as $category) {
+                $categories[] = '<a href="' . get_category_link($category) . '">' . $category->name . '</a>';
+            }
+
+            return join(" & ", $categories);
         }));
     }
 }

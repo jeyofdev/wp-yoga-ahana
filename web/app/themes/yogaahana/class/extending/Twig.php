@@ -39,6 +39,7 @@ class Twig extends TimberTwig
 		Functions::dd($twig);
 		Functions::format_city($twig);
 		Functions::format_opening_hours($twig);
+		Functions::category_by_post($twig);
 		
 
 		return $twig;

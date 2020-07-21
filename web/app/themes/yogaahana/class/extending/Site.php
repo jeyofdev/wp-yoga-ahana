@@ -7,6 +7,7 @@ use jeyofdev\wp\yoga\ahana\inc\Menus;
 use jeyofdev\wp\yoga\ahana\inc\Assets;
 use jeyofdev\wp\yoga\ahana\inc\Supports;
 use jeyofdev\wp\yoga\ahana\customize\Customizer;
+use jeyofdev\wp\yoga\ahana\inc\Images;
 use jeyofdev\wp\yoga\ahana\inc\Settings;
 
 
@@ -23,6 +24,7 @@ class Site extends TimberSite
         Assets::init();
         Supports::init();
         Menus::init();
+        Images::init();
 
         return new Customizer();
     }
