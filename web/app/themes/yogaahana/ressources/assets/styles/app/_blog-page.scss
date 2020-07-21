@@ -73,6 +73,14 @@
             border-radius: 20px;
             background: $primary_color;
         }
+
+        a {
+            color: #666;
+
+            &:hover {
+                text-transform: capitalize;
+            }
+        }
     }
 
     .bi-social {
