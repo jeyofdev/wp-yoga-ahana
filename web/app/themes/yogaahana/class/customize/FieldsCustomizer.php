@@ -150,7 +150,21 @@ class FieldsCustomizer
                 "title" => esc_html__("Logo", "ahana"),
 				"panel" => "header_option",
 				"priority" => 20
-            ]
+			],
+
+            // Add top section
+            "top_section" => [
+                "title" => esc_html__("Top section", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 20
+			],
+
+            // Add blog section
+            "blog_section" => [
+                "title" => esc_html__("Blog", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 30
+			]
 		];
 
 		return $sections;
@@ -173,7 +187,7 @@ class FieldsCustomizer
 				"description" => esc_html__("show or hide the header topbar.", "ahana"),
 				"label"       => esc_html__("Topbar", "ahana"),
                 "section"     => "top_bar_header_section",
-				"default"     => '1'
+				"default"     => "1"
 			],
 
 			// Add the logo of the header
@@ -183,7 +197,168 @@ class FieldsCustomizer
 				"label"       => esc_html__("Logo", "ahana"),
                 "section"     => "logo_header_section",
                 "default"     => ''
-            ]
+			],
+
+			// Set the first color for the background gradient of the breadcrumb
+			[
+				"type"      => "color",
+				"settings"  => "top_section_color_top",
+				"label"     => esc_attr__("Top Color", "ahana"),
+				"section"   => "top_section",
+				"default"   => "#f65d5d",
+				"priority"  => 10,
+				"output"    => [
+					[
+						"element"         => ".page-top-section:after",
+						"property"        => "background",
+						"value_pattern"   => "linear-gradient(directiondeg, $ topPos%,bottomCol bottomPos%)",
+						"pattern_replace" => [
+							"direction" => "top_section_gradient_direction",
+							"topPos"    => "top_section_color_bottom",
+							"bottomCol" => "top_section_color_top_position",
+							"bottomPos" => "top_section_color_bottom_position",
+						]
+					]
+				]
+			],
+
+			// Set the second color for the background gradient of the breadcrumb
+			[
+				"type"      => "color",
+				"settings"  => "top_section_color_bottom",
+				"label"     => esc_attr__("Bottom Color", "ahana"),
+				"section"   => "top_section",
+				"default"   => "#fdb07d",
+				"priority"  => 11,
+				"output"    => [
+					[
+						"element"         => ".page-top-section:after",
+						"property"        => "background",
+						"value_pattern"   => "linear-gradient(directiondeg, topCol topPos%,$ bottomPos%)",
+						"pattern_replace" => [
+							"direction" => "top_section_gradient_direction",
+							"topCol"    => "top_section_color_top",
+							"topPos"    => "top_section_color_top_position",
+							"bottomPos" => "top_section_color_bottom_position",
+						]
+					]
+				]
+			],
+
+			// Set the direction for the background gradient of the breadcrumb
+			[
+				"type"      => "slider",
+				"settings"  => "top_section_gradient_direction",
+				"label"     => esc_attr__("Gradient direction", "ahana"),
+				"section"   => "top_section",
+				"default"   => 145,
+				"priority"  => 12,
+				"choices"   => [
+					"min"  => 0,
+					"max"  => 360,
+					"step" => 1,
+				],
+				"output"    => [
+					[
+						"element"         => ".page-top-section:after",
+						"property"        => "background",
+						"value_pattern"   => "linear-gradient(directiondeg, topCol $%,bottomCol bottomPos%)",
+						"pattern_replace" => [
+							"direction" => "top_section_gradient_direction",
+							"topCol"    => "top_section_color_top",
+							"bottomCol" => "top_section_color_bottom",
+							"bottomPos" => "top_section_color_bottom_position",
+						]
+					]
+				]
+			],
+
+			// Set the position of the first color for the background gradient of the breadcrumb
+			[
+				"type"      => "slider",
+				"settings"  => "top_section_color_top_position",
+				"label"     => esc_attr__("Top Color Position", "ahana"),
+				"section"   => "top_section",
+				"default"   => 0,
+				"priority"  => 13,
+				"choices"   => [
+					"min"  => 0,
+					"max"  => 100,
+					"step" => 1,
+				],
+				"output"    => [
+					[
+						"element"         => ".page-top-section:after",
+						"property"        => "background",
+						"value_pattern"   => "linear-gradient(directiondeg, topCol $%,bottomCol bottomPos%)",
+						"pattern_replace" => [
+							"direction" => "top_section_gradient_direction",
+							"topCol"    => "top_section_color_top",
+							"bottomCol" => "top_section_color_bottom",
+							"bottomPos" => "top_section_color_bottom_position",
+						]
+					]
+				]
+			],
+
+
+			// Set the position of the second color for the background gradient of the breadcrumb
+			[
+				"type"      => "slider",
+				"settings"  => "top_section_color_bottom_position",
+				"label"     => esc_attr__("Bottom Color Position", "ahana"),
+				"section"   => "top_section",
+				"default"   => 100,
+				"priority"  => 14,
+				"choices"   => [
+					"min"  => 0,
+					"max"  => 100,
+					"step" => 1,
+				],
+				"output"    => [
+					[
+						"element"         => ".page-top-section:after",
+						"property"        => "background",
+						"value_pattern"   => "linear-gradient(directiondeg, topCol topPos%,bottomCol $%)",
+						"pattern_replace" => [
+							"direction" => "top_section_gradient_direction",
+							"topCol"    => "top_section_color_top",
+							"topPos"    => "top_section_color_top_position",
+							"bottomCol" => "top_section_color_bottom",
+						]
+					]
+				]
+			],
+
+			// Add background image of the breadcrumb
+			[
+				"type"        => "background",
+				"settings"    => "top_section_background_image",
+				"transport"   => "auto",
+				"section"     => "top_section",
+				"default"     => [
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "center top",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
+				],
+				"priority"  => 15,
+				"output" => [
+					[
+						"element"  => ".page-top-section",
+					]
+				]
+			],
+			
+			// add content to blog index
+			[
+				"type"     => "textarea",
+				"settings" => "intro_blog",
+				"label"    => esc_html__("Introduction", "ahana"),
+				"section"  => "blog_section",
+				"default"  => ''
+			]
 		];
 
 		return $fields;
