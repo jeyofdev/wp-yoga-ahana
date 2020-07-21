@@ -110,6 +110,11 @@
     }
 
     .ed-cata {
+        p {
+            color: $p_color;
+            margin-bottom: 0;
+        }
+
         i {
             font-size: 20px;
             color: $primary_color;
@@ -118,9 +123,12 @@
             top: 3px;
         }
 
-        p {
+        a {
             color: $p_color;
-            margin-bottom: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 

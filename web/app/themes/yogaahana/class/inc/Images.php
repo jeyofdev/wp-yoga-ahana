@@ -18,6 +18,7 @@ class Images {
     {
         add_action("after_setup_theme", function () {
             add_image_size("post_thumbnail", 370, 252, true);
+            add_image_size("post_thumbnail", 850, 502, true);
         });
     }
 }

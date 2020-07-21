@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+
+	<!-- Blog Details Section -->
+	<section class="blog-details-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="blog-details">
+						<div class="blog-preview">
+							{% if post.thumbnail.src is not null %}
+								<img src="{{ post.thumbnail.src | resize("post_thumbnail") }}" alt="">
+							{% endif %}
+						</div>
+						<h2>{{ post.title}}</h2>
+						{# <div class="blog-meta"><p><i class="material-icons">alarm_on</i>120 Mins </p></div>
+						<div class="blog-meta"><p><i class="material-icons">people_outline</i>250 People Registered</p></div> #}
+                        {{ post.content|raw }}
+
+						<div class="row">
+							<div class="col-sm-7">
+								<div class="ed-cata"><p><i class="material-icons">local_offer</i>{{ category_by_post(post)|raw }}</p></div>
+							</div>
+							{# <div class="col-sm-5 text-left text-sm-right pt-4 pt-sm-0">
+								<div class="ed-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div> #}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog Details Section end -->
+{% endblock body %}

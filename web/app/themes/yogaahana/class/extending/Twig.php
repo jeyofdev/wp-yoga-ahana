@@ -42,7 +42,6 @@ class Twig extends TimberTwig
 		Functions::category_by_post($twig);
 		Functions::paginate_links_posts_list($twig);
 		
-
 		return $twig;
     }
 

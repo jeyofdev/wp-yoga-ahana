@@ -1,19 +1,7 @@
 {% extends "base.twig" %}
 
 {% block body %}
-	<!-- Page top Section -->
-	<section class="page-top-section set-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2>{{ wp_title }}</h2>
-					<p>{{ theme.theme_mod("intro_blog") }}</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Page top Section end -->
-
+	{% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
 
 
 	<!-- Events Section -->
