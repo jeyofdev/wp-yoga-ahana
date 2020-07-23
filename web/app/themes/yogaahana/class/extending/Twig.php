@@ -39,6 +39,7 @@ class Twig extends TimberTwig
 		$twig->addFunction(new TwigFunction("previous_post_link", "previous_post_link"));
 		$twig->addFunction(new TwigFunction("next_post_link", "next_post_link"));
 		$twig->addFunction(new TwigFunction("comment_form", "comment_form"));
+		$twig->addFunction(new TwigFunction("get_post_meta", "get_post_meta"));
 
         Functions::dump($twig);
 		Functions::dd($twig);
