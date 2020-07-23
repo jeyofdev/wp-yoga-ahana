@@ -19,7 +19,7 @@ class Queries {
         add_action("pre_get_posts", function ($query) {
             if (!is_admin() && is_post_type_archive("trainer") && $query->is_main_query()) {
                 $query->set("post_type", "trainer");
-                $query->set("posts_per_page", 4);
+                $query->set("posts_per_page", 6);
             }
         });
     }

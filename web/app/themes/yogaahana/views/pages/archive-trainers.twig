@@ -16,7 +16,10 @@
                                 {% endif %}
                             </div>
                             <div class="ti-text">
-                                <h4>{{ post.title }}</h4>
+                                <a href="{{ post.link }}">
+                                    <h4>{{ post.title }}</h4>
+                                </a>
+                                
                                 <h6>{{ post.terms( {query: {taxonomy:"trainer_job" }} )|join(', ') }}</h6>
                                 <p>{{ post.trainer_excerpt }}</p>
                                 <div class="ti-social">
@@ -30,6 +33,9 @@
                     </div>
                 {% endfor %}
             </div>
+
+            <!-- Pagination -->
+            {% include "parts/pagination.twig" %}
         </div>
     </section>
     <!-- Trainers Section end -->

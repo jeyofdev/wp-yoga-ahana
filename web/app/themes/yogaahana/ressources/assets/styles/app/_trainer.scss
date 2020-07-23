@@ -113,10 +113,22 @@
         }
     }
 
-    h4 {
-        font-weight: 400;
-        font-family: $font_2;
-        margin-bottom: 10px;
+    a {
+        color: $heading_color;
+
+        @include transition(all .4s);
+
+        &:hover {
+            color: $primary_color;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-family: $font_2;
+            margin-bottom: 10px;
+            color: inherit;
+            text-transform: capitalize;
+        }
     }
 
     h6 {

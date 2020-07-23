@@ -1,0 +1,21 @@
+<div class="site-pagination pt-3">
+    {% if posts.pagination.prev %}
+        <a href="{{ posts.pagination.prev.link }}" class="prev">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </a>
+    {% endif %}
+
+    {% for page in posts.pagination.pages %}
+        {% if page.link %}
+            <a href="{{page.link}}">{{page.title}}</a>
+        {% else %}
+            <span aria-current="page">{{page.title}}</span>
+        {% endif %}
+    {% endfor %}
+
+    {% if posts.pagination.next %}
+        <a href="{{ posts.pagination.next.link }}" class="next">
+            <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+    {% endif %}
+</div>

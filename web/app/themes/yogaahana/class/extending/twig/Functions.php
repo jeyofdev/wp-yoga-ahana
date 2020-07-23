@@ -136,37 +136,6 @@ class Functions
 
 
     /**
-     * Retrieve paginated links for archive post pages.
-     *
-     * @param Environment $twig
-     *
-     * @return void
-     */
-    public static function paginate_links_posts_list (Environment $twig) : void
-    {
-        $twig->addFunction(new TwigFunction("paginate_links_posts_list", function () {
-            $pages = paginate_links([
-                "type" => "array",
-                "prev_text" => '<i class="material-icons">keyboard_arrow_left</i>',
-                "next_text" => '<i class="material-icons">keyboard_arrow_right</i>'
-            ]);
-    
-            if ($pages === null) {
-                return;
-            }
-
-            $output = '';
-            foreach ($pages as $page) {
-                $output .= $page;
-            }
-
-            return $output;
-        }));
-    }
-
-
-
-    /**
      * Retrieve the avatar <img> tag for a user, email address, MD5 hash, comment, or post
      *
      * @param Environment $twig
