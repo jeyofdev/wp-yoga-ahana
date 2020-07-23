@@ -3,6 +3,7 @@
 namespace jeyofdev\wp\yoga\ahana\extending;
 
 use Twig\Environment;
+use Twig\TwigFunction;
 use Timber\Twig as TimberTwig;
 use jeyofdev\wp\yoga\ahana\extending\twig\Filters;
 use jeyofdev\wp\yoga\ahana\extending\twig\Functions;
@@ -35,6 +36,9 @@ class Twig extends TimberTwig
 	 */
 	
     public function add_timber_functions($twig) {
+		$twig->addFunction(new TwigFunction("previous_post_link", "previous_post_link"));
+		$twig->addFunction(new TwigFunction("next_post_link", "next_post_link"));
+
         Functions::dump($twig);
 		Functions::dd($twig);
 		Functions::format_city($twig);
