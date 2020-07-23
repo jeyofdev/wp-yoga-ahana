@@ -198,6 +198,10 @@
     font-size: 25px;
     margin-bottom: 50px;
     text-transform: uppercase;
+
+    a {
+        color: $primary_color;
+    }
 }
 
 .comment-list {
@@ -230,12 +234,14 @@
 
     .comment-text {
         overflow: hidden;
+        padding-bottom: 35px;
 
         h3 {
             display: inline-block;
             font-size: 20px;
             margin-right: 20px;
             margin-bottom: 10px;
+            text-transform: capitalize;
         }
 
         .comment-date {
@@ -259,7 +265,6 @@
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 600;
-            margin-bottom: 35px;
 
             i {
                 position: relative;
@@ -282,14 +287,17 @@
             padding-left: 25px;
         }
 
+        .comment-text {
+            padding-bottom: 0;
+        }
+
         li {
+            display: inline-block;
             padding-top: 40px;
             border-top: 1px solid #e6e6e6;
             border-bottom: none;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
+            padding-bottom: 35px;
+            margin-bottom: 0;
         }
     }
 }

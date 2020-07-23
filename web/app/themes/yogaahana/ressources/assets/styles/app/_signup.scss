@@ -37,6 +37,22 @@
 }
 
 .singup-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+
+    @media #{$large_mobile, $small_mobile} {
+        grid-template-columns: 1fr;   
+    }
+
+    .comment-notes {
+        grid-column: 1 / -1;
+    }
+
+    .logged-in-as a {
+        color: $primary_color;
+    }
+
     input,
     textarea {
         width: 100%;
@@ -45,15 +61,25 @@
         font-size: 14px;
         color: #999;
         border-radius: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         border: 1px solid #e6e6e6;
         background: #fafafa;
     }
 
     textarea {
+        grid-column: 1 / -1;
         height: 140px;
         padding: 15px 28px 10px;
         border-radius: 20px;
         resize: none;
+    }
+
+    #url {
+        grid-column: 1 / -1;
+    }
+
+    > div {
+        grid-column: 1 / -1;
+        justify-self: start;
     }
 }

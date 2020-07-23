@@ -1,0 +1,18 @@
+<li>
+    {{ get_avatar(100, {"class": "comment-pic"}) | raw }}
+    <div class="comment-text">
+        <h3>{{ comment.author.first_name ~ " " ~ comment.author.last_name }}</h3>
+        <div class="comment-date"><i class="material-icons">alarm_on</i>{{ comment.date ~ __(" at ", "ahana") ~ comment.time }} </div>
+        <p>{{ comment.comment_content|raw }}</p>
+        {{ comment.reply_link | raw }}
+    </div>
+
+    <!-- reply to a comment -->
+    {% if comment.children %}
+        <ul class="comment-sub-list">
+            {% for child_comment in comment.children %}
+                {% include "parts/comment.twig" with { comment:child_comment } %}
+            {% endfor %}
+        </ul>
+    {% endif %}  
+</li>

@@ -65,6 +65,17 @@
 							</div>
 						</div>
 					</div>
+
+					<!-- comments -->
+					<ul class="comments-area">
+						<h3 class="comment-title">{{ __("Comments", "ahana") }}</h3>
+						<ul class="comment-list">
+						{% for comment in post.comments %}
+							{% include "parts/comment.twig" %}
+						{% endfor %}
+					</ul>
+
+					{{ comment_form() }}
 				</div>
 			</div>
 		</div>
