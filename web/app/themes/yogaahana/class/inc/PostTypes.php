@@ -51,7 +51,7 @@ class PostTypes {
             "menu_icon" => "dashicons-universal-access",
             "supports" => ["title", "thumbnail"],
             "show_in_rest" => false,
-            "has_archive" => false
+            "has_archive" => true
         ]);
     }
 }

@@ -6,7 +6,7 @@ use Timber\Post;
 
 
 /**
- * The blog template file
+ * The single post template file
  */
 
 $context = Timber::context();

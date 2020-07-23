@@ -12,6 +12,7 @@ use jeyofdev\wp\yoga\ahana\inc\Images;
 use jeyofdev\wp\yoga\ahana\inc\Pagination;
 use jeyofdev\wp\yoga\ahana\inc\Post;
 use jeyofdev\wp\yoga\ahana\inc\PostTypes;
+use jeyofdev\wp\yoga\ahana\inc\Queries;
 use jeyofdev\wp\yoga\ahana\inc\Settings;
 use jeyofdev\wp\yoga\ahana\inc\Taxonomies;
 use jeyofdev\wp\yoga\ahana\inc\Users;
@@ -37,6 +38,7 @@ class Site extends TimberSite
         Post::init();
         PostTypes::init();
         Taxonomies::init();
+        Queries::init();
 
         return new Customizer();
     }
