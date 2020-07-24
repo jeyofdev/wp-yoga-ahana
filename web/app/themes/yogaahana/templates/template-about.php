@@ -21,6 +21,11 @@ $context["trainers"] = Timber::get_posts([
     "posts_per_page" => 5,
     "order" => "DESC"
 ]);
+$context["testimonials"] = Timber::get_posts([
+    "post_type" => "testimonial",
+    "posts_per_page" => 3,
+    "order" => "DESC"
+]);
 
 $templates = "pages/templates/about.twig";
 

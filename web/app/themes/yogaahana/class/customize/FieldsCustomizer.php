@@ -166,11 +166,18 @@ class FieldsCustomizer
 				"priority" => 30
 			],
 
+            // Add testimonial section
+            "testimonial_section" => [
+                "title" => esc_html__("testimonial section", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 40
+			],
+
             // Add blog section
             "blog_section" => [
                 "title" => esc_html__("Blog", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 40
+				"priority" => 50
 			]
 		];
 
@@ -375,6 +382,27 @@ class FieldsCustomizer
 				"output" => [
 					[
 						"element"  => ".wwd-section",
+					]
+				]
+			],
+
+			// Add background image of the testimonial section
+			[
+				"type"        => "background",
+				"settings"    => "testimonial_section_background_image",
+				"transport"   => "auto",
+				"section"     => "testimonial_section",
+				"default"     => [
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "center top",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
+				],
+				"priority"  => 15,
+				"output" => [
+					[
+						"element"  => ".review-section",
 					]
 				]
 			],

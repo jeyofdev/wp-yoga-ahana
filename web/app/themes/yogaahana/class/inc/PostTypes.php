@@ -77,6 +77,30 @@ class PostTypes {
             "show_in_rest" => false,
             "has_archive" => false
         ]);
+
+        register_post_type("testimonial", [
+            "label" => __("Testimonial", "ahana"),
+            "labels" => [
+                "name"                     => __("Testimonials", "ahana"),
+                "singular_name"            => __("Testimonial", "ahana"),
+                "edit_item"                => __("Edit Testimonial", "ahana"),
+                "new_item"                 => __("New Testimonial", "ahana"),
+                "view_item"                => __("View Testimonial", "ahana"),
+                "view_items"               => __("View Testimonials", "ahana"),
+                "search_items"             => __("Search Testimonials", "ahana"),
+                "not_found"                => __("No Testimonials found.", "ahana"),
+                "not_found_in_trash"       => __("No Testimonials found in trash.", "ahana"),
+                "all_items"                => __("All Testimonials", "ahana")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 31,
+            "menu_icon" => "dashicons-testimonial",
+            "supports" => ["title", "thumbnail", "editor"],
+            "show_in_rest" => false,
+            "has_archive" => false
+        ]);
     }
 }
 

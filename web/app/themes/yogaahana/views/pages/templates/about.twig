@@ -80,4 +80,32 @@
 		</div>
 	</section>
 	<!-- Trainer Section end -->
+
+
+	<!-- Review Section -->
+	<section class="review-section spad set-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 m-auto">
+					<div class="review-slider owl-carousel">
+						{% for testimonial in testimonials %}
+							<div class="review-item">
+								<div class="ri-img">
+									{% if testimonial.thumbnail.src is not null %}
+										<img src="{{ testimonial.thumbnail.src | resize("testimonial_thumbnail") }}" alt="">
+									{% endif %}
+								</div>
+								<div class="ri-text text-white">
+									<p>{{ testimonial.content | raw }}</p>
+									<h4>{{ testimonial.testimonial_name }}</h4>
+									<h6>{{ testimonial.testimonial_job }}</h6>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Review Section end -->
 {% endblock body %}

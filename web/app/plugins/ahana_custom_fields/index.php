@@ -68,6 +68,32 @@ register_extended_field_group([
 
 
 
+
+/**
+ * Custom post type testimonial
+ */
+register_extended_field_group([
+    "title" => __("Author", "ahana"),
+    "fields" => [
+        Text::make(__("Name", "ahana"), "testimonial_name")
+            ->required()
+            ->defaultValue(__("Denise Thomas", "ahana")),
+        Text::make(__("Job", "ahana"), "testimonial_job")
+            ->required()
+            ->defaultValue(__("Designer", "ahana")),
+    ],
+    "location" => [
+        Location::if("post_type", "==", "testimonial")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
 /**
  *  wwd section
  */
