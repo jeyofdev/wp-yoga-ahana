@@ -108,4 +108,22 @@
 		</div>
 	</section>
 	<!-- Review Section end -->
+
+
+	<!-- Blog Section -->
+	<section class="about-blog-section spad">
+		<div class="container">
+			<div class="section-title text-center">
+				<img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.blog_title }}</h2>
+				<p>{{ post.blog_subtitle }}</p>
+			</div>
+			<div class="row">
+				{% for article in blog %}
+					{% include "parts/blog-list.twig" with { post: article } %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Blog Section end -->
 {% endblock body %}

@@ -68,7 +68,6 @@ register_extended_field_group([
 
 
 
-
 /**
  * Custom post type testimonial
  */
@@ -149,7 +148,6 @@ register_extended_field_group([
 
 
 
-
 /**
  * trainers section
  */
@@ -167,6 +165,32 @@ register_extended_field_group([
         Location::if("page_template", "==", "templates/template-about.php")
     ],
     "menu_order" => 2,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * Blog section
+ */
+register_extended_field_group([
+    "title" => __("Blog section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "blog_title")
+            ->required()
+            ->defaultValue(__("course benefits", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "blog_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_template", "==", "templates/template-about.php")
+    ],
+    "menu_order" => 3,
     "position" => "normal",
     "style" => "default",
     "label_placement" => "top",

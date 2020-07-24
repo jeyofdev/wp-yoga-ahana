@@ -9,27 +9,7 @@
 		<div class="container">
 			<div class="row">
 				{% for post in posts %}
-					<div class="col-lg-4 col-md-6">
-						<div class="blog-item">
-							{% if post.thumbnail.src is not null %}
-								<img src="{{ post.thumbnail.src | resize("post_thumbnail") }}" alt="">
-							{% else %}
-								<img src="{{ theme.link ~ '/assets/images/blog/default-370-252.jpg' }}" alt="">
-							{% endif %}
-							<div class="bi-text">
-								<h2><a href="{{ post.link }}">{{ post.title}}</a></h2>
-								<p>{{ post.preview.length(20).read_more(false)|raw }}</p>
-							</div>
-							<div class="bi-footer">
-								<div class="bi-cata">{{ category_by_post(post)|raw }}</div>
-								<div class="bi-social">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
+					{% include "parts/blog-list.twig" %}
 				{% endfor %}
 			</div>
 
