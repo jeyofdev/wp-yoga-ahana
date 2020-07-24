@@ -65,3 +65,58 @@ register_extended_field_group([
     "instruction_placement" => "label",
     "active" => true,
 ]);
+
+
+
+/**
+ *  wwd section
+ */
+register_extended_field_group([
+    "title" => __("What we do section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "wwd_title")
+            ->required()
+            ->defaultValue(__("what we do", "ahana")),
+        Text::make(__("Introduction", "ahana"), "wwd_intro")
+            ->required()
+            ->defaultValue(__("To be invited to the nearest Cali center and get free physical advice to learn more about the program.", "ahana")),
+        Group::make(__("Skills", "ahana"), "wwd_skills")
+            ->required()
+            ->layout("row")
+            ->fields([
+                Range::make(__("Breathing", "ahana"), "wwd_breathing")
+                    ->min(0)
+                    ->max(100)
+                    ->step(1)
+                    ->defaultValue(50)
+                    ->required(),
+                Range::make(__("Metabolism", "ahana"), "wwd_metabolism")
+                    ->min(0)
+                    ->max(100)
+                    ->step(1)
+                    ->defaultValue(50)
+                    ->required(),
+                Range::make(__("Flexibility", "ahana"), "wwd_flexibility")
+                    ->min(0)
+                    ->max(100)
+                    ->step(1)
+                    ->defaultValue(50)
+                    ->required(),
+                Range::make(__("Strongness", "ahana"), "wwd_strongness")
+                    ->min(0)
+                    ->max(100)
+                    ->step(1)
+                    ->defaultValue(50)
+                    ->required(),
+            ])
+    ],
+    "location" => [
+        Location::if("page_template", "==", "templates/template-about.php")
+    ],
+    "menu_order" => 1,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);

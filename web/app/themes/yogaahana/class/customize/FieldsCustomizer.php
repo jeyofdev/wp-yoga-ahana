@@ -159,11 +159,18 @@ class FieldsCustomizer
 				"priority" => 20
 			],
 
+            // Add what_we_do section
+            "what_we_do_section" => [
+                "title" => esc_html__("What we do section", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 30
+			],
+
             // Add blog section
             "blog_section" => [
                 "title" => esc_html__("Blog", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 30
+				"priority" => 40
 			]
 		];
 
@@ -347,6 +354,27 @@ class FieldsCustomizer
 				"output" => [
 					[
 						"element"  => ".page-top-section",
+					]
+				]
+			],
+
+			// Add background image of the what_we_do_section
+			[
+				"type"        => "background",
+				"settings"    => "what_we_do_section_background_image",
+				"transport"   => "auto",
+				"section"     => "what_we_do_section",
+				"default"     => [
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "center top",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
+				],
+				"priority"  => 15,
+				"output" => [
+					[
+						"element"  => ".wwd-section",
 					]
 				]
 			],

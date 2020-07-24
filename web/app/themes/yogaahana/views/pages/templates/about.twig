@@ -26,4 +26,37 @@
 		</div>
 	</section>
     <!-- Service Section end -->
+
+
+	<!-- What we do Section -->
+	<section class="wwd-section spad set-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-7 ml-auto">
+					<div class="wwd-text">
+						<h3>{{ post.wwd_title }}</h3>
+						<p>{{ post.wwd_intro }}</p>
+
+						<div class="single-progress-item">
+							<p>{{ __("Breathing", "ahana") }}</p>
+							<div class="progress-bar-style" data-progress="{{ post.wwd_skills_wwd_breathing }}"  data-bgcolor="#f76d63"></div>
+						</div>
+						<div class="single-progress-item">
+							<p>{{ __("Metabolism", "ahana") }}</p>
+							<div class="progress-bar-style" data-progress="{{ post.wwd_skills_wwd_metabolism }}"  data-bgcolor="#f76d63"></div>
+						</div>
+						<div class="single-progress-item">
+							<p>{{ __("Flexibility", "ahana") }}</p>
+							<div class="progress-bar-style" data-progress="{{ post.wwd_skills_wwd_flexibility }}"  data-bgcolor="#f76d63"></div>
+						</div>
+						<div class="single-progress-item">
+							<p>{{ __("Strongness", "ahana") }}</p>
+							<div class="progress-bar-style" data-progress="{{ post.wwd_skills_wwd_strongness }}"  data-bgcolor="#f76d63"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- What we do Section end -->
 {% endblock body %}
