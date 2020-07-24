@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+    <!-- Trainers Section -->
+	<section class="trainer-details-section spad overflow-hidden">
+		<div class="container">
+			<div class="trainer-details">
+				<div class="trainer-info">
+					<div class="td-left">
+                        <img src="{{ Image(post.meta("trainer_image")).src | resize("trainer_single_thumbnail") }}" alt="">
+						<div class="td-social">
+							<a href="{{ "https://www.facebook.com/" ~ post.trainer_social_facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="{{ "https://www.instagram.com/" ~ post.trainer_social_instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ "https://www.twitter.com/" ~ post.trainer_social_twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="{{ "https://www.linkedin.com/" ~ post.trainer_social_linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+						</div>
+					</div>
+					<div class="td-right">
+						<h3>{{ post.title }}</h3>
+						<h6>{{ post.terms( {query: {taxonomy:"trainer_job" }} )|join(', ') }}</h6>
+						<ul>
+							<li><strong>{{ __("Experience:", "ahana") }}</strong><p>{{ post.trainer_experience ~ __(" years", "ahana") }}</p></li>
+							<li><strong>{{ __("Email:", "ahana") }}</strong><p>{{ post.trainer_email }}</p></li>
+							<li><strong>{{ __("Biography:", "ahana") }}</strong><p>{{ post.trainer_biography }}</p></li>
+						</ul>
+						<a href="#" class="site-btn sb-gradient">{{ __("View classes", "ahana") }}</a>
+					</div>
+				</div>
+				<div class="trainer-details-text">
+                    <h3>{{ post.trainer_content_title }}</h3>
+                    {{ post.content|raw }}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Trainers Section end -->
+{% endblock body %}

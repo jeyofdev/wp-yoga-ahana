@@ -49,7 +49,7 @@ class PostTypes {
             "exclude_from_search" => true,
             "menu_position" => 30,
             "menu_icon" => "dashicons-universal-access",
-            "supports" => ["title", "thumbnail"],
+            "supports" => ["title", "thumbnail", "editor"],
             "show_in_rest" => false,
             "has_archive" => true
         ]);
