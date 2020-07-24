@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+	<!-- Service Section -->
+	<section class="service-section spad">
+		<div class="container">
+			<div class="row">
+                {% for service in services %}
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="about-item icon-box">
+                            <div class="ai-icon">
+                                {% if service.thumbnail.src is not null %}
+                                    <img src="{{ service.thumbnail.src }}" alt="">
+                                {% endif %}
+                            </div>
+                            <div class="ai-text">
+                                <h4>{{ service.title }}</h4>
+                                <p>{{ service.content|raw }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+			</div>
+		</div>
+	</section>
+    <!-- Service Section end -->
+{% endblock body %}

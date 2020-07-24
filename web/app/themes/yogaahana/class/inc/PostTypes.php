@@ -53,6 +53,30 @@ class PostTypes {
             "show_in_rest" => false,
             "has_archive" => true
         ]);
+
+        register_post_type("service", [
+            "label" => __("Services", "ahana"),
+            "labels" => [
+                "name"                     => __("Services", "ahana"),
+                "singular_name"            => __("Service", "ahana"),
+                "edit_item"                => __("Edit Service", "ahana"),
+                "new_item"                 => __("New Service", "ahana"),
+                "view_item"                => __("View Service", "ahana"),
+                "view_items"               => __("View Services", "ahana"),
+                "search_items"             => __("Search Services", "ahana"),
+                "not_found"                => __("No Services found.", "ahana"),
+                "not_found_in_trash"       => __("No Services found in trash.", "ahana"),
+                "all_items"                => __("All Services", "ahana")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 31,
+            "menu_icon" => "dashicons-admin-generic",
+            "supports" => ["title", "thumbnail", "editor"],
+            "show_in_rest" => false,
+            "has_archive" => false
+        ]);
     }
 }
 

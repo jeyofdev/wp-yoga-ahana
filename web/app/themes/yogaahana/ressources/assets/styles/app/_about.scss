@@ -44,6 +44,11 @@
         .ai-icon {
             float: none;
             margin: 0 auto 15px;
+
+            img {
+                max-width: 70px;
+                max-height: auto;
+            }
         }
     }
 }

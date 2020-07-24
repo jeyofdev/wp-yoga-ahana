@@ -23,6 +23,3 @@ class Images {
         });
     }
 }
-
-
-
