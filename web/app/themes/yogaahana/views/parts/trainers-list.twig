@@ -1,0 +1,21 @@
+<div class="trainer-item">
+    <div class="ti-img">
+        {% if trainer.thumbnail.src is not null %}
+            <img src="{{ trainer.thumbnail.src | resize("trainer_thumbnail") }}" alt="">
+        {% endif %}
+    </div>
+    <div class="ti-text">
+        <a href="{{ trainer.link }}">
+            <h4>{{ trainer.title }}</h4>
+        </a>
+        
+        <h6>{{ trainer.terms( {query: {taxonomy:"trainer_job" }} )|join(', ') }}</h6>
+        <p>{{ trainer.trainer_excerpt }}</p>
+        <div class="ti-social">
+            <a href="{{ "https://www.facebook.com/" ~ trainer.trainer_social_facebook }}"><i class="fab fa-facebook-f"></i></a>
+            <a href="{{ "https://www.instagram.com/" ~ trainer.trainer_social_instagram }}"><i class="fab fa-instagram"></i></a>
+            <a href="{{ "https://www.twitter.com/" ~ trainer.trainer_social_twitter }}"><i class="fab fa-twitter"></i></a>
+            <a href="{{ "https://www.linkedin.com/" ~ trainer.trainer_social_linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>

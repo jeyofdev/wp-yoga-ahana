@@ -59,4 +59,25 @@
 		</div>
 	</section>
 	<!-- What we do Section end -->
+
+
+	<!-- Trainer Section -->
+	<section class="trainer-section overflow-hidden spad">
+		<div class="container">
+			<div class="section-title text-center">
+				<img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.trainer_title }}</h2>
+				<p>{{ post.trainer_subtitle }}</p>
+			</div>
+
+			<div class="trainer-slider owl-carousel">
+				{% for trainer in trainers %}
+					<div class="ts-item">
+						{% include "parts/trainers-list.twig" with { trainer: trainer } %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Trainer Section end -->
 {% endblock body %}

@@ -9,27 +9,7 @@
             <div class="row">
                 {% for post in posts %}
                     <div class="col-lg-6">
-                        <div class="trainer-item">
-                            <div class="ti-img">
-                                {% if post.thumbnail.src is not null %}
-                                    <img src="{{ post.thumbnail.src | resize("trainer_thumbnail") }}" alt="">
-                                {% endif %}
-                            </div>
-                            <div class="ti-text">
-                                <a href="{{ post.link }}">
-                                    <h4>{{ post.title }}</h4>
-                                </a>
-                                
-                                <h6>{{ post.terms( {query: {taxonomy:"trainer_job" }} )|join(', ') }}</h6>
-                                <p>{{ post.trainer_excerpt }}</p>
-                                <div class="ti-social">
-                                    <a href="{{ "https://www.facebook.com/" ~ post.trainer_social_facebook }}"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="{{ "https://www.instagram.com/" ~ post.trainer_social_instagram }}"><i class="fab fa-instagram"></i></a>
-                                    <a href="{{ "https://www.twitter.com/" ~ post.trainer_social_twitter }}"><i class="fab fa-twitter"></i></a>
-                                    <a href="{{ "https://www.linkedin.com/" ~ post.trainer_social_linkedin }}"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        {% include "parts/trainers-list.twig" with { trainer: post } %}
                     </div>
                 {% endfor %}
             </div>

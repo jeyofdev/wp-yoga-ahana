@@ -120,3 +120,30 @@ register_extended_field_group([
     "instruction_placement" => "label",
     "active" => true,
 ]);
+
+
+
+
+/**
+ * trainers section
+ */
+register_extended_field_group([
+    "title" => __("Trainers section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "trainer_title")
+            ->required()
+            ->defaultValue(__("our trainer yoga", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "trainer_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_template", "==", "templates/template-about.php")
+    ],
+    "menu_order" => 2,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
