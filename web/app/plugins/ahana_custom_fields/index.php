@@ -16,7 +16,9 @@ use WordPlate\Acf\Fields\Email;
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Range;
+use WordPlate\Acf\Fields\Number;
 use WordPlate\Acf\Fields\Textarea;
+use WordPlate\Acf\Fields\TimePicker;
 
 defined("ABSPATH") or die("unauthorized");
 
@@ -83,6 +85,43 @@ register_extended_field_group([
     ],
     "location" => [
         Location::if("post_type", "==", "testimonial")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * Custom post type classes
+ */
+
+register_extended_field_group([
+    "title" => __("Informations class", "ahana"),
+    "fields" => [
+        Number::make(__("Price", "ahana"), "classes_price")
+            ->required()
+            ->prepend(__("$", "ahana"))
+            ->step(1)
+            ->defaultValue(__(100)),
+        Number::make(__("Number of places", "ahana"), "classes_number")
+            ->required()
+            ->step(1)
+            ->defaultValue(__(50)),
+        TimePicker::make(__("Start time", "ahana"), "classes_start_time")
+            ->displayFormat("H:ia")
+            ->returnFormat("H:ia")
+            ->required(),
+        TimePicker::make(__("End time", "ahana"), "classes_end_time")
+            ->displayFormat("H:ia")
+            ->returnFormat("H:ia")
+            ->required()
+    ],
+    "location" => [
+        Location::if("post_type", "==", "classes")
     ],
     "position" => "normal",
     "style" => "default",

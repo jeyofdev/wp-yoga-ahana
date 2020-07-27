@@ -54,6 +54,30 @@ class PostTypes {
             "has_archive" => true
         ]);
 
+        register_post_type("classes", [
+            "label" => __("Class", "ahana"),
+            "labels" => [
+                "name"                     => __("Classes", "ahana"),
+                "singular_name"            => __("Class", "ahana"),
+                "edit_item"                => __("Edit Class", "ahana"),
+                "new_item"                 => __("New Class", "ahana"),
+                "view_item"                => __("View Class", "ahana"),
+                "view_items"               => __("View Classes", "ahana"),
+                "search_items"             => __("Search Classes", "ahana"),
+                "not_found"                => __("No Classes found.", "ahana"),
+                "not_found_in_trash"       => __("No Classes found in trash.", "ahana"),
+                "all_items"                => __("All Classes", "ahana")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 31,
+            "menu_icon" => "dashicons-testimonial",
+            "supports" => ["title", "thumbnail", "editor", "excerpt", "comments"],
+            "show_in_rest" => false,
+            "has_archive" => true
+        ]);
+
         register_post_type("service", [
             "label" => __("Services", "ahana"),
             "labels" => [
@@ -71,7 +95,7 @@ class PostTypes {
             "public" => true,
             "hierarchical" => false,
             "exclude_from_search" => true,
-            "menu_position" => 31,
+            "menu_position" => 32,
             "menu_icon" => "dashicons-admin-generic",
             "supports" => ["title", "thumbnail", "editor"],
             "show_in_rest" => false,
@@ -95,7 +119,7 @@ class PostTypes {
             "public" => true,
             "hierarchical" => false,
             "exclude_from_search" => true,
-            "menu_position" => 31,
+            "menu_position" => 33,
             "menu_icon" => "dashicons-testimonial",
             "supports" => ["title", "thumbnail", "editor"],
             "show_in_rest" => false,

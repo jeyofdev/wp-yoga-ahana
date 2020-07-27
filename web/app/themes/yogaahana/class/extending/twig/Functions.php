@@ -179,4 +179,63 @@ class Functions
             }                   
         }));
     }
+
+
+
+    /**
+     * Display the days by displaying the first 3 letters
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */
+    public static function get_classes_days (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("get_classes_days", function (array $days) {
+            $output = [];
+            foreach ($days as $day) {
+                $output[] = substr($day->title, 0, 3); 
+            }
+
+            return implode(", ", $output);
+        }));
+    }
+
+
+
+    /**
+     * retrieve the trainer corresponding to a classes or an event
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */public static function get_trainer (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("get_trainer", function (Post $post) {
+            $trainer = get_the_terms($post, "trainer");
+
+            if (!$trainer) {
+                return;
+            };
+
+            $allTrainers = Timber::get_posts([
+                "post_type" => "trainer",
+                "posts_per_page" => -1
+            ]);
+
+            $items = [];
+            foreach ($allTrainers as $item) {
+                if ($trainer[0]->name === $item->title) {
+                    $items[] = $item;
+                    $job = get_the_terms($item, "trainer_job");
+                }
+            }
+
+            return [
+                "trainer" => $items[0]->name,
+                "job" => $job[0]->name,
+                "thumbnail" => $items[0]->trainer_avatar
+            ];
+        }));
+    }
 }

@@ -48,7 +48,9 @@ class Twig extends TimberTwig
 		Functions::category_by_post($twig);
 		functions::get_avatar($twig);
 		Functions::add_author_social($twig);
-		
+		Functions::get_classes_days($twig);
+		Functions::get_trainer($twig);
+
 		return $twig;
     }
 

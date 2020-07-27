@@ -50,7 +50,7 @@ class Taxonomies {
             "has_archive" => false,
         ]);
 
-        register_taxonomy("trainer", "post", [
+        register_taxonomy("trainer", ["post", "classes"], [
             "labels" => [
                 "name"                       => __( "Trainers", "ahana"),
                 "singular_name"              => __( "Trainer", "ahana"),
@@ -69,6 +69,47 @@ class Taxonomies {
             "meta_box_cb" => "post_categories_meta_box",
             "has_archive" => false,
             "show_in_rest" => true
+        ]);
+
+        register_taxonomy("classes_level", "classes", [
+            "labels" => [
+                "name"                       => __( "Levels", "ahana"),
+                "singular_name"              => __( "Level", "ahana"),
+                "search_items"               => __( "Search Levels", "ahana"),
+                "popular_items"              => __( "Popular Levels", "ahana"),
+                "all_items"                  => __( "All Levels", "ahana"),
+                "edit_item"                  => __( "Edit Level", "ahana"),
+                "view_item"                  => __( "View Level", "ahana"),
+                "update_item"                => __( "Update Level", "ahana"),
+                "add_new_item"               => __( "Add New Level", "ahana"),
+                "not_found"                  => __( "No Levels found.", "ahana"),
+                "no_terms"                   => __( "No Levels", "ahana"),
+                "back_to_items"              => __( "&larr; Back to Levels", "ahana")
+            ],
+            "hierarchical" => true,
+            "meta_box_cb" => "post_categories_meta_box",
+            "has_archive" => false,
+            "show_in_rest" => true
+        ]);
+
+        register_taxonomy("classes_day", "classes", [
+            "labels" => [
+                "name"                       => __( "Days", "ahana"),
+                "singular_name"              => __( "Day", "ahana"),
+                "search_items"               => __( "Search Days", "ahana"),
+                "popular_items"              => __( "Popular Days", "ahana"),
+                "all_items"                  => __( "All Days", "ahana"),
+                "edit_item"                  => __( "Edit Day", "ahana"),
+                "view_item"                  => __( "View Day", "ahana"),
+                "update_item"                => __( "Update Day", "ahana"),
+                "add_new_item"               => __( "Add New Day", "ahana"),
+                "not_found"                  => __( "No Days found.", "ahana"),
+                "no_terms"                   => __( "No Days", "ahana"),
+                "back_to_items"              => __( "&larr; Back to Days", "ahana")
+            ],
+            "hierarchical" => true,
+            "meta_box_cb" => "post_categories_meta_box",
+            "has_archive" => false,
         ]);
     }
 }
