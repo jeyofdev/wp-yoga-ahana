@@ -4,6 +4,7 @@ namespace jeyofdev\wp\yoga\ahana\inc;
 
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
+use jeyofdev\wp\yoga\ahana\widgets\TagCloudWidget;
 
 
 
@@ -38,6 +39,7 @@ class Sidebar
     {
         register_widget(PostCategoryWidget::class);
         register_widget(LatestPostWidget::class);
+        register_widget(TagCloudWidget::class);
     }
 
 
@@ -51,6 +53,7 @@ class Sidebar
     {
         unregister_widget("WP_Widget_Categories");
         unregister_widget("WP_Widget_Recent_Posts");
+        unregister_widget("WP_Widget_Tag_Cloud");
     }
 
 

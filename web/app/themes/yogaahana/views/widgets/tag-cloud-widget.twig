@@ -1,0 +1,13 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    <div class="sb-tags">
+        {% for tag in tag_cloud %}
+            {{ tag|raw }}
+        {% endfor %}
+    </div>
+
+{{ args.after_widget|raw }}
