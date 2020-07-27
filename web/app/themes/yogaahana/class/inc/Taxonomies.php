@@ -49,5 +49,26 @@ class Taxonomies {
             "meta_box_cb" => "post_categories_meta_box",
             "has_archive" => false,
         ]);
+
+        register_taxonomy("trainer", "post", [
+            "labels" => [
+                "name"                       => __( "Trainers", "ahana"),
+                "singular_name"              => __( "Trainer", "ahana"),
+                "search_items"               => __( "Search Trainers", "ahana"),
+                "popular_items"              => __( "Popular Trainers", "ahana"),
+                "all_items"                  => __( "All Trainers", "ahana"),
+                "edit_item"                  => __( "Edit Trainer", "ahana"),
+                "view_item"                  => __( "View Trainer", "ahana"),
+                "update_item"                => __( "Update Trainer", "ahana"),
+                "add_new_item"               => __( "Add New Trainer", "ahana"),
+                "not_found"                  => __( "No Trainers found.", "ahana"),
+                "no_terms"                   => __( "No Trainers", "ahana"),
+                "back_to_items"              => __( "&larr; Back to Trainers", "ahana")
+            ],
+            "hierarchical" => true,
+            "meta_box_cb" => "post_categories_meta_box",
+            "has_archive" => false,
+            "show_in_rest" => true
+        ]);
     }
 }

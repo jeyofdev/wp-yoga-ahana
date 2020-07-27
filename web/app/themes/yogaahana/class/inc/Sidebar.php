@@ -5,6 +5,7 @@ namespace jeyofdev\wp\yoga\ahana\inc;
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TagCloudWidget;
+use jeyofdev\wp\yoga\ahana\widgets\TrainerWidget;
 
 
 
@@ -40,6 +41,7 @@ class Sidebar
         register_widget(PostCategoryWidget::class);
         register_widget(LatestPostWidget::class);
         register_widget(TagCloudWidget::class);
+        register_widget(TrainerWidget::class);
     }
 
 

@@ -1,0 +1,21 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    <div class="about-instructor-widget">
+        {% if trainer.thumbnail.src is not null %}
+            <img src="{{ Image(trainer.meta('trainer_avatar')).src | resize('trainer_thumbnail_widget') }}" alt="">
+        {% endif %}
+        <h4>{{ trainer.title }}</h4>
+        <h6>{{ trainer.terms( {query: {taxonomy:"trainer_job" }} )|join(', ') }}</h6>
+        <p>{{ trainer.trainer_excerpt }}</p>
+        <div class="ai-social">
+            <a href="{{ "https://www.facebook.com/" ~ trainer.trainer_social_facebook }}"><i class="fab fa-facebook-f"></i></a>
+            <a href="{{ "https://www.instagram.com/" ~ trainer.trainer_social_instagram }}"><i class="fab fa-instagram"></i></a>
+            <a href="{{ "https://www.twitter.com/" ~ trainer.trainer_social_twitter }}"><i class="fab fa-twitter"></i></a>
+            <a href="{{ "https://www.linkedin.com/" ~ trainer.trainer_social_linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+{{ args.after_widget|raw }}
