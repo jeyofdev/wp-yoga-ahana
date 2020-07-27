@@ -75,7 +75,8 @@ class PostTypes {
             "menu_icon" => "dashicons-testimonial",
             "supports" => ["title", "thumbnail", "editor", "excerpt", "comments"],
             "show_in_rest" => false,
-            "has_archive" => true
+            "has_archive" => true,
+            "taxonomies" => ["category"]
         ]);
 
         register_post_type("service", [

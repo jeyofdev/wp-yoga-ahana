@@ -1,0 +1,32 @@
+<div class="classes-item">
+    <div class="ci-img">
+        {% if post.thumbnail.src is not null %}
+        <img src="{{ post.thumbnail.src | resize("classes_thumbnail") }}" alt="">
+        {% endif %}
+    </div>
+    <div class="ci-text">
+        <h4><a href="{{ post.link }}">{{ post.title }}</a></h4>
+        <div class="ci-metas">
+            <div class="ci-meta">
+                <i class="material-icons">event_available</i>
+                {{ get_classes_days(post.terms( {query: {taxonomy:"classes_day" }} )) }}
+            </div>
+            <div class="ci-meta">
+                <i class="material-icons">alarm_on</i>
+                {{ post.classes_start_time|date("H:ia") ~ " - " ~ post.classes_end_time|date("H:ia") }}
+            </div>
+        </div>
+        <p>{{ post.preview.read_more(false) }}</p>
+    </div>
+    <div class="ci-bottom">
+        <div class="ci-author">
+            <img src="{{ Image(get_trainer(post).thumbnail).src | resize("classes_trainer_thumbnail") }}" alt="">
+
+            <div class="author-text">
+                <h6>{{ get_trainer(post).trainer }}</h6>
+                <p>{{ get_trainer(post).job }}</p>
+            </div>
+        </div>
+        <a href="" class="site-btn sb-gradient">{{ __("book now", "ahana") }}</a>
+    </div>
+</div>

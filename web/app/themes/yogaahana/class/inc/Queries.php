@@ -26,6 +26,11 @@ class Queries {
                 $query->set("post_type", "classes");
                 $query->set("posts_per_page", 6);
             }
+
+            else if (!is_admin() && is_category() && $query->is_main_query()) {
+                $query->set("post_type", ["post", "classes"]);
+                $query->set("posts_per_page", 6);
+            }
         });
     }
 }

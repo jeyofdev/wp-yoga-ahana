@@ -119,6 +119,14 @@
             color: $p_color;
             margin-bottom: 0;
         }
+
+        a {
+            color: $p_color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     .cd-social {

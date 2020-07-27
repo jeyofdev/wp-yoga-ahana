@@ -1,0 +1,85 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+
+	<!-- Classes Details Section -->
+	<section class="classes-details-section spad overflow-hidden">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="classes-details">
+						<div class="classes-preview">
+							{% if post.thumbnail.src is not null %}
+                                <img src="{{ post.thumbnail.src | resize("classes_single") }}" alt="">
+                            {% endif %}
+						</div>
+						<div class="row">
+							<div class="col-lg-8">
+								<h2>{{ post.title }}</h2>
+								<div class="cd-meta"><p><i class="material-icons">alarm_on</i>{{ get_post_meta(post.ID, "time_to_read", true) ~ __(" Mins", "ahana") }}</p></div>
+								<div class="cd-meta"><p><i class="material-icons">people_outline</i>{{ sprintf(_n("Limited to %s person", "Limited to %s people", post.classes_number, "ahana"), post.classes_number) }}</p></div>
+							</div>
+							<div class="col-lg-4 text-left text-md-right">
+								<div class="cd-price">{{ "$" ~ post.classes_price }}</div>
+							</div>
+                        </div>
+                        {{ post.content|raw }}
+						<!-- <p>Yoga is the secret of many women in Vietnam and internationally. This is a very popular subject to bring extremely effective exercises to help improve physique effectively and reduce belly fat quickly. In order to have a perfect, toned physique, you need to arrange a suitable exercise regime for yourself as well as a nutritious diet. The following is a series of yoga exercises that help reduce fat effectively. 5 Moves to increase height for dwarf mushrooms. Exercise regularly to get the best results.</p>
+						<div class="row mb-5">
+							<div class="col-lg-5">
+								<img src="img/classes/classes-details.png" alt="">
+							</div>
+							<div class="col-lg-7">
+								<blockquote>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain.</blockquote>
+								<h3>The secret to improving her height to achieve quick results:</h3>
+								<ul>
+									<li><i class="material-icons">done_all</i>Combining 30 minutes of practice and 30 jumps high</li>
+									<li><i class="material-icons">done_all</i>Apply scientific nutrition, avoid obesity.</li>
+									<li><i class="material-icons">done_all</i>Practice sports regularly</li>
+									<li><i class="material-icons">done_all</i>Various versions have evolved over the years</li>
+								</ul>
+							</div>
+						</div>
+						<p>Update the trend of 12 yoga exercises to help you lose weight effectively at home, help strengthen your exercise ability. Besides impacting weight loss effects, it also helps to repel diseases, enhance the body's resistance. Have a toned body with just 8 steps of yoga every day, helping to lose weight quickly combined with a reasonable diet.</p>
+                    -->
+                        <div class="row">
+							<div class="col-sm-7">
+								<div class="cd-cata"><p><i class="material-icons">local_offer</i>{{ category_by_post(post)|raw }}</p></div>
+							</div>
+							<!-- <div class="col-sm-5 text-left text-sm-right pt-4 pt-sm-0">
+								<div class="cd-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div> -->
+						</div>
+                    </div>
+                    
+                    <!-- featured classes -->
+					<h3 class="comment-title">{{ theme.theme_mod("title_classes_section") }}</h3>
+					<div class="classes-other-slider owl-carousel">
+                        {% for item in classes %}
+                            {% include "parts/classes-list.twig" with { post: item } %}
+                        {% endfor %}
+                    </div>
+
+					<!-- comments -->
+					<ul class="comments-area">
+						<h3 class="comment-title">{{ __("Comments", "ahana") }}</h3>
+						<ul class="comment-list">
+						{% for comment in post.comments %}
+							{% include "parts/comment.twig" %}
+						{% endfor %}
+					</ul>
+
+					{{ comment_form() }}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Classes Details Section end -->
+{% endblock body %}

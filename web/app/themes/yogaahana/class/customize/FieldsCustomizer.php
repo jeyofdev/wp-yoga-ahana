@@ -173,11 +173,18 @@ class FieldsCustomizer
 				"priority" => 40
 			],
 
+            // Add classes section
+            "classes_section" => [
+                "title" => esc_html__("Classes section", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 50
+			],
+
             // Add blog section
             "blog_section" => [
                 "title" => esc_html__("Blog", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 50
+				"priority" => 60
 			]
 		];
 
@@ -405,6 +412,14 @@ class FieldsCustomizer
 						"element"  => ".review-section",
 					]
 				]
+			],
+			
+			// add title section classes
+			[
+				"type"     => "text",
+				"settings" => "title_classes_section",
+				"label"    => esc_html__("Title", "ahana"),
+				"section"  => "classes_section"
 			],
 			
 			// add content to blog index
