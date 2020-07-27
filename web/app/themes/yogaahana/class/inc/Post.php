@@ -14,7 +14,7 @@ class Post {
     public static function init () : void
     {
         add_action("save_post", function ($post_id, $post, $update) {
-            if(!$update || wp_is_post_revision($post_id) || $post->post_type != "post" || (defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)) {
+            if(!$update || wp_is_post_revision($post_id) || ($post->post_type != "post" && $post->post_type != "classes" && $post->post_type != "event") || (defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)) {
                 return;
             }
 

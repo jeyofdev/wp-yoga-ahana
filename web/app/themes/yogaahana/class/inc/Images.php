@@ -25,6 +25,8 @@ class Images {
             add_image_size("event_thumbnail", 222, 186, true);
             add_image_size("post_thumbnail_widget", 86, 68, true);
             add_image_size("trainer_thumbnail_widget", 142, 142, true);
+            add_image_size("event_single", 930, 463, true);
+            add_image_size("event_single_thumbnail", 315, 265, true);
         });
     }
 }

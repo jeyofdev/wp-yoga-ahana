@@ -180,11 +180,18 @@ class FieldsCustomizer
 				"priority" => 50
 			],
 
+            // Add event section
+            "event_section" => [
+                "title" => esc_html__("Event section", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 60
+			],
+
             // Add blog section
             "blog_section" => [
                 "title" => esc_html__("Blog", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 60
+				"priority" => 70
 			]
 		];
 
@@ -420,6 +427,14 @@ class FieldsCustomizer
 				"settings" => "title_classes_section",
 				"label"    => esc_html__("Title", "ahana"),
 				"section"  => "classes_section"
+			],
+
+			// add title section event
+			[
+				"type"     => "text",
+				"settings" => "title_event_section",
+				"label"    => esc_html__("Title", "ahana"),
+				"section"  => "event_section"
 			],
 			
 			// add content to blog index

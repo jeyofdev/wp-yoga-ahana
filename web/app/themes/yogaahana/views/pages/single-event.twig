@@ -1,0 +1,69 @@
+{% extends "base.twig" %}
+
+{% block body %}
+	{% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+
+	<!-- Event Details Section -->
+	<section class="event-details-section spad overflow-hidden">
+		<div class="container">
+			<div class="event-preview">
+				{% if post.thumbnail.src is not null %}
+					<img src="{{ post.thumbnail.src | resize("event_single") }}" alt="">
+				{% endif %}
+			</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="event-details">
+						<div class="row">
+							<div class="col-md-8">
+								<h2>{{ post.title }}</h2>
+								<div class="ed-meta"><p><i class="material-icons">alarm_on</i>{{ get_post_meta(post.ID, "time_to_read", true) ~ __(" Mins", "ahana") }}</p></div>
+								<div class="ed-meta"><p><i class="material-icons">people_outline</i>{{ sprintf(_n("Limited to %s person", "Limited to %s people", post.classes_number, "ahana"), post.event_number) }}</p></div>
+							</div>
+							<div class="col-md-4 text-left text-md-right">
+								<div class="ed-note">{{ post.event_difficulty }}</div>
+							</div>
+						</div>
+                        {{ post.content|raw }}
+                        <div class="row">
+							<div class="col-lg-7">
+								<div class="ed-cata"><p><i class="material-icons">local_offer</i>{{ category_by_post(post)|raw }}</p></div>
+							</div>
+							<!-- <div class="col-lg-5 text-left text-md-right">
+								<div class="ed-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</div>
+							</div> -->
+						</div>
+					</div>
+
+
+					<!-- featured events -->
+					<h3 class="comment-title">{{ theme.theme_mod("title_event_section") }}</h3>
+					<div class="event-other-slider owl-carousel">
+						{% for event in events %}
+							{% include "parts/event-list.twig" with { post: event, imageSize: "event_single_thumbnail"} %}
+						{% endfor %}
+					</div>
+
+
+					<!-- comments -->
+					<ul class="comments-area">
+						<h3 class="comment-title">{{ __("Comments", "ahana") }}</h3>
+						<ul class="comment-list">
+						{% for comment in post.comments %}
+							{% include "parts/comment.twig" %}
+						{% endfor %}
+					</ul>
+
+					{{ comment_form() }}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Event Details Section end -->
+{% endblock body %}

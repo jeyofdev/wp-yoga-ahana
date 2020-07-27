@@ -1,0 +1,15 @@
+<div class="event-item">
+    <div class="ei-img">
+        {% if post.thumbnail.src is not null %}
+            <img src="{{ post.thumbnail.src | resize(imageSize) }}" alt="">
+        {% endif %}
+    </div>
+    <div class="ei-text">
+        <h4><a href="{{ post.link }}">{{ post.title }}</a></h4>
+        <ul>
+            <li><i class="material-icons">person</i>{{ get_trainer(post).trainer }}</li>
+            <li><i class="material-icons">event_available</i>{{ post.event_date|date("d F, Y") }}</li>
+            <li><i class="material-icons">map</i>{{ format_city(",") }}</li>
+        </ul>
+    </div>
+</div>

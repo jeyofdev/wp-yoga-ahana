@@ -100,7 +100,8 @@ class PostTypes {
             "menu_icon" => "dashicons-calendar-alt",
             "supports" => ["title", "thumbnail", "editor", "comments"],
             "show_in_rest" => false,
-            "has_archive" => true
+            "has_archive" => true,
+            "taxonomies" => ["category"]
         ]);
 
         register_post_type("service", [

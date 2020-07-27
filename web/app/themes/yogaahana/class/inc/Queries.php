@@ -33,7 +33,7 @@ class Queries {
             }
 
             else if (!is_admin() && is_category() && $query->is_main_query()) {
-                $query->set("post_type", ["post", "classes"]);
+                $query->set("post_type", ["post", "classes", "event"]);
                 $query->set("posts_per_page", 6);
             }
         });
