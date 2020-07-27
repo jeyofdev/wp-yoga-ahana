@@ -2,6 +2,8 @@
 
 namespace jeyofdev\wp\yoga\ahana\inc;
 
+use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
+
 /**
  * Class which manages the sidebars
  */
@@ -31,7 +33,7 @@ class Sidebar
      */
     public static function register_widget () : void
     {
-        
+        register_widget(PostCategoryWidget::class);
     }
 
 
@@ -43,7 +45,7 @@ class Sidebar
      */
     public static function unregister_widget () : void
     {
-        
+        unregister_widget("WP_Widget_Categories");
     }
 
 
