@@ -34,6 +34,8 @@ class Context {
                 "opening_hours" => get_option(ClubSettings::OPENING_HOURS)
             ]);
 
+            $this->add("page_title", get_the_archive_title());
+
             return $this->context;
         });
     }

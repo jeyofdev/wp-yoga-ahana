@@ -9,6 +9,7 @@ use jeyofdev\wp\yoga\ahana\inc\Supports;
 use jeyofdev\wp\yoga\ahana\customize\Customizer;
 use jeyofdev\wp\yoga\ahana\inc\Comments;
 use jeyofdev\wp\yoga\ahana\inc\Images;
+use jeyofdev\wp\yoga\ahana\inc\Page;
 use jeyofdev\wp\yoga\ahana\inc\Pagination;
 use jeyofdev\wp\yoga\ahana\inc\Post;
 use jeyofdev\wp\yoga\ahana\inc\PostTypes;
@@ -41,6 +42,7 @@ class Site extends TimberSite
         Taxonomies::init();
         Queries::init();
         Sidebar::init();
+        Page::init();
 
         return new Customizer();
     }
