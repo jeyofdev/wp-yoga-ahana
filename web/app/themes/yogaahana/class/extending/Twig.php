@@ -62,7 +62,9 @@ class Twig extends TimberTwig
 	 * @return Environment
 	 */
     public function add_timber_filters($twig) {
-        Filters::format_phone_number($twig);
+		Filters::format_phone_number($twig);
+        Filters::chars($twig);
+		
 
 		return $twig;
 	}

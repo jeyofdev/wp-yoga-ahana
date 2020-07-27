@@ -14,6 +14,30 @@ use jeyofdev\wp\yoga\ahana\options\ClubSettings;
 class Filters
 {
     /**
+     * Display the excerpt of a text
+     *
+     * @param Environment $twig
+     *
+     * @return void
+     */
+    public static function chars (Environment $twig) : void
+    {
+        $twig->addFilter(new TwigFilter("chars", function (string $text, ?int $limit = 20) {
+            if (strlen($text) > $limit) {
+                $last_space = strpos($text, " ", $limit);
+
+                if ($last_space !== false) {
+                    return substr($text, 0, $last_space) . "...";
+                }
+            }
+
+            return $text;
+        }));
+    }
+
+
+
+    /**
      * Format a phone number
      *
      * @param Environment $twig

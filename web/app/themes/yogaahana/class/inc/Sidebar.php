@@ -2,7 +2,10 @@
 
 namespace jeyofdev\wp\yoga\ahana\inc;
 
+use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
+
+
 
 /**
  * Class which manages the sidebars
@@ -34,6 +37,7 @@ class Sidebar
     public static function register_widget () : void
     {
         register_widget(PostCategoryWidget::class);
+        register_widget(LatestPostWidget::class);
     }
 
 
@@ -46,6 +50,7 @@ class Sidebar
     public static function unregister_widget () : void
     {
         unregister_widget("WP_Widget_Categories");
+        unregister_widget("WP_Widget_Recent_Posts");
     }
 
 
