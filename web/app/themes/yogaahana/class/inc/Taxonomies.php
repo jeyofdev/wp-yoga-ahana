@@ -50,7 +50,7 @@ class Taxonomies {
             "has_archive" => false,
         ]);
 
-        register_taxonomy("trainer", ["post", "classes"], [
+        register_taxonomy("trainer", ["post", "classes", "event"], [
             "labels" => [
                 "name"                       => __( "Trainers", "ahana"),
                 "singular_name"              => __( "Trainer", "ahana"),

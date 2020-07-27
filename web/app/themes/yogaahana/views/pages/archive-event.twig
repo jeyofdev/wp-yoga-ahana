@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+
+    <!-- Events Section -->
+	<section class="events-page-section spad">
+		<div class="container">
+			<div class="row">
+                {% for post in posts %}
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <div class="ei-img">
+                                {% if post.thumbnail.src is not null %}
+                                    <img src="{{ post.thumbnail.src | resize("event_thumbnail") }}" alt="">
+                                {% endif %}
+                            </div>
+                            <div class="ei-text">
+                                <h4><a href="{{ post.link }}">{{ post.title }}</a></h4>
+                                <ul>
+                                    <li><i class="material-icons">person</i>{{ get_trainer(post).trainer }}</li>
+                                    <li><i class="material-icons">event_available</i>{{ post.event_date|date("d F, Y") }}</li>
+                                    <li><i class="material-icons">map</i>{{ format_city(",") }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+			</div>
+
+            <!-- Pagination -->
+            {% include "parts/pagination.twig" %}
+		</div>
+	</section>
+	<!-- Events Section end -->
+{% endblock body %}

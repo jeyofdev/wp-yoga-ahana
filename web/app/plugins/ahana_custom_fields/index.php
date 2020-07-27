@@ -17,7 +17,9 @@ use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Range;
 use WordPlate\Acf\Fields\Number;
+use WordPlate\Acf\Fields\Select;
 use WordPlate\Acf\Fields\Textarea;
+use WordPlate\Acf\Fields\DatePicker;
 use WordPlate\Acf\Fields\TimePicker;
 
 defined("ABSPATH") or die("unauthorized");
@@ -122,6 +124,42 @@ register_extended_field_group([
     ],
     "location" => [
         Location::if("post_type", "==", "classes")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * Custom post type event
+ */
+register_extended_field_group([
+    "title" => __("Event informations", "ahana"),
+    "fields" => [
+        DatePicker::make(__("Date", "ahana"), "event_date")
+            ->required()
+            ->displayFormat("d/m/Y")
+            ->returnFormat("d/m/Y"),
+        Number::make(__("Number of places", "ahana"), "event_number")
+            ->required()
+            ->step(1)
+            ->defaultValue(__(50)),
+        Select::make(__("Difficulty", "ahana"), "event_difficulty")
+            ->required()
+            ->choices([
+                "all" => __("All", "ahana"),
+                "novice" => __("Novice", "ahana"),
+                "intermediate" => __("Intermediate", "ahana"),
+                "advanced" => __("Advanced", "ahana"),
+            ])
+            ->returnFormat("label"),
+    ],
+    "location" => [
+        Location::if("post_type", "==", "event")
     ],
     "position" => "normal",
     "style" => "default",
