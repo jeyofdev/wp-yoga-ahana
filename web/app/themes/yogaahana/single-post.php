@@ -11,6 +11,8 @@ use Timber\Post;
 
 $context = Timber::context();
 $context["post"] = new Post();
+$context["sidebar_blog"] = Timber::get_widgets("blog");
+
 $templates = "pages/single-post.twig";
 
 
