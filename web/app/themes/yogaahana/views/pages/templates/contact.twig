@@ -1,0 +1,48 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+
+	<!-- Contact Section -->
+	<section class="contact-page-section spad overflow-hidden">
+		<div class="container">
+			<!-- <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33245.297803635964!2d-73.76987401620775!3d40.704774398815005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1575866843291!5m2!1sen!2sbd" style="border:0;" allowfullscreen=""></iframe></div> -->
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="con-info">
+						<h3>{{ post.address_title }}</h3>
+						<ul>
+							<li><i class="material-icons">map</i>{{ format_city(",") }}</li>
+						</ul>
+					</div>
+					<div class="con-info">
+						<h3>{{ post.contact_title }}</h3>
+						<ul>
+							<li><i class="material-icons">map</i>{{ club_settings.phone|format_phone_number }}</li>
+							<li><i class="material-icons">map</i>{{ club_settings.email }}</li>
+						</ul>
+					</div>
+					<div class="con-info">
+						<h3>{{ post.opening_hours_title }}</h3>
+						<ul>
+                            {{ format_opening_hours(false)|raw }}
+						</ul>
+					</div>
+					<div class="contact-social">
+						{{ add_social("facebook", "fab fa-facebook-f")|raw }}
+                        {{ add_social("instagram", "fab fa-instagram")|raw }}
+                        {{ add_social("twitter", "fab fa-twitter")|raw }}
+                        {{ add_social("linkedin", "fab fa-linkedin-in")|raw }}
+					</div>
+				</div>
+				<div class="col-lg-8">
+					{% apply shortcodes|raw %}
+						[contact-form-7 id="239" title="contact" html_id="contactForm" html_class="singup-form contact-form"]
+					{% endapply %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Trainers Section end -->
+{% endblock body %}

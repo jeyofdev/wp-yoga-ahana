@@ -77,7 +77,7 @@ class Functions
      */
     public static function format_opening_hours (Environment $twig) : void
     {
-        $twig->addFunction(new TwigFunction("format_opening_hours", function () {
+        $twig->addFunction(new TwigFunction("format_opening_hours", function ($single = true) {
             $hours = [
                 "weeks" => [
                     "opening" => get_option(ClubSettings::WEEK_OPENING),
@@ -93,20 +93,27 @@ class Functions
                 ],
             ];
 
+            if ($single) {
+                $currentDay = (new DateTime())->format("l");
+                $dayWeek = ["Monday", "Tuesday", "Thursday", "Wednesday", "Thursday", "Friday"];
 
-            $currentDay = (new DateTime())->format("l");
-            $dayWeek = ["Monday", "Tuesday", "Thursday", "Wednesday", "Thursday", "Friday"];
+                if (in_array($currentDay, $dayWeek)) {
+                    return sprintf(esc_html__("Mon - Fri : %s - %s", "ahana"), $hours["weeks"]["opening"], $hours["weeks"]["closing"]);
+                }
 
-            if (in_array($currentDay, $dayWeek)) {
-                return sprintf(esc_html__("Mon - Fri : %s - %s", "ahana"), $hours["weeks"]["opening"], $hours["weeks"]["closing"]);
-            }
+                if ($currentDay === "Saturday") {
+                    return sprintf(esc_html__("Saturday : %s - %s", "ahana"), $hours["saturday"]["opening"], $hours["saturday"]["closing"]);
+                }
 
-            if ($currentDay === "Saturday") {
-                return sprintf(esc_html__("Saturday : %s - %s", "ahana"), $hours["saturday"]["opening"], $hours["saturday"]["closing"]);
-            }
+                if ($currentDay === "Sunday") {
+                    return sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]);
+                }
+            } else {
+                $output = '<li><i class="material-icons">map</i>' . sprintf(esc_html__("Mon - Fri : %s - %s", "ahana"), $hours["weeks"]["opening"], $hours["weeks"]["closing"]) . '</li>';
+                $output .= '<li><i class="material-icons">map</i>' . sprintf(esc_html__("Saturday : %s - %s", "ahana"), $hours["saturday"]["opening"], $hours["saturday"]["closing"]) . '</li>';
+                $output .= '<li><i class="material-icons">map</i>' . sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]) . '</li>';
 
-            if ($currentDay === "Sunday") {
-                return sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]);
+                return $output;
             }
         }));
     }
@@ -158,12 +165,9 @@ class Functions
      * 
      * @return void
      */
-    public static function add_author_social (Environment $twig) : void
+    public static function add_social (Environment $twig) : void
     {
-        $twig->addFunction(new TwigFunction("add_author_social", function (string $social, string $icon) {
-            $post = Timber::get_post();
-            $user = $post->author();
-
+        $twig->addFunction(new TwigFunction("add_social", function (string $social, string $icon, bool $author = false) {
             $urls = [
                 "facebook" => "https://www.facebook.com/",
                 "instagram" => "https://www.instagram.com/",
@@ -171,11 +175,21 @@ class Functions
                 "linkedin" => "https://www.linkedin.com/"
             ];
 
-            if (!empty($social)) {
-                if (!empty($user->$social)) {
-                    $url = $urls[$social] . $user->$social;
-                    return '<a href="' . $url . '" target="_blank"><i class="' . $icon . '"></i></a>';
+            if ($author) {
+                $post = Timber::get_post();
+                $user = $post->author();
+                $url = $urls[$social] . $user->$social;
+
+                if (empty($user->$social)) {
+                    return;
                 }
+            } else {
+                $context = Timber::get_context();
+                $url = $urls[$social] . $context["club_settings"][$social];
+            }
+
+            if (!empty($social) && $icon !== '') {
+                return '<a href="' . $url . '" target="_blank"><i class="' . $icon . '"></i></a>';
             }                   
         }));
     }

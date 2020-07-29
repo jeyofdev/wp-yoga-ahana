@@ -11,3 +11,4 @@ import './lib/jquery.nice-select.min.js'
 
 // app
 import './app/main.js'
+import './app/contact-form'

@@ -16,6 +16,11 @@ class ClubSettings
     CONST CITY = "club_city";
     CONST PHONE_CODE = "club_phone_code";
     CONST PHONE = "club_phone";
+    CONST EMAIL = "club_email";
+    CONST FACEBOOK = "club_facebook";
+    CONST INSTAGRAM = "club_instagram";
+    CONST TWITTER = "club_twitter";
+    CONST LINKEDIN = "club_linkedin";
     CONST OPENING_HOURS = "club_opening_hours";
 
     CONST WEEK_OPENING = "club_week_opening";
@@ -48,6 +53,11 @@ class ClubSettings
         register_setting(self::GROUP, self::CITY);
         register_setting(self::GROUP, self::PHONE_CODE);
         register_setting(self::GROUP, self::PHONE);
+        register_setting(self::GROUP, self::EMAIL);
+        register_setting(self::GROUP, self::FACEBOOK);
+        register_setting(self::GROUP, self::INSTAGRAM);
+        register_setting(self::GROUP, self::TWITTER);
+        register_setting(self::GROUP, self::LINKEDIN);
         register_setting(self::GROUP, self::OPENING_HOURS);
 
         register_setting(self::GROUP, self::WEEK_OPENING);
@@ -91,6 +101,13 @@ class ClubSettings
             <?php
         }, self::GROUP, self::SECTION_SLUG);
 
+        add_settings_field("club_options_email", __("Email", "ahana"), function () {
+            ?>
+                <input type="email" name="<?= self::EMAIL; ?>" id="<?= self::EMAIL; ?>" class="regular-text" value="<?= esc_html(get_option(self::EMAIL)); ?>">
+                <p class="description" id="email-description"><?= __("Club email (name@gmail.com).", "ahana"); ?></p>
+            <?php
+        }, self::GROUP, self::SECTION_SLUG);
+
         add_settings_field("club_options_address", __("Address", "ahana"), function () {
             ?>
                 <input type="text" name="<?= self::ADDRESS; ?>" id="<?= self::ADDRESS; ?>" class="regular-text" value="<?= esc_html(get_option(self::ADDRESS)); ?>">
@@ -101,7 +118,35 @@ class ClubSettings
         add_settings_field("club_options_city", __("City", "ahana"), function () {
             ?>
                 <input type="text" name="<?= self::CITY; ?>" id="<?= self::CITY; ?>" class="regular-text" value="<?= esc_html(get_option(self::CITY)); ?>">
-                <p class="description" id="address-description"><?= __("Club address city (ex: Paris, New York).", "ahana"); ?></p>
+                <p class="description" id="city-description"><?= __("Club address city (ex: Paris, New York).", "ahana"); ?></p>
+            <?php
+        }, self::GROUP, self::SECTION_SLUG);
+
+        add_settings_field("club_options_facebook", __("Facebook", "ahana"), function () {
+            ?>
+                <input type="text" name="<?= self::FACEBOOK; ?>" id="<?= self::FACEBOOK; ?>" class="regular-text" value="<?= esc_html(get_option(self::FACEBOOK)); ?>">
+                <p class="description" id="facebook-description"><?= __("Pseudo Facebook", "ahana"); ?></p>
+            <?php
+        }, self::GROUP, self::SECTION_SLUG);
+
+        add_settings_field("club_options_instagram", __("Instagram", "ahana"), function () {
+            ?>
+                <input type="text" name="<?= self::INSTAGRAM; ?>" id="<?= self::INSTAGRAM; ?>" class="regular-text" value="<?= esc_html(get_option(self::INSTAGRAM)); ?>">
+                <p class="description" id="instagram-description"><?= __("Pseudo Instagram", "ahana"); ?></p>
+            <?php
+        }, self::GROUP, self::SECTION_SLUG);
+
+        add_settings_field("club_options_twitter", __("Twitter", "ahana"), function () {
+            ?>
+                <input type="text" name="<?= self::TWITTER; ?>" id="<?= self::TWITTER; ?>" class="regular-text" value="<?= esc_html(get_option(self::TWITTER)); ?>">
+                <p class="description" id="twitter-description"><?= __("Pseudo Twitter", "ahana"); ?></p>
+            <?php
+        }, self::GROUP, self::SECTION_SLUG);
+
+        add_settings_field("club_options_linkedin", __("Linkedin", "ahana"), function () {
+            ?>
+                <input type="text" name="<?= self::LINKEDIN; ?>" id="<?= self::LINKEDIN; ?>" class="regular-text" value="<?= esc_html(get_option(self::LINKEDIN)); ?>">
+                <p class="description" id="linkedin-description"><?= __("Pseudo Linkedin", "ahana"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
 

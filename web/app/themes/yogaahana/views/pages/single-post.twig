@@ -45,10 +45,10 @@
 								<h3>{{ post.author.first_name ~ " " ~ post.author.last_name }}</h3>
 								<p>{{ post.author.description }}</p>
 								<div class="ba-social">
-                                    {{ add_author_social("facebook", "fab fa-facebook-f")|raw }}
-                                    {{ add_author_social("instagram", "fab fa-instagram")|raw }}
-                                    {{ add_author_social("twitter", "fab fa-twitter")|raw }}
-                                    {{ add_author_social("linkedin", "fab fa-linkedin-in")|raw }}
+                                    {{ add_social("facebook", "fab fa-facebook-f", true)|raw }}
+                                    {{ add_social("instagram", "fab fa-instagram", true)|raw }}
+                                    {{ add_social("twitter", "fab fa-twitter", true)|raw }}
+                                    {{ add_social("linkedin", "fab fa-linkedin-in", true)|raw }}
 								</div>
 							</div>
 						</div>

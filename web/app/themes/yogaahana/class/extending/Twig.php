@@ -49,7 +49,7 @@ class Twig extends TimberTwig
 		Functions::format_opening_hours($twig);
 		Functions::category_by_post($twig);
 		functions::get_avatar($twig);
-		Functions::add_author_social($twig);
+		Functions::add_social($twig);
 		Functions::get_classes_days($twig);
 		Functions::get_trainer($twig);
 

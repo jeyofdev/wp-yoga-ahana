@@ -83,3 +83,39 @@
         justify-self: start;
     }
 }
+
+.contact-form.singup-form {
+    .wpcf7-response-output {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+        grid-column: 1 / 1;
+        width: 100%;
+
+        &.lastname,
+        &.phone {
+            grid-column: 2 / -1;
+        }
+
+        &.message {
+            grid-column: 1 / -1;
+        }
+
+        &.submit {
+            width: auto;
+        }
+    }
+
+    @media #{$large_mobile, $small_mobile} {
+        grid-template-columns: 1fr;
+
+        .form-group {
+            grid-column: 1 / 1 !important;
+        }
+    }
+}

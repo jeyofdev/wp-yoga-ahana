@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85a8867c965755f662efde1a9796a9c0",
+    "content-hash": "b1e75141dbd95fc9a458787f81f89e88",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -898,6 +898,120 @@
                 "environment"
             ],
             "time": "2020-04-12T15:20:09+00:00"
+        },
+        {
+            "name": "wordplate/acf",
+            "version": "8.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wordplate/extended-acf.git",
+                "reference": "1f8bc3dd04bb83142fd4ea54f56ef9c14fbb7d27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wordplate/extended-acf/zipball/1f8bc3dd04bb83142fd4ea54f56ef9c14fbb7d27",
+                "reference": "1f8bc3dd04bb83142fd4ea54f56ef9c14fbb7d27",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WordPlate\\Acf\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@doubledip.se"
+                },
+                {
+                    "name": "Chris Andersson",
+                    "email": "hello@puredazzle.se"
+                }
+            ],
+            "description": "Register advanced custom fields with object oriented PHP",
+            "keywords": [
+                "acf",
+                "advanced",
+                "custom",
+                "fields",
+                "wordplate",
+                "wordpress"
+            ],
+            "time": "2020-06-05T08:47:30+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "5.8.12",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "tags/5.8.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.12.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
+            "name": "wpackagist-plugin/duplicate-page",
+            "version": "4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-page/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-page.zip?timestamp=1585205975"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-page/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",

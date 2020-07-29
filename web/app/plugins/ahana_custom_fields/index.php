@@ -274,3 +274,31 @@ register_extended_field_group([
     "instruction_placement" => "label",
     "active" => true,
 ]);
+
+
+
+/**
+ * Contact sections
+ */
+register_extended_field_group([
+    "title" => __("Sections Title", "ahana"),
+    "fields" => [
+        Text::make(__("Adress", "ahana"), "address_title")
+            ->required()
+            ->defaultValue(__("Visit the Yoga Ahana", "ahana")),
+        Text::make(__("Contacts", "ahana"), "contact_title")
+            ->required()
+            ->defaultValue(__("Message Us", "ahana")),
+        Text::make(__("Opening Hours", "ahana"), "opening_hours_title")
+            ->required()
+            ->defaultValue(__("Opening Hours", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_template", "==", "templates/template-contact.php")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);

@@ -31,6 +31,11 @@ class Context {
                 "phone" => get_option(ClubSettings::PHONE),
                 "address" => get_option(ClubSettings::ADDRESS),
                 "city" => get_option(ClubSettings::CITY),
+                "email" => get_option(ClubSettings::EMAIL),
+                "facebook" => get_option(ClubSettings::FACEBOOK),
+                "instagram" => get_option(ClubSettings::INSTAGRAM),
+                "twitter" => get_option(ClubSettings::TWITTER),
+                "linkedin" => get_option(ClubSettings::LINKEDIN),
                 "opening_hours" => get_option(ClubSettings::OPENING_HOURS)
             ]);
 
