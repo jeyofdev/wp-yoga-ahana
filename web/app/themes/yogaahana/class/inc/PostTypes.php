@@ -151,6 +151,54 @@ class PostTypes {
             "show_in_rest" => false,
             "has_archive" => false
         ]);
+
+        register_post_type("slide", [
+            "label" => __("slide", "ahana"),
+            "labels" => [
+                "name"                     => __("Slides", "ahana"),
+                "singular_name"            => __("Slide", "ahana"),
+                "edit_item"                => __("Edit Slide", "ahana"),
+                "new_item"                 => __("New Slide", "ahana"),
+                "view_item"                => __("View Slide", "ahana"),
+                "view_items"               => __("View Slides", "ahana"),
+                "search_items"             => __("Search Slides", "ahana"),
+                "not_found"                => __("No Slides found.", "ahana"),
+                "not_found_in_trash"       => __("No Slides found in trash.", "ahana"),
+                "all_items"                => __("All Slides", "ahana")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 35,
+            "menu_icon" => "dashicons-controls-play",
+            "supports" => ["title", "thumbnail", "editor"],
+            "show_in_rest" => false,
+            "has_archive" => false
+        ]);
+
+        register_post_type("pricing_plan", [
+            "label" => __("pricing plan", "ahana"),
+            "labels" => [
+                "name"                     => __("Pricing Plans", "ahana"),
+                "singular_name"            => __("Pricing Plan", "ahana"),
+                "edit_item"                => __("Edit Pricing Plan", "ahana"),
+                "new_item"                 => __("New Pricing Plan", "ahana"),
+                "view_item"                => __("View Pricing Plan", "ahana"),
+                "view_items"               => __("View Pricing Plans", "ahana"),
+                "search_items"             => __("Search Pricing Plans", "ahana"),
+                "not_found"                => __("No Pricing Plans found.", "ahana"),
+                "not_found_in_trash"       => __("No Pricing Plans found in trash.", "ahana"),
+                "all_items"                => __("All Pricing Plans", "ahana")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 36,
+            "menu_icon" => "dashicons-cart",
+            "supports" => ["title", "editor", "thumbnail"],
+            "show_in_rest" => false,
+            "has_archive" => false
+        ]);
     }
 }
 

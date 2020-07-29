@@ -15,12 +15,15 @@ use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Email;
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Image;
+use WordPlate\Acf\Fields\Radio;
 use WordPlate\Acf\Fields\Range;
 use WordPlate\Acf\Fields\Number;
 use WordPlate\Acf\Fields\Select;
 use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\DatePicker;
 use WordPlate\Acf\Fields\TimePicker;
+
+
 
 defined("ABSPATH") or die("unauthorized");
 
@@ -171,6 +174,30 @@ register_extended_field_group([
 
 
 /**
+ * Custom post type pricing plan
+ */
+register_extended_field_group([
+    "title" => __("Plan informations", "ahana"),
+    "fields" => [
+        Number::make(__("Price", "ahana"), "plan_price")
+            ->required()
+            ->prepend(__("$", "ahana"))
+            ->step(1)
+            ->defaultValue(__(100)),
+    ],
+    "location" => [
+        Location::if("post_type", "==", "pricing_plan")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
  *  wwd section
  */
 register_extended_field_group([
@@ -271,6 +298,198 @@ register_extended_field_group([
     "position" => "normal",
     "style" => "default",
     "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * home slides
+ */
+register_extended_field_group([
+    "title" => __("Slider", "ahana"),
+    "fields" => [
+        Radio::make(__("Format slide", "ahana"), "format_slide")
+            ->choices([
+                "format_image_only" => __("Image only", "ahana"),
+                "format_two_columns" => __("Two columns", "ahana"),
+                "format_two_rows" => __("Two rows", "ahana"),
+            ])
+            ->defaultValue("format_image_only")
+            ->returnFormat("value")
+            ->layout("horizontal")
+            ->required(),
+    ],
+    "location" => [
+        Location::if("post_type", "==", "slide")
+    ],
+    "menu_order" => 1,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+
+/**
+ * home about section
+ */
+register_extended_field_group([
+    "title" => __("About home section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "about_section_title")
+            ->required()
+            ->defaultValue(__("Welcome to ahana", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "about_section_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+        Image::make(__("Content picture", "ahana"), "about_section_image")
+            ->required()
+            ->returnFormat("array")
+            ->previewSize("medium")
+            ->library("all")
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 2,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * home classes section
+ */
+register_extended_field_group([
+    "title" => __("Classes home section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "classes_section_title")
+            ->required()
+            ->defaultValue(__("Popular classes", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "classes_section_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 3,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * home trainers section
+ */
+register_extended_field_group([
+    "title" => __("Trainers home section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "trainers_section_title")
+            ->required()
+            ->defaultValue(__("Our trainer yoga", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "trainers_section_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 4,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * home events section
+ */
+register_extended_field_group([
+    "title" => __("Events home section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "events_section_title")
+            ->required()
+            ->defaultValue(__("Upcoming events", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "events_section_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 5,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * home pricing plans section
+ */
+register_extended_field_group([
+    "title" => __("Pricing plan home section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "pricing_plans_section_title")
+            ->required()
+            ->defaultValue(__("Pricing plans", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "pricing_plans_section_subtitle")
+            ->required()
+            ->defaultValue(__("Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 6,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * home contact section
+ */
+register_extended_field_group([
+    "title" => __("Contact home section", "ahana"),
+    "fields" => [
+        Text::make(__("Title", "ahana"), "contact_section_title")
+            ->required()
+            ->defaultValue(__("Sign Up for Our Classes", "ahana")),
+        Text::make(__("Subtitle", "ahana"), "contact_section_subtitle")
+            ->required()
+            ->defaultValue(__("To be invited to the nearest Cali center and get free physical advice to learn more about the program.", "ahana")),
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 7,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
     "instruction_placement" => "label",
     "active" => true,
 ]);

@@ -51,6 +51,7 @@ class Twig extends TimberTwig
 		functions::get_avatar($twig);
 		Functions::add_social($twig);
 		Functions::get_classes_days($twig);
+		Functions::get_pricing_plan_taxonomy($twig);
 		Functions::get_trainer($twig);
 
 		return $twig;

@@ -111,5 +111,65 @@ class Taxonomies {
             "meta_box_cb" => "post_categories_meta_box",
             "has_archive" => false,
         ]);
+
+        register_taxonomy("pricing_plan_payment", "pricing_plan", [
+            "labels" => [
+                "name"                       => __( "Payments", "ahana"),
+                "singular_name"              => __( "Payment", "ahana"),
+                "search_items"               => __( "Search Payments", "ahana"),
+                "popular_items"              => __( "Popular Payments", "ahana"),
+                "all_items"                  => __( "All Payments", "ahana"),
+                "edit_item"                  => __( "Edit Payment", "ahana"),
+                "view_item"                  => __( "View Payment", "ahana"),
+                "update_item"                => __( "Update Payment", "ahana"),
+                "add_new_item"               => __( "Add New Payment", "ahana"),
+                "not_found"                  => __( "No Payments found.", "ahana"),
+                "no_terms"                   => __( "No Payments", "ahana"),
+                "back_to_items"              => __( "&larr; Back to Payments", "ahana")
+            ],
+            "hierarchical" => true,
+            "meta_box_cb" => "post_categories_meta_box",
+            "has_archive" => false,
+        ]);
+
+        register_taxonomy("pricing_plan_options", "pricing_plan", [
+            "labels" => [
+                "name"                       => __( "Options", "ahana"),
+                "singular_name"              => __( "Option", "ahana"),
+                "search_items"               => __( "Search Options", "ahana"),
+                "popular_items"              => __( "Popular Options", "ahana"),
+                "all_items"                  => __( "All Options", "ahana"),
+                "edit_item"                  => __( "Edit Option", "ahana"),
+                "view_item"                  => __( "View Option", "ahana"),
+                "update_item"                => __( "Update Option", "ahana"),
+                "add_new_item"               => __( "Add New Option", "ahana"),
+                "not_found"                  => __( "No Options found.", "ahana"),
+                "no_terms"                   => __( "No Options", "ahana"),
+                "back_to_items"              => __( "&larr; Back to Options", "ahana")
+            ],
+            "hierarchical" => true,
+            "meta_box_cb" => "post_categories_meta_box",
+            "has_archive" => false,
+        ]);
+
+        register_taxonomy("pricing_plan_level", "pricing_plan", [
+            "labels" => [
+                "name"                       => __( "Levels", "ahana"),
+                "singular_name"              => __( "Level", "ahana"),
+                "search_items"               => __( "Search Levels", "ahana"),
+                "popular_items"              => __( "Popular Levels", "ahana"),
+                "all_items"                  => __( "All Levels", "ahana"),
+                "edit_item"                  => __( "Edit Level", "ahana"),
+                "view_item"                  => __( "View Level", "ahana"),
+                "update_item"                => __( "Update Level", "ahana"),
+                "add_new_item"               => __( "Add New Level", "ahana"),
+                "not_found"                  => __( "No Levels found.", "ahana"),
+                "no_terms"                   => __( "No Levels", "ahana"),
+                "back_to_items"              => __( "&larr; Back to Levels", "ahana")
+            ],
+            "hierarchical" => true,
+            "meta_box_cb" => "post_categories_meta_box",
+            "has_archive" => false,
+        ]);
     }
 }

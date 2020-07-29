@@ -1,0 +1,244 @@
+{% extends "base.twig" %}
+
+{% block body %}                                                                        
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="hero-social-warp">
+			<div class="hero-social">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</div>
+
+		<div class="arrow-buttom">
+			<img src="{{ theme.link ~ '/assets/images/icons/arrows-buttom.png' }}" alt="">
+		</div>
+
+		<div class="hero-slider owl-carousel">
+			{% for slide in slides %}
+				{% if slide.format_slide is same as ("format_image_only") %}
+					<div class="hs-item">
+						<div class="hs-style-1 text-center">
+							{% if slide.thumbnail.src is not null %}
+								<img src="{{ slide.thumbnail.src }}" alt="">
+							{% endif %}
+						</div>
+					</div>
+				{% elseif slide.format_slide is same as ("format_two_columns") %}
+					<div class="hs-item">
+						<div class="hs-style-2">
+							<div class="container-fluid h-100">
+								<div class="row h-100">
+									<div class="col-lg-6 h-100 d-none d-lg-flex align-items-xl-end align-items-lg-center">
+										<div class="hs-img">
+											{% if slide.thumbnail.src is not null %}
+												<img src="{{ slide.thumbnail.src }}" alt="">
+											{% endif %}
+										</div>
+									</div>
+									<div class="col-lg-6 d-flex align-items-center">
+										<div class="hs-text-warp">
+											<div class="hs-text">
+												<h2>{{ slide.title }}</h2>
+												<p>{{ slide.content|raw }}</p>
+												<div class="site-btn sb-white">Register now</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% elseif slide.format_slide is same as ("format_two_rows") %}
+					<div class="hs-item">
+						<div class="hs-style-3 text-center">
+							<div class="container">
+								<div class="hs-text">
+									<h2>{{ slide.title }}</h2>
+									<p>{{ slide.content|raw }}</p>
+									<div class="site-btn sb-white">Register now</div>
+								</div>
+							</div>
+							<div class="hs-img">
+								{% if slide.thumbnail.src is not null %}
+									<img src="{{ slide.thumbnail.src }}" alt="">
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+	<!-- Hero Section end -->
+
+
+	<!-- About Section -->
+	<section class="about-section spad">
+		<div class="container">
+			<div class="section-title text-center">
+                <img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.about_section_title}}</h2>
+				<p>{{ post.about_section_subtitle}}</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="about-img">
+						{% if Image(post.meta("about_section_image")).src is not null %}
+                            <img src="{{ Image(post.meta("about_section_image")).src | resize("home_about_thumbnail") }}" alt="">
+                        {% endif %}
+					</div>
+				</div>
+				<div class="col-lg-6">
+                    {% for service in services %}
+                        <div class="about-item">
+                            <div class="ai-icon">
+                                {% if service.thumbnail.src is not null %}
+                                    <img src="{{ service.thumbnail.src }}" alt="">
+                                {% endif %}
+                            </div>
+                            <div class="ai-text">
+                                <h4>{{ service.title }}</h4>
+                                <p>{{ service.content|raw }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+					
+					<a href="" class="site-btn sb-gradient mt-5">{{ __("explore more", "ahana") }}</a>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- About Section end -->
+
+
+	<!-- Classes Section -->
+	<section class="classes-section spad">
+		<div class="container">
+			<div class="section-title text-center">
+				<img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.classes_section_title }}</h2>
+				<p>{{ post.classes_section_subtitle }}</p>
+			</div>
+			<div class="classes-slider owl-carousel">
+                {% for item in classes %}
+                    {% include "parts/classes-list.twig" with { post: item} %}
+                {% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Classes Section end -->
+
+
+	<!-- Trainer Section -->
+	<section class="trainer-section overflow-hidden spad">
+		<div class="container">
+			<div class="section-title text-center">
+				<img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.trainers_section_title }}</h2>
+				<p>{{ post.trainers_section_subtitle }}</p>
+			</div>
+			<div class="trainer-slider owl-carousel">
+                {% for trainer in trainers %}
+                    <div class="ts-item">
+                        {% include "parts/trainers-list.twig" %}
+                    </div>
+                {% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Trainer Section end -->
+
+
+	<!-- Review Section -->
+	{% include "parts/testimonials-section.twig" %}
+	<!-- Review Section end -->
+
+
+	<!-- Event Section -->
+	<section class="event-section spad">
+		<div class="container">
+			<div class="section-title text-center">
+				<img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.events_section_title }}</h2>
+				<p>{{ post.events_section_subtitle }}</p>
+			</div>
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="event-video">
+						<img src="{{ theme.theme_mod('video_image_event')| resize('home_video_image') }}" alt="">
+                        <a href="{{ theme.theme_mod('video_link_event') }}" class="video-popup">
+                            <img src="{{ theme.link ~ '/assets/images/icons/play.png' }}" alt="">
+                        </a>
+					</div>
+				</div>
+				<div class="col-xl-6">
+                    {% for event in events %}
+                        {% include "parts/event-list.twig" with { post: event, imageSize: "event_thumbnail"} %}
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Event Section end -->
+
+
+	<!-- Pricing Section -->
+	<section class="pricing-section spad">
+		<div class="container">
+			<div class="section-title text-center">
+				<img src="{{ theme.link ~ '/assets/images/icons/logo-icon.png' }}" alt="">
+				<h2>{{ post.pricing_plans_section_title }}</h2>
+				<p>{{ post.pricing_plans_section_subtitle }}</p>
+			</div>
+			<div class="row">
+				{% for item in pricing_plans %}
+					<div class="col-lg-3 col-sm-6">
+						<div class="pricing-item {{ get_pricing_plan_taxonomy(item.terms( {query: {taxonomy:"pricing_plan_level" }})) }}">
+							<div class="pi-top">
+								<h4>{{ item.title }}</h4>
+							</div>
+							<div class="pi-price">
+								<h3>{{ __("$%s", "ahana")|format(item.plan_price) }}</h3>
+								<p>{{ __("per ", "ahana") ~ get_pricing_plan_taxonomy(item.terms( {query: {taxonomy:"pricing_plan_payment" }})) }}</p>
+							</div>
+							<ul>
+								{% for option in item.terms( {query: {taxonomy:"pricing_plan_options" }}) %}
+									<li>{{ option.title }}</li>
+								{% endfor %}
+							</ul>
+							<a href="#" class="site-btn sb-line-gradient">{{ __("Get started", "ahana") }}</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Pricing Section end -->
+
+
+	<!-- Sign up Section -->
+	<section class="signup-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="signup-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33245.297803635964!2d-73.76987401620775!3d40.704774398815005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1575866843291!5m2!1sen!2sbd" style="border:0;" allowfullscreen=""></iframe></div>
+				</div>
+				<div class="col-lg-6">
+					<div class="singup-text">
+						<h3>{{ post.contact_section_title }}</h3>
+						<p>{{ post.contact_section_subtitle }}</p>
+                    </div>
+
+                    {% apply shortcodes|raw %}
+                        [contact-form-7 id="264" title="sign up classes" html_id="contactForm" html_class="singup-form contact-form"]
+					{% endapply %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Sign up Section end -->
+{% endblock body %}

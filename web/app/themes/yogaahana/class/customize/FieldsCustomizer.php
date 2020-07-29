@@ -434,7 +434,29 @@ class FieldsCustomizer
 				"type"     => "text",
 				"settings" => "title_event_section",
 				"label"    => esc_html__("Title", "ahana"),
-				"section"  => "event_section"
+				"section"  => "event_section",
+				"priority"  => 10,
+			],
+
+			// Add a video link of the events section
+			[
+				"type"     => "text",
+				"settings" => "video_link_event",
+				"label"    => esc_html__("Video link", "ahana"),
+				"section"  => "event_section",
+				"default"  => esc_html__("youtube video", "ahana"),
+				"priority"  => 11,
+			],
+
+			// Add an image to the video of the events section
+			[
+				"type"        => "image",
+				"settings"    => "video_image_event",
+				"label"       => esc_html__("Video image", "ahana"),
+				"transport"   => "auto",
+				"section"     => "event_section",
+				"default"     => '',
+				"priority"    => 12,
 			],
 			
 			// add content to blog index

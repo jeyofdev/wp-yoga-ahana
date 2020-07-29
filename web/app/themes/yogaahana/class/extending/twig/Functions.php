@@ -218,6 +218,22 @@ class Functions
 
 
     /**
+     * Display the payment taxonomy for a pricing plan
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */
+    public static function get_pricing_plan_taxonomy (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("get_pricing_plan_taxonomy", function (array $payments) {
+            return strtolower($payments[0]->name);
+        }));
+    }
+
+
+
+    /**
      * retrieve the trainer corresponding to a classes or an event
      *
      * @param Environment $twig
