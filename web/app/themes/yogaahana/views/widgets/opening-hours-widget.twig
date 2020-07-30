@@ -1,0 +1,10 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    <ul>
+        {{ format_opening_hours(false)|raw }}
+    </ul>
+{{ args.after_widget|raw }}

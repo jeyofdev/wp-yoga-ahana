@@ -5,6 +5,12 @@
 .footer-widget {
     margin-bottom: 30px;
 
+    &.widget_nav_menu,
+    &.opening_hours-widget {
+        @extend .pl-0;
+        @extend .pl-lg-5
+    }
+
     .about-widget {
         max-width: 280px;
 

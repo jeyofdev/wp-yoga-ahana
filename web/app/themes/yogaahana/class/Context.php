@@ -4,6 +4,7 @@ namespace jeyofdev\wp\yoga\ahana;
 
 use Timber\Menu;
 use jeyofdev\wp\yoga\ahana\extending\Site;
+use jeyofdev\wp\yoga\ahana\extending\Timber;
 use jeyofdev\wp\yoga\ahana\options\ClubSettings;
 
 
@@ -38,6 +39,7 @@ class Context {
                 "linkedin" => get_option(ClubSettings::LINKEDIN),
                 "opening_hours" => get_option(ClubSettings::OPENING_HOURS)
             ]);
+            $this->add("sidebar_footer", Timber::get_widgets("footer"));
 
             $this->add("page_title", get_the_archive_title());
 

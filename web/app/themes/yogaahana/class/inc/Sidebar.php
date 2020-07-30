@@ -2,7 +2,9 @@
 
 namespace jeyofdev\wp\yoga\ahana\inc;
 
+use jeyofdev\wp\yoga\ahana\widgets\AboutWidget;
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
+use jeyofdev\wp\yoga\ahana\widgets\OpeningHoursWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TagCloudWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TrainerWidget;
@@ -42,6 +44,8 @@ class Sidebar
         register_widget(LatestPostWidget::class);
         register_widget(TagCloudWidget::class);
         register_widget(TrainerWidget::class);
+        register_widget(AboutWidget::class);
+        register_widget(OpeningHoursWidget::class);
     }
 
 
@@ -73,6 +77,15 @@ class Sidebar
             'before_widget' => '<div id="%1$s" class="sb-widget %2$s">',
             'after_widget'  => "</div>",
             'before_title'  => '<h2 class="sb-title">',
+            'after_title'   => "</h2>",
+        ]);
+
+        register_sidebar([
+            "id" => "footer",
+            "name" => __("Footer sidebar", "ahana"),
+            'before_widget' => '<div class="col-lg-3 col-sm-6"><div id="%1$s" class="footer-widget %2$s">',
+            'after_widget'  => "</div></div>",
+            'before_title'  => '<h2 class="fw-title">',
             'after_title'   => "</h2>",
         ]);
     }

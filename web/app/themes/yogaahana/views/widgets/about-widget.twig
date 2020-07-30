@@ -1,0 +1,15 @@
+{{ args.before_widget|raw }}
+
+    <div class="about-widget">
+        {% if theme.theme_mod('logo_footer') is not empty %}
+            <img src="{{ theme.theme_mod('logo_footer') }}" alt="">
+        {% endif %}
+
+        <p>{{ instance.content }}</p>
+        <ul>
+            <li><i class="material-icons">phone</i>{{ contact.phone|format_phone_number }}</li>
+            <li><i class="material-icons">email</i>{{ contact.email }}</li>
+            <li><i class="material-icons">map</i>{{ format_city(contact, ",") }}</li>
+        </ul>
+    </div>
+{{ args.after_widget|raw }}

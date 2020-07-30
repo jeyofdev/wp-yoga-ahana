@@ -84,6 +84,12 @@ class FieldsCustomizer
             "title"       => esc_html__("Header", "ahana"),
         ]);
 
+		// Add footer options panel
+        Kirki::add_panel("footer_option", [
+            "priority"    => 30,
+            "title"       => esc_html__("Footer", "ahana"),
+        ]);
+
         // Add theme options panel
         Kirki::add_panel("theme_option", [
             "priority"    => 40,
@@ -150,6 +156,13 @@ class FieldsCustomizer
                 "title" => esc_html__("Logo", "ahana"),
 				"panel" => "header_option",
 				"priority" => 20
+			],
+
+			// Add logo footer section
+            "logo_footer_section" => [
+                "title" => esc_html__("Logo", "ahana"),
+				"panel" => "footer_option",
+				"priority" => 10
 			],
 
             // Add top section
@@ -224,6 +237,15 @@ class FieldsCustomizer
                 "settings"    => "logo_header",
 				"label"       => esc_html__("Logo", "ahana"),
                 "section"     => "logo_header_section",
+                "default"     => ''
+			],
+
+			// Add the logo of the footer
+			[
+                "type"        => "image",
+                "settings"    => "logo_footer",
+				"label"       => esc_html__("Logo", "ahana"),
+                "section"     => "logo_footer_section",
                 "default"     => ''
 			],
 

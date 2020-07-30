@@ -57,10 +57,8 @@ class Functions
      */
     public static function format_city (Environment $twig) : void
     {
-        $twig->addFunction(new TwigFunction("format_city", function (?string $separator = null, ?bool $space = true) {
-            $context = Timber::get_context();
-            extract($context["club_settings"]);
-
+        $twig->addFunction(new TwigFunction("format_city", function (array $clubSetting = [], ?string $separator = null, ?bool $space = true) {
+            extract($clubSetting);
             $space = $space ? " " : null;
 
             return $address . $separator . $space . $city;
