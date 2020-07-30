@@ -7,6 +7,7 @@ use jeyofdev\wp\yoga\ahana\inc\Menus;
 use jeyofdev\wp\yoga\ahana\inc\Assets;
 use jeyofdev\wp\yoga\ahana\inc\Supports;
 use jeyofdev\wp\yoga\ahana\customize\Customizer;
+use jeyofdev\wp\yoga\ahana\inc\Admin;
 use jeyofdev\wp\yoga\ahana\inc\Comments;
 use jeyofdev\wp\yoga\ahana\inc\Images;
 use jeyofdev\wp\yoga\ahana\inc\Page;
@@ -45,6 +46,7 @@ class Site extends TimberSite
         Sidebar::init();
         Page::init();
         Styles::init();
+        Admin::init();
 
         return new Customizer();
     }

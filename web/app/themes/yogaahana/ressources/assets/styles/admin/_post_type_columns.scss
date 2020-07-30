@@ -1,0 +1,16 @@
+.wrap .wp-list-table.widefat.posts #the-list tr * {
+    vertical-align: middle;
+}
+
+.manage-column {
+    &.column-thumbnail {
+        width: 9.5%;
+    }
+
+    &.column-job,
+    &.column-level,
+    &.column-trainer,
+    &.column-categories {
+        width: 15%;
+    }
+}

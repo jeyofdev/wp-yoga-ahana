@@ -29,6 +29,7 @@ class Images {
             add_image_size("event_single_thumbnail", 315, 265, true);
             add_image_size("home_about_thumbnail", 557, 533, true);
             add_image_size("home_video_image", 930, 1028, true);
+            add_image_size("admin_column_thumbnail", 100, 100, false);
         });
     }
 }
