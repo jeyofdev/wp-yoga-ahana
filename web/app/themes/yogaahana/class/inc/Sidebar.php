@@ -2,6 +2,7 @@
 
 namespace jeyofdev\wp\yoga\ahana\inc;
 
+use jeyofdev\wp\yoga\ahana\widgets\AboutEventOrClassesWidget;
 use jeyofdev\wp\yoga\ahana\widgets\AboutWidget;
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\OpeningHoursWidget;
@@ -48,6 +49,7 @@ class Sidebar
         register_widget(AboutWidget::class);
         register_widget(OpeningHoursWidget::class);
         register_widget(SearchWidget::class);
+        register_widget(AboutEventOrClassesWidget::class);
     }
 
 
@@ -91,6 +93,15 @@ class Sidebar
             'after_widget'  => "</div></div>",
             'before_title'  => '<h2 class="fw-title">',
             'after_title'   => "</h2>",
+        ]);
+
+        register_sidebar([
+            "id" => "event",
+            "name" => __("Event sidebar", "ahana"),
+            "before_widget" => '<div id="%1$s" class="sb-widget %2$s">',
+            "after_widget"  => "</div>",
+            "before_title"  => '<h2 class="sb-title">',
+            "after_title"   => "</h2>",
         ]);
     }
 }

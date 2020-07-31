@@ -147,6 +147,14 @@ register_extended_field_group([
             ->required()
             ->displayFormat("d/m/Y")
             ->returnFormat("d/m/Y"),
+        TimePicker::make(__("Start time", "ahana"), "event_start_time")
+            ->displayFormat("H:ia")
+            ->returnFormat("H:ia")
+            ->required(),
+        TimePicker::make(__("End time", "ahana"), "event_end_time")
+            ->displayFormat("H:ia")
+            ->returnFormat("H:ia")
+            ->required(),
         Number::make(__("Number of places", "ahana"), "event_number")
             ->required()
             ->step(1)

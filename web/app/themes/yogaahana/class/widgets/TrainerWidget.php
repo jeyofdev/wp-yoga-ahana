@@ -55,10 +55,7 @@ class TrainerWidget extends WP_Widget {
         $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("About instructor", "ahana");
 
         // trainer associated with the current post
-        $postTrainer = Timber::get_terms([
-            "post_type" => "post",
-            "taxonomy" => "trainer"
-        ]);
+        $postTrainer = get_the_terms($post, "trainer")[0];
 
         // trainer
         $trainer = Timber::get_post(
@@ -66,7 +63,7 @@ class TrainerWidget extends WP_Widget {
 				"widget_posts_args", [
                     "post_type" => "trainer",
                     "posts_per_page" => 1,
-                    "post_name__in" => [$postTrainer[0]->slug]
+                    "post_name__in" => [$postTrainer->slug]
 				],
 				$instance
             )

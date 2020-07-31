@@ -17,6 +17,7 @@ $context["events"] = Timber::get_posts([
     "order" => "DESC",
     "post__not_in" => [$post->ID]
 ]);
+$context["sidebar_event"] = Timber::get_widgets("event");
 
 $templates = "pages/single-event.twig";
 
