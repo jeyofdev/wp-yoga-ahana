@@ -34,6 +34,42 @@ class Queries {
             else if (!is_admin() && is_post_type_archive("event") && $query->is_main_query()) {
                 $query->set("post_type", "event");
                 $query->set("posts_per_page", 8);
+
+                // filter date
+                $filterDate = explode("/", get_query_var("event_date"));
+
+                $date = '';
+                if (count($filterDate) === 3) {
+                    $date = $filterDate[2] . $filterDate[0] . $filterDate[1]; 
+                }
+
+                if ($date) {
+                    $meta_query = $query->get("meta_query", []);
+                    $meta_query[] = [
+                        "key" => "event_date",
+                        "value" => $date,
+                        "compare" => ">="
+                    ];
+                    $query->set("meta_query", $meta_query);
+                }
+
+                // filter search
+                $search = get_query_var("event_search");
+                if ($search) {
+                    $query->set("s", $search);
+                }
+
+                // filter trainer
+                $trainer = get_query_var("event_trainer");
+                if ($trainer) {
+                    $meta_query = $query->get("meta_query", []);
+                    $meta_query[] = [
+                        "taxonomy" => "trainer",
+                        "field"    => "slug",
+                        "terms" => $trainer,
+                    ];
+                    $query->set("tax_query", $meta_query);
+                }
             }
 
             else if (!is_admin() && is_category() && $query->is_main_query()) {
@@ -79,6 +115,9 @@ class Queries {
         {
             $params[] = "search_all";
             $params[] = "search_blog";
+            $params[] = "event_date";
+            $params[] = "event_search";
+            $params[] = "event_trainer";
 
             return $params;
         });

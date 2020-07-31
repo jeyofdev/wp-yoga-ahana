@@ -42,6 +42,10 @@ class Twig extends TimberTwig
 		$twig->addFunction(new TwigFunction("get_post_meta", "get_post_meta"));
 		$twig->addFunction(new TwigFunction("sprintf", "sprintf"));
 		$twig->addFunction(new TwigFunction("get_search_query", "get_search_query"));
+		$twig->addFunction(new TwigFunction("get_post_type_archive_link", "get_post_type_archive_link"));
+		$twig->addFunction(new TwigFunction("selected", "selected"));
+
+
 
 
         Functions::dump($twig);

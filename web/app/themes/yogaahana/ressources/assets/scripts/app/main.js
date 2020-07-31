@@ -257,7 +257,7 @@ $(window).on('load', function() {
 	// /* ------------------
 	// 	Datepicker
 	// -------------------- */
-	// $('.event-date').datepicker();
+	$('.event-date').datepicker();
 
 })(jQuery);
 

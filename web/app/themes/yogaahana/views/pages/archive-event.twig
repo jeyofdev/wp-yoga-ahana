@@ -4,6 +4,43 @@
     {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
 
 
+    <!-- Filter -->
+	<div class="container">
+		<div class="event-filter-warp">
+			<div class="row">
+				<div class="col-xl-3">
+					<p>{{ __("Showing %d events of %d events", "ahana")|format(posts.count, posts.found_posts) }}</p>
+				</div>
+				<div class="col-xl-9">
+					<form action="{{ get_post_type_archive_link("event") }}" class="event-filter-form">
+						<div class="ef-item">
+							<input type="text" id="date" name="event_date" placeholder="{{ __('Event Date', 'ahana') }}" class="event-date" value="{{ query_vars.date }}">
+							<i class="material-icons">event_available</i>
+						</div>
+
+						<div class="ef-item">
+							<input type="text" id="event_search" name="event_search" value="{{ query_vars.event_search }}" placeholder="{{ __('Search', 'ahana') }}">
+							<i class="material-icons">search</i>
+						</div>
+
+						<div class="ef-item">
+							<select name="event_trainer" id="trainer" class="circle-select">
+								<option value="">{{ __("Choose Trainer", "ahana") }}</option>
+								{% for trainer in trainers %}
+									<option value="{{ trainer.slug }}" {{ selected(trainer.slug, query_vars.trainer) }}>{{ trainer.title }}</option>
+								{% endfor %}
+							</select>
+							<i class="material-icons">person</i>
+						</div>
+
+						<button type="submit" class="site-btn sb-gradient">{{ __("Find Event", "ahana") }}</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
     <!-- Events Section -->
 	<section class="events-page-section spad">
 		<div class="container">
