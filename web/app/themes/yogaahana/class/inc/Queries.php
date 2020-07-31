@@ -58,10 +58,13 @@ class Queries {
             }
 
             $searchAll = get_query_var("search_all");
+            $searchBlog = get_query_var("search_blog");
 
             if (!empty($searchAll)) {
                 $query->set("post_type", ["post", "trainer", "classes", "event"]);
                 $query->set("posts_per_page", 10);
+            } elseif (!empty($searchBlog)) {
+                $query->set("post_type", "post");
             }
 
             return $query;
@@ -75,6 +78,7 @@ class Queries {
         add_filter("query_vars", function (array $params)
         {
             $params[] = "search_all";
+            $params[] = "search_blog";
 
             return $params;
         });

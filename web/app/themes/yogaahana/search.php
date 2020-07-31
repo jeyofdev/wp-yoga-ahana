@@ -12,7 +12,8 @@ use jeyofdev\wp\yoga\ahana\extending\Timber;
 
 $context = Timber::context();
 $context["query_vars"] = [
-    "search_all" => get_query_var("search_all")
+    "search_all" => get_query_var("search_all"),
+    "search_blog" => get_query_var("search_blog")
 ];
 
 $templates = ["pages/search.twig"];

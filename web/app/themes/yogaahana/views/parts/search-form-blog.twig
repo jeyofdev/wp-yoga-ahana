@@ -1,0 +1,8 @@
+<!-- search form of the blog posts -->
+<form role="search" action="{{ site.home }}" method="get" id="searchform" class="search-form">
+    <input type="hidden" name="search_blog" value="1" />
+    <input type="text" id="search_posts" name="s" value="{{ get_search_query() }}" aria-label="Search" placeholder="{{ __("Search", "ahana") }}">
+    <button>
+        <i class="material-icons">search</i>
+    </button type="submit">
+</form>

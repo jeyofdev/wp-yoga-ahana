@@ -6,6 +6,7 @@ use jeyofdev\wp\yoga\ahana\widgets\AboutWidget;
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\OpeningHoursWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
+use jeyofdev\wp\yoga\ahana\widgets\SearchWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TagCloudWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TrainerWidget;
 
@@ -46,6 +47,7 @@ class Sidebar
         register_widget(TrainerWidget::class);
         register_widget(AboutWidget::class);
         register_widget(OpeningHoursWidget::class);
+        register_widget(SearchWidget::class);
     }
 
 
@@ -60,6 +62,8 @@ class Sidebar
         unregister_widget("WP_Widget_Categories");
         unregister_widget("WP_Widget_Recent_Posts");
         unregister_widget("WP_Widget_Tag_Cloud");
+        unregister_widget("WP_Widget_Search");
+
     }
 
 
