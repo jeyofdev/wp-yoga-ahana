@@ -41,6 +41,7 @@ class Twig extends TimberTwig
 		$twig->addFunction(new TwigFunction("comment_form", "comment_form"));
 		$twig->addFunction(new TwigFunction("get_post_meta", "get_post_meta"));
 		$twig->addFunction(new TwigFunction("sprintf", "sprintf"));
+		$twig->addFunction(new TwigFunction("get_search_query", "get_search_query"));
 
 
         Functions::dump($twig);
@@ -67,9 +68,9 @@ class Twig extends TimberTwig
 	 * @return Environment
 	 */
     public function add_timber_filters($twig) {
+		Filters::chars($twig);
+		Filters::texturize($twig);
 		Filters::format_phone_number($twig);
-        Filters::chars($twig);
-		
 
 		return $twig;
 	}

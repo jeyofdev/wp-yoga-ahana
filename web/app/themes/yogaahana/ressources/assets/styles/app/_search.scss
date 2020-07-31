@@ -63,3 +63,23 @@
         color: #fff;
     }
 }
+
+.search-page-section {
+    .row {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+        a {
+            color: $heading_color;
+
+            @include transition(all .4s);
+
+            &:hover {
+                color: $primary_color;
+            }
+        }
+    }
+}
+

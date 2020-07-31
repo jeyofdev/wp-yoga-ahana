@@ -38,6 +38,24 @@ class Filters
 
 
     /**
+     * Replaces common plain text characters with formatted entities
+     *
+     * @param Environment $twig
+     *
+     * @return void
+     */
+    public static function texturize (Environment $twig) : void
+    {
+        $twig->addFilter(new TwigFilter("texturize", function (string $text) {
+            $text = str_replace("&#038;", "&", $text);
+            $text = str_replace("&hellip;", "...", $text);
+            return $text;
+        }));
+    }
+
+
+
+    /**
      * Format a phone number
      *
      * @param Environment $twig

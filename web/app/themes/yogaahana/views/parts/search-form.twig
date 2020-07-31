@@ -1,0 +1,8 @@
+<!-- global search form -->
+<form role="search" action="{{ site.home }}" method="get" id="searchform" class="search-moderl-form">
+    <input type="hidden" name="search_all" value="1" />
+    <input type="text" id="s" name="s" value="{{ get_search_query() }}" aria-label="Search" placeholder="{{ __("Search", "ahana") }}">
+    <button type="submit">
+        <img src="{{ theme.link ~ '/assets/images/icons/search-2.png' }}" alt="">
+    </button>
+</form>

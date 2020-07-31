@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block body %}
+	{% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("intro_blog")  } %}
+
+
+	<!-- Search result Section -->
+	<section class="search-page-section spad">
+		<div class="container">
+			<div class="row">
+				{% for post in posts %}
+                    <div class="col-12">
+                        <a href="{{ post.link }}">
+                            <h2 class="d-block text-center mb-2">{{ post.title }}</h2>
+                        </a>
+                    </div>
+				{% endfor %}
+			</div>
+
+			<!-- Pagination -->
+			{% include "parts/pagination.twig" %}
+		</div>
+	</section>
+	<!-- Events Section end -->
+{% endblock body %}
