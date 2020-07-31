@@ -158,6 +158,13 @@ class FieldsCustomizer
 				"priority" => 20
 			],
 
+			// Add search header section
+            "search_header_section" => [
+                "title" => esc_html__("Search", "ahana"),
+				"panel" => "header_option",
+				"priority" => 30
+			],
+
 			// Add logo footer section
             "logo_footer_section" => [
                 "title" => esc_html__("Logo", "ahana"),
@@ -238,6 +245,26 @@ class FieldsCustomizer
 				"label"       => esc_html__("Logo", "ahana"),
                 "section"     => "logo_header_section",
                 "default"     => ''
+			],
+
+			// Add background image on header search
+			[
+				"type"        => "background",
+				"settings"    => "header_search_background_image",
+				"transport"   => "auto",
+				"section"     => "search_header_section",
+				"default"     => [
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "center top",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
+				],
+				"output" => [
+					[
+						"element"  => ".search-model",
+					]
+				]
 			],
 
 			// Add the logo of the footer
