@@ -67,7 +67,6 @@ class Admin {
                 "title" => $columns["title"],
                 "categories" => __("Categories", "ahana"),
                 "trainer" => __("Trainer", "ahana"),
-                "level" => __("Level", "ahana"),
                 "date" => $columns["date"]
             ];
         });
@@ -76,9 +75,6 @@ class Admin {
             switch ($column) {
                 case "thumbnail":
                     the_post_thumbnail("admin_column_thumbnail", $postId);
-                    break;
-                case "level":
-                    echo self::set_column("classes", $postId, "classes_level");
                     break;
                 case "trainer":
                     echo self::set_column("classes", $postId, "trainer");
@@ -193,7 +189,7 @@ class Admin {
     public static function term_radio_checklist () : void
     {
         add_filter("wp_terms_checklist_args", function ($args) {
-            if ((!empty( $args["taxonomy"])) && (($args["taxonomy"] === "trainer") || ($args["taxonomy"] === "classes_level") || ($args["taxonomy"] === "pricing_plan_payment") || ($args["taxonomy"] === "pricing_plan_level"))) {
+            if ((!empty( $args["taxonomy"])) && (($args["taxonomy"] === "trainer") || ($args["taxonomy"] === "pricing_plan_payment") || ($args["taxonomy"] === "pricing_plan_level"))) {
                 if (empty($args["walker"]) || is_a($args["walker"], "Walker") ) {
                     $args['walker'] = new TaxonomyRadioChecklistWalker();
                 }
@@ -213,9 +209,6 @@ class Admin {
         add_action("admin_menu", function () {
             remove_meta_box("trainerdiv", ["classes", "event"], "normal");
             add_meta_box( "trainerdiv", "Trainers", [Styles::class, "remove_most_used_meta_box"], ["classes", "event"] , "side");
-
-            remove_meta_box("classes_leveldiv", ["classes"], "normal");
-            add_meta_box( "classes_leveldiv", "Levels", [Styles::class, "remove_most_used_meta_box"], ["classes"] , "side");
 
             remove_meta_box("pricing_plan_paymentdiv", ["pricing_plan"], "normal");
             add_meta_box( "pricing_plan_paymentdiv", "Payments", [Styles::class, "remove_most_used_meta_box"], ["pricing_plan"] , "side");

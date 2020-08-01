@@ -168,15 +168,47 @@
     margin-bottom: 55px;
 }
 
+.classes-filter {
+    select,
+    .circle-select,
+    input {
+        width: 100%;
+        height: 49px;
+        line-height: 47px;
+        min-width: 234px;
+        padding-left: 29px;
+        border-radius: 41px;
+        border: 1px solid #e6e6e6;
+        background: #fafafa;
+        margin-bottom: 20px;
+        color: #a8a8a8;
+        padding-right: 30px;
+        color: #a8a8a8;
+
+        &::placeholder {
+            color: #a8a8a8;
+        }
+    }
+}
+
 .circle-select {
     height: 49px;
     line-height: 47px;
     min-width: 234px;
     padding-left: 29px;
+    padding-right: 30px;
     border-radius: 41px;
     border: 1px solid #e6e6e6;
     background: #fafafa;
+    margin-bottom: 20px;
+    color: #a8a8a8;
 
+    &::placeholder {
+        color: #a8a8a8;
+    }
+}
+
+.circle-select {
     .current {
         font-size: 14px;
         color: #999;

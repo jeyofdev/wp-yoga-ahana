@@ -8,10 +8,13 @@ use jeyofdev\wp\yoga\ahana\widgets\FeaturedClassesWidget;
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\OpeningHoursWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
+use jeyofdev\wp\yoga\ahana\widgets\SearchClassesWidget;
 use jeyofdev\wp\yoga\ahana\widgets\SearchWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TagCloudWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TrainerWidget;
 use jeyofdev\wp\yoga\ahana\widgets\VideoWidget;
+
+
 
 /**
  * Class which manages the sidebars
@@ -52,6 +55,7 @@ class Sidebar
         register_widget(AboutEventOrClassesWidget::class);
         register_widget(FeaturedClassesWidget::class);
         register_widget(VideoWidget::class);
+        register_widget(SearchClassesWidget::class);
     }
 
 

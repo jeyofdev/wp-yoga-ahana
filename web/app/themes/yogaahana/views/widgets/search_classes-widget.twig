@@ -1,0 +1,31 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    <form action="{{ get_post_type_archive_link("classes") }}" class="classes-filter">
+        <select name="classes_category" id="category" class="circle-select">
+            <option value="">{{ __("Choose Category", "ahana") }}</option>
+            {% for category in categories %}
+                <option value="{{ category.slug }}" {{ selected(category.slug, query_vars.category) }}>{{ category.title }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="classes_trainer" id="trainer" class="circle-select">
+            <option value="">{{ __("Choose Trainer", "ahana") }}</option>
+            {% for trainer in trainers %}
+                <option value="{{ trainer.slug }}" {{ selected(trainer.slug, query_vars.trainer) }}>{{ trainer.title }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="number" id="classes_price_min" name="classes_price_min" value="{{ query_vars.price_min }}" placeholder="{{ __('Minimum price', 'ahana') }}">
+        
+        <input type="number" id="classes_price_max" name="classes_price_max" value="{{ query_vars.price_max }}" placeholder="{{ __('Maximum price', 'ahana') }}">
+
+        <div class="clearfix"></div>
+
+        <button class="site-btn sb-gradient">{{ __("Filter now", "ahana") }}</button>
+    </form>
+
+{{ args.after_widget|raw }}

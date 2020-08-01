@@ -29,6 +29,43 @@ class Queries {
             else if (!is_admin() && is_post_type_archive("classes") && $query->is_main_query()) {
                 $query->set("post_type", "classes");
                 $query->set("posts_per_page", 6);
+
+                $meta_query = $query->get("meta_query", []);
+
+                // filter category
+                $category = get_query_var("classes_category");
+                if ($category) {
+                    $meta_query[] = [
+                        "taxonomy" => "category",
+                        "field"    => "slug",
+                        "terms" => $category,
+                    ];
+                    $query->set("tax_query", $meta_query);
+                }
+
+                // filter trainer
+                $trainer = get_query_var("classes_trainer");
+                if ($trainer) {
+                    $meta_query[] = [
+                        "taxonomy" => "trainer",
+                        "field"    => "slug",
+                        "terms" => $trainer,
+                    ];
+                    $query->set("tax_query", $meta_query);
+                }
+
+                // filter price
+                $price_min = get_query_var("classes_price_min");
+                $price_max = get_query_var("classes_price_max");
+                if ($price_min & $price_max) {
+                    $meta_query[] = [
+                        "key" => "classes_price",
+                        "value" => [$price_min, $price_max],
+                        "type" => "numeric",
+                        "compare" => "BETWEEN"
+                    ];
+                    $query->set("meta_query", $meta_query);
+                }
             }
 
             else if (!is_admin() && is_post_type_archive("event") && $query->is_main_query()) {
@@ -118,6 +155,10 @@ class Queries {
             $params[] = "event_date";
             $params[] = "event_search";
             $params[] = "event_trainer";
+            $params[] = "classes_trainer";
+            $params[] = "classes_category";
+            $params[] = "classes_price_min";
+            $params[] = "classes_price_max";
 
             return $params;
         });
