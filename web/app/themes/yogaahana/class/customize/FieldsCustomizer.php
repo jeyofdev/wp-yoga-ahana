@@ -207,11 +207,18 @@ class FieldsCustomizer
 				"priority" => 60
 			],
 
+            // Add video section
+            "video_section" => [
+                "title" => esc_html__("Video", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 70
+			],
+
             // Add blog section
             "blog_section" => [
                 "title" => esc_html__("Blog", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 70
+				"priority" => 80
 			]
 		];
 
@@ -490,9 +497,9 @@ class FieldsCustomizer
 			// Add a video link of the events section
 			[
 				"type"     => "text",
-				"settings" => "video_link_event",
-				"label"    => esc_html__("Video link", "ahana"),
-				"section"  => "event_section",
+				"settings" => "video_link",
+				"label"    => esc_html__("link", "ahana"),
+				"section"  => "video_section",
 				"default"  => esc_html__("youtube video", "ahana"),
 				"priority"  => 11,
 			],
@@ -500,10 +507,10 @@ class FieldsCustomizer
 			// Add an image to the video of the events section
 			[
 				"type"        => "image",
-				"settings"    => "video_image_event",
-				"label"       => esc_html__("Video image", "ahana"),
+				"settings"    => "video_image",
+				"label"       => esc_html__("image", "ahana"),
 				"transport"   => "auto",
-				"section"     => "event_section",
+				"section"     => "video_section",
 				"default"     => '',
 				"priority"    => 12,
 			],

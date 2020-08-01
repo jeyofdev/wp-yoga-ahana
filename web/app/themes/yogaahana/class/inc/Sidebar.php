@@ -11,8 +11,7 @@ use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
 use jeyofdev\wp\yoga\ahana\widgets\SearchWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TagCloudWidget;
 use jeyofdev\wp\yoga\ahana\widgets\TrainerWidget;
-
-
+use jeyofdev\wp\yoga\ahana\widgets\VideoWidget;
 
 /**
  * Class which manages the sidebars
@@ -52,6 +51,7 @@ class Sidebar
         register_widget(SearchWidget::class);
         register_widget(AboutEventOrClassesWidget::class);
         register_widget(FeaturedClassesWidget::class);
+        register_widget(VideoWidget::class);
     }
 
 
@@ -67,7 +67,7 @@ class Sidebar
         unregister_widget("WP_Widget_Recent_Posts");
         unregister_widget("WP_Widget_Tag_Cloud");
         unregister_widget("WP_Widget_Search");
-
+        unregister_widget("WP_Widget_Media_Video");
     }
 
 

@@ -1,0 +1,12 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    <div class="sb-video">
+        <img src="{{ theme.theme_mod('video_image')| resize('video_image_widget') }}" alt="">
+        <a href="{{ theme.theme_mod('video_link') }}" class="video-popup"><img src="{{ theme.link ~ '/assets/images/icons/play.png' }}" alt=""></a>
+    </div>
+
+{{ args.after_widget|raw }}
