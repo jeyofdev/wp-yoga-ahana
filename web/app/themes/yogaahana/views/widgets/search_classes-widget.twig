@@ -23,6 +23,22 @@
         
         <input type="number" id="classes_price_max" name="classes_price_max" value="{{ query_vars.price_max }}" placeholder="{{ __('Maximum price', 'ahana') }}">
 
+        <h3>{{ __("Filter by Day", "ahana") }}</h3>
+
+        {% for item in days %}
+            <div class="cf-cal">
+                {% for day in item %}
+                    {% set dayName = day.slug %}
+                    {% set name = "classes_" ~ dayName %}
+
+                    <div class="cf-radio">
+                        <input type="checkbox" name="{{ name }}" id="{{ day.slug }}" {{checked("on", query_vars[dayName])}} }}>
+                        <label for="{{ day.slug }}">{{ day.name }}</label>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
         <div class="clearfix"></div>
 
         <button class="site-btn sb-gradient">{{ __("Filter now", "ahana") }}</button>

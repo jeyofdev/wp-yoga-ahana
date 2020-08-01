@@ -44,6 +44,7 @@ class Twig extends TimberTwig
 		$twig->addFunction(new TwigFunction("get_search_query", "get_search_query"));
 		$twig->addFunction(new TwigFunction("get_post_type_archive_link", "get_post_type_archive_link"));
 		$twig->addFunction(new TwigFunction("selected", "selected"));
+		$twig->addFunction(new TwigFunction("checked", "checked"));
 		$twig->addFunction(new TwigFunction("is_singular", "is_singular"));
 
         Functions::dump($twig);
@@ -56,6 +57,7 @@ class Twig extends TimberTwig
 		Functions::get_classes_days($twig);
 		Functions::get_pricing_plan_taxonomy($twig);
 		Functions::get_trainer($twig);
+		Functions::get_number_posts($twig);
 
 		return $twig;
     }

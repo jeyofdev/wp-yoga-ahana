@@ -237,7 +237,8 @@ class Functions
      * @param Environment $twig
      * 
      * @return void
-     */public static function get_trainer (Environment $twig) : void
+     */
+    public static function get_trainer (Environment $twig) : void
     {
         $twig->addFunction(new TwigFunction("get_trainer", function (Post $post) {
             $trainer = get_the_terms($post, "trainer");
@@ -264,6 +265,17 @@ class Functions
                 "job" => $job[0]->name,
                 "thumbnail" => $items[0]->trainer_avatar
             ];
+        }));
+    }
+
+
+
+    public static function get_number_posts (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("get_number_posts", function ($posts, string $singular, string $plural) {
+            $output = sprintf(_n($singular, $plural, $posts->count(), "ahana"), $posts->count(), $posts->found_posts);
+
+            return $output;
         }));
     }
 }

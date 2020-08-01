@@ -8,6 +8,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
+                    <div class="classes-top">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {% if posts is not empty %}
+                                    <p>{{ get_number_posts(posts, "Showing %d class of %d class", "Showing %d classes of %d classes") }}</p>
+                                {% else %}
+                                    <p>{{ __("Your search criteria are too restrictive", "ahana") }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="row">
                         {% for post in posts %}
                             <div class="col-md-6">

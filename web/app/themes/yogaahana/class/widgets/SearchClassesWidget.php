@@ -65,12 +65,36 @@ class SearchClassesWidget extends WP_Widget
             "taxonomy" => "categories"
         ]);
 
+        $days = Timber::get_terms([
+            "taxonomy" => "classes_day",
+            "orderby" => "ID",
+        ]);
+
+        $odd = [];
+        $even = [];
+        foreach ($days as $key => $value) {
+            if ($key % 2) {
+                $odd[$key] = $value;
+            } else {
+                $even[$key] = $value;
+            }
+        }
+
+        $context["days"] = [
+            "even" => $even, 
+            "odd" => $odd
+        ];
+
         $context["query_vars"] = [
             "category" => get_query_var("classes_category"),
             "trainer" => get_query_var("classes_trainer"),
             "price_min" => get_query_var("classes_price_min"),
             "price_max" => get_query_var("classes_price_max"),
         ];
+
+        foreach ($days as $day) {
+            $context["query_vars"][$day->slug] = get_query_var("classes_" . $day->slug);
+        }
 
         Timber::render("widgets/search_classes-widget.twig", $context);
     }

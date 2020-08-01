@@ -9,7 +9,11 @@
 		<div class="event-filter-warp">
 			<div class="row">
 				<div class="col-xl-3">
-					<p>{{ __("Showing %d events of %d events", "ahana")|format(posts.count, posts.found_posts) }}</p>
+					{% if posts is not empty %}
+						<p>{{ get_number_posts(posts, "Showing %d event of %d event", "Showing %d events of %d events") }}</p>
+					{% else %}
+						<p>{{ __("Your search criteria are too restrictive", "ahana") }}</p>
+					{% endif %}
 				</div>
 				<div class="col-xl-9">
 					<form action="{{ get_post_type_archive_link("event") }}" class="event-filter-form">

@@ -3,6 +3,8 @@
 namespace jeyofdev\wp\yoga\ahana\inc;
 
 use \WP_Query;
+use jeyofdev\wp\yoga\ahana\extending\Timber;
+
 
 
 /**
@@ -65,6 +67,25 @@ class Queries {
                         "compare" => "BETWEEN"
                     ];
                     $query->set("meta_query", $meta_query);
+                }
+
+                // filter days
+                $days = Timber::get_terms([
+                    "taxonomy" => "classes_day",
+                    "orderby" => "ID",
+                ]);
+
+                foreach ($days as $day) {
+                    $query_var = get_query_var("classes_" . $day->slug());
+
+                    if ($query_var) {
+                        $meta_query[] = [
+                            "taxonomy" => "classes_day",
+                            "field"    => "slug",
+                            "terms" => $day->slug()
+                        ];
+                        $query->set("tax_query", $meta_query);
+                    }
                 }
             }
 
@@ -160,6 +181,14 @@ class Queries {
             $params[] = "classes_price_min";
             $params[] = "classes_price_max";
 
+            $days = Timber::get_terms([
+                "taxonomy" => "classes_day",
+                "orderby" => "ID",
+            ]);
+            
+            foreach ($days as $day) {
+                $params[] = "classes_" . $day->slug;
+            }
             return $params;
         });
     }
