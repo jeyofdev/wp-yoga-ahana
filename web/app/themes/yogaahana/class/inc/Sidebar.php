@@ -105,6 +105,15 @@ class Sidebar
         ]);
 
         register_sidebar([
+            "id" => "classes-list",
+            "name" => __("Classes sidebar list", "ahana"),
+            "before_widget" => '<div id="%1$s" class="sb-widget %2$s">',
+            "after_widget"  => "</div>",
+            "before_title"  => '<h2 class="sb-title">',
+            "after_title"   => "</h2>",
+        ]);
+
+        register_sidebar([
             "id" => "classes-single",
             "name" => __("Classes single sidebar", "ahana"),
             "before_widget" => '<div id="%1$s" class="sb-widget %2$s">',

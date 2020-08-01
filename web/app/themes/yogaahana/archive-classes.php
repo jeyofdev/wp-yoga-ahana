@@ -11,6 +11,7 @@ use jeyofdev\wp\yoga\ahana\extending\Timber;
 
 
 $context = Timber::context();
+$context["sidebar_classes_list"] = Timber::get_widgets("classes-list");
 
 $templates = "pages/archive-classes.twig";
 
