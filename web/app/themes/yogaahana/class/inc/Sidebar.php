@@ -4,6 +4,7 @@ namespace jeyofdev\wp\yoga\ahana\inc;
 
 use jeyofdev\wp\yoga\ahana\widgets\AboutEventOrClassesWidget;
 use jeyofdev\wp\yoga\ahana\widgets\AboutWidget;
+use jeyofdev\wp\yoga\ahana\widgets\FeaturedClassesWidget;
 use jeyofdev\wp\yoga\ahana\widgets\LatestPostWidget;
 use jeyofdev\wp\yoga\ahana\widgets\OpeningHoursWidget;
 use jeyofdev\wp\yoga\ahana\widgets\PostCategoryWidget;
@@ -50,6 +51,7 @@ class Sidebar
         register_widget(OpeningHoursWidget::class);
         register_widget(SearchWidget::class);
         register_widget(AboutEventOrClassesWidget::class);
+        register_widget(FeaturedClassesWidget::class);
     }
 
 

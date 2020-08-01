@@ -1,0 +1,38 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    <div class="popular-classes-widget owl-carousel">
+        {% for item in classes %}
+            <div class="pc-item">
+                <div class="pc-thumb set-bg">
+                    {% if item.thumbnail.src is not null %}
+                        <img src="{{ item.thumbnail.src | resize("featured_classes_thumbnail_widget") }}" alt="">
+                    {% endif %}
+                </div>
+
+                <div class="pc-text">
+                    <h4>
+                        <a href="{{ item.link }}">{{ item.title|chars(10)  }}</a>
+                    </h4>
+                    <ul>
+                        <li>
+                            <i class="material-icons">event_available</i>
+                            {{ get_classes_days(item.terms( {query: {taxonomy:"classes_day" }} )) }}
+                        </li>
+                        <li>
+                            <i class="material-icons">alarm_on</i>
+                            {{ item.classes_start_time|date("H:ia") ~ " - " ~ item.classes_end_time|date("H:ia") }}
+                        </li>
+                        <li>
+                            <i class="material-icons">person_outline</i>
+                            {{ get_trainer(item).trainer }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{{ args.after_widget|raw }}
