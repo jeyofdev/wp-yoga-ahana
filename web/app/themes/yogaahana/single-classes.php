@@ -17,6 +17,8 @@ $context["classes"] = Timber::get_posts([
     "order" => "DESC",
     "post__not_in" => [$post->ID]
 ]);
+$context["sidebar_classes_single"] = Timber::get_widgets("classes-single");
+
 $templates = "pages/single-classes.twig";
 
 Timber::render($templates, $context);

@@ -44,9 +44,7 @@ class Twig extends TimberTwig
 		$twig->addFunction(new TwigFunction("get_search_query", "get_search_query"));
 		$twig->addFunction(new TwigFunction("get_post_type_archive_link", "get_post_type_archive_link"));
 		$twig->addFunction(new TwigFunction("selected", "selected"));
-
-
-
+		$twig->addFunction(new TwigFunction("is_singular", "is_singular"));
 
         Functions::dump($twig);
 		Functions::dd($twig);

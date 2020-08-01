@@ -7,7 +7,12 @@
     <div class="classes-info">
         <ul>
             <li><i class="material-icons">map</i>{{ format_city(club_settings, ",") }}</li>
-            <li><i class="material-icons">event_available</i>{{ post.event_date|date("d F, Y") }}</li>
+            {% if is_singular("event") %}
+                <li><i class="material-icons">event_available</i>{{ post.event_date|date("d F, Y") }}</li>
+            {% endif %}
+            {% if is_singular("classes") %}
+                <li><i class="material-icons">done_all</i>{{ get_classes_days(post.terms( {query: {taxonomy:"classes_day" }} )) }}</li>
+            {% endif %}
             <li><i class="material-icons">alarm_on</i>{{ post.event_start_time|date("H:ia") ~ " - " ~ post.event_end_time|date("H:ia") }}</li>
             <li><i class="material-icons">person_outline</i>{{ get_trainer(post).trainer }}</li>
         </ul>
