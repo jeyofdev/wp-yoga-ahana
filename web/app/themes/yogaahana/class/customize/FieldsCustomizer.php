@@ -226,13 +226,6 @@ class FieldsCustomizer
                 "title" => esc_html__("Video", "ahana"),
 				"panel" => "theme_option",
 				"priority" => 90
-			],
-
-            // Add blog section
-            "blog_section" => [
-                "title" => esc_html__("Blog", "ahana"),
-				"panel" => "theme_option",
-				"priority" => 100
 			]
 		];
 
@@ -393,7 +386,8 @@ class FieldsCustomizer
 							".hs-text *",
 							".sb-gradient",
 							".sb-line-gradient:hover",
-							".ed-note"
+							".ed-note",
+							".site-pagination a:hover i"
 						],
 						"property" => "color"
 					],
@@ -707,7 +701,7 @@ class FieldsCustomizer
 				]
 			],
 
-			// Add background image of the breadcrumb
+			// Add background image of the top section
 			[
 				"type"        => "background",
 				"settings"    => "top_section_background_image",
@@ -720,12 +714,82 @@ class FieldsCustomizer
 					"background-size"       => "cover",
 					"background-attachment" => "scroll",
 				],
-				"priority"  => 15,
+				"priority"  => 10,
 				"output" => [
 					[
 						"element"  => ".page-top-section",
 					]
 				]
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_about",
+				"label"    => esc_html__("About", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 20,
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_classes",
+				"label"    => esc_html__("Classes", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 30,
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_trainer",
+				"label"    => esc_html__("Trainers", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 40,
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_event",
+				"label"    => esc_html__("Events", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 50,
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_blog",
+				"label"    => esc_html__("Blog", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 60,
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_contact",
+				"label"    => esc_html__("Contact", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 70,
+			],
+			
+			// add content of the top section for blog templates
+			[
+				"type"     => "textarea",
+				"settings" => "top_section_content_search",
+				"label"    => esc_html__("Search", "ahana"),
+				"section"  => "top_section",
+				"default"  => '',
+				"priority"  => 80,
 			],
 
 			// Add background image of the what_we_do_section
@@ -806,15 +870,6 @@ class FieldsCustomizer
 				"section"     => "video_section",
 				"default"     => '',
 				"priority"    => 12,
-			],
-			
-			// add content to blog index
-			[
-				"type"     => "textarea",
-				"settings" => "intro_blog",
-				"label"    => esc_html__("Introduction", "ahana"),
-				"section"  => "blog_section",
-				"default"  => ''
 			]
 		];
 
