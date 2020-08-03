@@ -261,7 +261,8 @@ class Functions
             }
 
             return [
-                "trainer" => $items[0]->name,
+                "trainer_name" => $items[0]->name,
+                "trainer_link" => $items[0]->link,
                 "job" => $job[0]->name,
                 "thumbnail" => $items[0]->trainer_avatar
             ];

@@ -132,7 +132,6 @@
     }
 
     h6 {
-        color: $primary_color;
         margin-bottom: 20px;
     }
 
@@ -140,7 +139,6 @@
         max-width: 250px;
         position: relative;
         z-index: 99;
-        background: #fff;
 
         @media #{$medium_device, $large_mobile, $small_mobile} {
             text-align: center;
@@ -166,7 +164,6 @@
 
             &:hover {
                 color: #fff;
-                background: $primary_color;
             }
         }
     }

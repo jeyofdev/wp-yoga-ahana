@@ -14,7 +14,7 @@
                 <li><i class="material-icons">done_all</i>{{ get_classes_days(post.terms( {query: {taxonomy:"classes_day" }} )) }}</li>
             {% endif %}
             <li><i class="material-icons">alarm_on</i>{{ post.event_start_time|date("H:ia") ~ " - " ~ post.event_end_time|date("H:ia") }}</li>
-            <li><i class="material-icons">person_outline</i>{{ get_trainer(post).trainer }}</li>
+            <li><i class="material-icons">person_outline</i><a href="{{ get_trainer(post).trainer_link }}">{{ get_trainer(post).trainer_name }}</a></li>
         </ul>
     </div>
 {{ args.after_widget|raw }}

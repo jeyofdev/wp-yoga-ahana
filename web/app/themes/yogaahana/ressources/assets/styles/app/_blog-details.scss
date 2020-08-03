@@ -42,14 +42,12 @@
 
         i {
             font-size: 20px;
-            color: $primary_color;
             margin-right: 10px;
             position: relative;
             top: 3px;
         }
 
         p {
-            color: $heading_color;
             margin-bottom: 0;
         }
     }
@@ -111,13 +109,11 @@
 
     .ed-cata {
         p {
-            color: $p_color;
             margin-bottom: 0;
         }
 
         i {
             font-size: 20px;
-            color: $primary_color;
             margin-right: 10px;
             position: relative;
             top: 3px;
@@ -229,10 +225,6 @@
             display: inline-block;
             color: $p_color;
             margin-right: 10px;
-
-            &:hover {
-                color: $primary_color;
-            }
         }
     }
 }
@@ -250,7 +242,6 @@
         position: absolute;
         top: 5px;
         font-size: 35px;
-        color: $primary_color;
     }
 
     &.bn-prev {
@@ -310,7 +301,6 @@
             a {
                 display: inline-block;
                 font-size: 16px;
-                color: $p_color;
                 margin-bottom: 12px;
 
                 span {
@@ -331,10 +321,6 @@
             font-size: 16px;
             border: 1px solid #e6e6e6;
             background: #fafafa;
-
-            &:hover {
-                color: $primary_color;
-            }
         }
     }
 }
@@ -374,7 +360,6 @@
 
         i {
             position: relative;
-            color: $primary_color;
             font-size: 16px;
             top: 3px;
             margin-right: 10px;

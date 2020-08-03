@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="lp-text">
-                    <a href="{{ post.link }}"><h3>{{ post.title|chars(10)  }}</h3></a>
+                    <h3><a href="{{ post.link }}">{{ post.title|chars(10)  }}</a></h3>
                     {% if date is same as (true) %}
                         <p><i class="material-icons">event_available</i>{{ post.date }}</p>
                     {% endif %}

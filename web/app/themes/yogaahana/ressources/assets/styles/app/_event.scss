@@ -69,13 +69,7 @@
             margin-bottom: 15px;
 
             a {
-                color: $heading_color;
-
                 @include transition(all .3s);
-
-                &:hover {
-                    color: $primary_color;
-                }
             }
         }
 
@@ -87,7 +81,6 @@
                 margin-bottom: 5px;
 
                 i {
-                    color: $primary_color;
                     font-size: 16px;
                     position: relative;
                     top: 3px;
@@ -110,7 +103,6 @@
     margin-top: -60px;
     position: relative;
     z-index: 999;
-    background: #fff;
 
     @include box-shadow(0 5px 6px rgba(72, 105, 114, .15));
 

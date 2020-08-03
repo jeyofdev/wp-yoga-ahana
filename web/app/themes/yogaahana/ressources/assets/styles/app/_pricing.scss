@@ -7,7 +7,6 @@
 
 .pricing-item {
     text-align: center;
-    background: #fff;
     padding-bottom: 40px;
     margin: 15px 0;
     border-radius: 13px;
@@ -40,7 +39,6 @@
         margin: -71px auto 30px;
         padding-top: 35px;
         border-radius: 50%;
-        background: #fff;
 
         @include box-shadow(0 5px 6px rgba(72, 105, 114, .15));
 
@@ -62,7 +60,6 @@
 
         li {
             font-size: 16px;
-            color: $p_color;
             margin-bottom: 12px;
         }
     }

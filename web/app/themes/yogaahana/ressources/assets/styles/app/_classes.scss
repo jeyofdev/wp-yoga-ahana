@@ -25,7 +25,6 @@
 
             &.active {
                 width: 26px;
-                background: $primary_color;
             }
         }
     }
@@ -33,7 +32,6 @@
 
 .classes-item {
     text-align: center;
-    background: $white_color;
     padding-top: 40px;
     margin-top: 15px;
     margin-bottom: 50px;
@@ -73,20 +71,11 @@
         font-family: $font_2;
         font-weight: 400;
         margin-bottom: 15px;
-
-        a {
-            color: $heading_color;
-
-            &:hover {
-                color: $primary_color;
-            }
-        }
     }
 
     .ci-meta {
         display: inline-block;
         font-size: 14px;
-        color: $p_color;
         margin-right: 10px;
         margin-bottom: 15px;
 
@@ -95,7 +84,6 @@
         }
 
         i {
-            color: $primary_color;
             font-size: 15px;
             margin-right: 10px;
         }
@@ -145,7 +133,6 @@
         }
 
         p {
-            color: $primary_color;
             margin-bottom: 0;
         }
     }
@@ -334,7 +321,6 @@
 
             &.active {
                 width: 26px;
-                background: $primary_color;
             }
         }
     }
@@ -370,16 +356,10 @@
             font-weight: 400;
             font-family: $font_2;
             margin-bottom: 15px;
+        }
 
-            a {
-                color: $heading_color;
-
-                @include transition(all .3s);
-
-                &:hover {
-                    color: $primary_color;
-                }
-            }
+        a {
+            @include transition(all .3s);
         }
 
         ul {
@@ -390,7 +370,6 @@
                 margin-bottom: 5px;
 
                 i {
-                    color: $primary_color;
                     font-size: 16px;
                     position: relative;
                     top: 3px;

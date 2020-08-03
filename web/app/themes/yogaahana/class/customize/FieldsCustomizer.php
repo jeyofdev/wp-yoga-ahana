@@ -172,53 +172,60 @@ class FieldsCustomizer
 				"priority" => 10
 			],
 
+            // Add colors section
+            "colors_section" => [
+                "title" => esc_html__("Colors", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 20
+			],
+
             // Add top section
             "top_section" => [
                 "title" => esc_html__("Top section", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 20
+				"priority" => 40
 			],
 
             // Add what_we_do section
             "what_we_do_section" => [
                 "title" => esc_html__("What we do section", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 30
+				"priority" => 50
 			],
 
             // Add testimonial section
             "testimonial_section" => [
                 "title" => esc_html__("testimonial section", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 40
+				"priority" => 60
 			],
 
             // Add classes section
             "classes_section" => [
                 "title" => esc_html__("Classes section", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 50
+				"priority" => 70
 			],
 
             // Add event section
             "event_section" => [
                 "title" => esc_html__("Event section", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 60
+				"priority" => 80
 			],
 
             // Add video section
             "video_section" => [
                 "title" => esc_html__("Video", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 70
+				"priority" => 90
 			],
 
             // Add blog section
             "blog_section" => [
                 "title" => esc_html__("Blog", "ahana"),
 				"panel" => "theme_option",
-				"priority" => 80
+				"priority" => 100
 			]
 		];
 
@@ -281,6 +288,207 @@ class FieldsCustomizer
 				"label"       => esc_html__("Logo", "ahana"),
                 "section"     => "logo_footer_section",
                 "default"     => ''
+			],
+
+			// Add primary color
+			[
+				"type"        => "color",
+				"settings"    => "primary_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Primary color :", "ahana"),
+				"section"     => "colors_section",
+				"priority"    => 10,
+                "default"     => "#f65d5d",
+                "output" => [
+                    [
+                        "element"  => [
+							".footer-widget ul li a:hover",
+							".material-icons",
+							".site-btn.sb-gradient:hover",
+							".site-btn.sb-line-gradient",
+							".trainer-item h6",
+							".ti-text a:hover",
+							".bi-text a:hover",
+							".ei-text a:hover",
+							".ci-text a:hover",
+							".lp-text a:hover",
+							".pc-text a:hover",
+							".site-btn.sb-white",
+							".ci-author p",
+							".ci-author a:hover",
+							".owl-nav .owl-next",
+							".owl-nav .owl-prev",
+							".copyright i",
+							".copyright a:hover",
+							".about-instructor-widget h6",
+							".sb-tags a:hover",
+							".ba-social a:hover",
+							".reply",
+							".reply:hover",
+							".classes-info ul li a:hover",
+							".about-instructor-widget a:hover"
+						],
+						"property" => "color"
+					],
+					[
+                        "element"  => [
+							".owl-carousel .owl-dot.active",
+							".ti-social a:hover",
+							".ai-social a:hover",
+							".td-social a:hover",
+							".progress-bar-style .bar-inner",
+							".cd-price",
+							".bi-cata:after",
+							".contact-social a:hover"
+						],
+                        "property" => "background-color"
+                    ],
+				]
+			],
+
+			// Add light color
+			[
+				"type"        => "color",
+				"settings"    => "light_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Light color :", "ahana"),
+				"section"     => "colors_section",
+				"priority"    => 20,
+                "default"     => "#ffffff",
+                "output" => [
+                    [
+                        "element"  => [
+							"body",
+							".text-white *",
+							".hs-text *",
+							".sb-gradient",
+							".sb-line-gradient:hover",
+							".ed-note"
+						],
+						"property" => "color"
+					],
+					[
+                        "element"  => [
+							"body",
+							".header-top",
+							".classes-item",
+							".trainer-item .ti-text",
+							".pricing-item",
+							".pi-price",
+							".hero-slider .owl-dots .owl-dot:before",
+							".sb-line-gradient:after",
+							".sb-white",
+							".sb-gradient:after",
+							".review-item .ri-img",
+							".event-filter-warp"
+
+						],
+						"property" => "background-color"
+					],
+					[
+                        "element"  => [
+							".hero-slider .owl-dots .owl-dot",
+						],
+						"property" => "border-color"
+					]
+				]
+			],
+
+			// Add headings color
+			[
+				"type"        => "color",
+				"settings"    => "headings_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Headings color :", "ahana"),
+				"section"     => "colors_section",
+				"priority"    => 30,
+                "default"     => "#333333",
+                "output" => [
+                    [
+                        "element"  => [
+							"h1", "h2", "h3", "h4", "h5", "h6", ".single-progress-item p", 
+							".cd-meta p",
+							".ed-meta p",
+							".blog-meta p",
+							".about-instructor-widget a"
+						],
+						"property" => "color"
+					]
+				]
+			],
+
+			// Add paragraph color
+			[
+				"type"        => "color",
+				"settings"    => "paragrah_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Paragrah color :", "ahana"),
+				"section"     => "colors_section",
+				"priority"    => 40,
+                "default"     => "#666666",
+                "output" => [
+                    [
+                        "element"  => [
+							"p",
+							".footer-widget ul li",
+							".ci-meta",
+							".ei-text ul li",
+							".pricing-item ul li",
+							".pc-text ul li",
+							".comment-list .comment-text .comment-date",
+							".trainer-details .trainer-info ul strong",
+							".pc-text a",
+							".classes-info ul li",
+							".classes-info ul li a",
+							".sb-list li a"
+						],
+						"property" => "color"
+					]
+				]
+			],
+
+			// Add link color
+			[
+				"type"        => "color",
+				"settings"    => "link_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Link color :", "ahana"),
+				"section"     => "colors_section",
+				"priority"    => 50,
+                "default"     => "#333333",
+                "output" => [
+                    [
+                        "element"  => [
+							".ti-text a",
+							".bi-text a",
+							".ei-text a",
+							".ci-text a",
+							".lp-text a"
+						],
+						"property" => "color"
+					]
+				]
+			],
+
+			// Add link navbar color
+			[
+				"type"        => "color",
+				"settings"    => "link_nav_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Link nav color :", "ahana"),
+				"section"     => "colors_section",
+				"priority"    => 60,
+                "default"     => "#fff",
+                "output" => [
+                    [
+                        "element"  => ".main-menu li > a",
+						"property" => "color"
+					],
+					[
+                        "element"  => ".main-menu li.current-menu-item a",
+						"property" => "border-color"
+					]
+				]
 			],
 
 			// Set the first color for the background gradient of the breadcrumb

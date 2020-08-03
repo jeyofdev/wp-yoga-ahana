@@ -8,7 +8,7 @@
         {% if trainer.thumbnail.src is not null %}
             <img src="{{ Image(trainer.meta('trainer_avatar')).src | resize('trainer_thumbnail_widget') }}" alt="">
         {% endif %}
-        <h4>{{ trainer.title }}</h4>
+        <h4><a href="{{ trainer.link }}">{{ trainer.title }}</a></h4>
         <h6>{{ trainer.terms( {query: {taxonomy:"trainer_job" }} )|join(', ') }}</h6>
         <p>{{ trainer.trainer_excerpt }}</p>
         <div class="ai-social">

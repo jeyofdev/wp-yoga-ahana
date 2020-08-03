@@ -28,7 +28,7 @@
                         </li>
                         <li>
                             <i class="material-icons">person_outline</i>
-                            {{ get_trainer(item).trainer }}
+                            <a href="{{ get_trainer(item).trainer_link }}">{{ get_trainer(item).trainer_name }}</a>
                         </li>
                     </ul>
                 </div>

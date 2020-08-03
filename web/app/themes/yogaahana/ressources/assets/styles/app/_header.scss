@@ -11,7 +11,6 @@
 
 .header-top {
     padding: 0 80px;
-    background: $white_color;
 
     @media #{$medium_device} {
         padding: 0 30px;
@@ -45,14 +44,12 @@
 
     i {
         font-size: 17px;
-        color: $primary_color;
         margin-right: 10px;
         position: relative;
         top: 4px;
     }
 
     p {
-        color: $heading_color;
         margin-bottom: 0;
     }
 }
@@ -274,9 +271,6 @@
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-
-    @extend .bg-g-1;
-
     z-index: 999;
 
     @media #{$large_mobile, $small_mobile} {

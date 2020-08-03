@@ -52,7 +52,6 @@
 
             &:hover {
                 color: #fff;
-                background: $primary_color;
             }
         }
     }
@@ -74,7 +73,6 @@
         }
 
         h6 {
-            color: $primary_color;
             margin-bottom: 16px;
         }
 
@@ -92,7 +90,6 @@
             strong {
                 float: left;
                 width: 112px;
-                color: #666;
                 font-weight: 600;
 
                 @media #{$xs_mobile} {
@@ -154,7 +151,6 @@
             left: 0;
             top: 4px;
             font-size: 16px;
-            color: $primary_color;
         }
     }
 }
