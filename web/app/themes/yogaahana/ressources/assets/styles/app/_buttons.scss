@@ -22,8 +22,6 @@
         padding: 13px 29px;
         position: relative;
 
-        @extend .bg-g-2;
-
         @include transition(all .4s);
 
         z-index: 1;
@@ -52,8 +50,6 @@
     &.sb-line-gradient {
         padding: 13px 29px;
         position: relative;
-
-        @extend .bg-g-2;
 
         @include transition(all .4s);
 

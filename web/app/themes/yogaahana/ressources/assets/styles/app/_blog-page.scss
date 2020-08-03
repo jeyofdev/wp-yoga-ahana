@@ -148,8 +148,6 @@
 
     a {
         &:hover {
-            @extend .bg-g-1;
-
             color: #fff;
         }
 
@@ -164,8 +162,6 @@
     }
 
     > span {
-        @extend .bg-g-1;
-
         border-color: transparent;
         color: #fff;
     }

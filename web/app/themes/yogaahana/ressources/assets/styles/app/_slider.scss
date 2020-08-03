@@ -7,8 +7,6 @@
     height: 100%;
     padding-top: 150px;
 
-    @extend .bg-g-1;
-
     @media #{$medium_device} {
         min-height: 990px;
     }

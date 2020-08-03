@@ -179,6 +179,13 @@ class FieldsCustomizer
 				"priority" => 20
 			],
 
+            // Add colors section
+            "gradients_section" => [
+                "title" => esc_html__("gradients", "ahana"),
+				"panel" => "theme_option",
+				"priority" => 30
+			],
+
             // Add top section
             "top_section" => [
                 "title" => esc_html__("Top section", "ahana"),
@@ -290,6 +297,11 @@ class FieldsCustomizer
                 "default"     => ''
 			],
 
+
+			//
+			// COLOR THEME
+			//
+
 			// Add primary color
 			[
 				"type"        => "color",
@@ -343,6 +355,24 @@ class FieldsCustomizer
 						],
                         "property" => "background-color"
                     ],
+				]
+			],
+
+			// Add secondary color
+			[
+				"type"        => "color",
+				"settings"    => "secondary_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Secondary color :", "ahana"),
+				"section"     => "colors_section",
+                "default"     => "#fdb07d",
+                "output" => [
+                    [
+                        "element"  => [
+							".progress-bar-style"
+						],
+						"property" => "background-color"
+					]
 				]
 			],
 
@@ -491,24 +521,39 @@ class FieldsCustomizer
 				]
 			],
 
-			// Set the first color for the background gradient of the breadcrumb
+
+			//
+			// GRADIENT COLOR THEME
+			//
+
+			// Set the first color for the primary gradient
 			[
 				"type"      => "color",
-				"settings"  => "top_section_color_top",
-				"label"     => esc_attr__("Top Color", "ahana"),
-				"section"   => "top_section",
+				"settings"  => "gradient_color_top",
+				"label"     => esc_attr__("Color top", "ahana"),
+				"section"   => "gradients_section",
 				"default"   => "#f65d5d",
 				"priority"  => 10,
 				"output"    => [
 					[
-						"element"         => ".page-top-section:after",
+						"element" => [
+							".hero-section",
+							".back-to-top",
+							".site-btn.sb-gradient",
+							".site-btn.sb-line-gradient",
+							".site-pagination a:hover",
+							".site-pagination > span",
+							".page-top-section:after",
+							".review-section:after",
+							".search-model:after"
+						],
 						"property"        => "background",
 						"value_pattern"   => "linear-gradient(directiondeg, $ topPos%,bottomCol bottomPos%)",
 						"pattern_replace" => [
-							"direction" => "top_section_gradient_direction",
-							"topPos"    => "top_section_color_bottom",
-							"bottomCol" => "top_section_color_top_position",
-							"bottomPos" => "top_section_color_bottom_position",
+							"direction" => "gradient_direction",
+							"topPos"    => "gradient_top_position",
+							"bottomCol" => "gradient_color_bottom",
+							"bottomPos" => "gradient_bottom_position",
 						]
 					]
 				]
@@ -517,21 +562,31 @@ class FieldsCustomizer
 			// Set the second color for the background gradient of the breadcrumb
 			[
 				"type"      => "color",
-				"settings"  => "top_section_color_bottom",
-				"label"     => esc_attr__("Bottom Color", "ahana"),
-				"section"   => "top_section",
+				"settings"  => "gradient_color_bottom",
+				"label"     => esc_attr__("Color bottom", "ahana"),
+				"section"   => "gradients_section",
 				"default"   => "#fdb07d",
 				"priority"  => 11,
 				"output"    => [
 					[
-						"element"         => ".page-top-section:after",
+						"element" => [
+							".hero-section",
+							".back-to-top",
+							".site-btn.sb-gradient",
+							".site-btn.sb-line-gradient",
+							".site-pagination a:hover",
+							".site-pagination > span",
+							".page-top-section:after",
+							".review-section:after",
+							".search-model:after"
+						],
 						"property"        => "background",
 						"value_pattern"   => "linear-gradient(directiondeg, topCol topPos%,$ bottomPos%)",
 						"pattern_replace" => [
-							"direction" => "top_section_gradient_direction",
-							"topCol"    => "top_section_color_top",
-							"topPos"    => "top_section_color_top_position",
-							"bottomPos" => "top_section_color_bottom_position",
+							"direction" => "gradient_direction",
+							"topCol"    => "gradient_color_top",
+							"topPos"    => "gradient_top_position",
+							"bottomPos" => "gradient_bottom_position",
 						]
 					]
 				]
@@ -540,9 +595,9 @@ class FieldsCustomizer
 			// Set the direction for the background gradient of the breadcrumb
 			[
 				"type"      => "slider",
-				"settings"  => "top_section_gradient_direction",
-				"label"     => esc_attr__("Gradient direction", "ahana"),
-				"section"   => "top_section",
+				"settings"  => "gradient_direction",
+				"label"     => esc_attr__("Direction", "ahana"),
+				"section"   => "gradients_section",
 				"default"   => 145,
 				"priority"  => 12,
 				"choices"   => [
@@ -552,14 +607,24 @@ class FieldsCustomizer
 				],
 				"output"    => [
 					[
-						"element"         => ".page-top-section:after",
+						"element" => [
+							".hero-section",
+							".back-to-top",
+							".site-btn.sb-gradient",
+							".site-btn.sb-line-gradient",
+							".site-pagination a:hover",
+							".site-pagination > span",
+							".page-top-section:after",
+							".review-section:after",
+							".search-model:after"
+						],
 						"property"        => "background",
 						"value_pattern"   => "linear-gradient(directiondeg, topCol $%,bottomCol bottomPos%)",
 						"pattern_replace" => [
-							"direction" => "top_section_gradient_direction",
-							"topCol"    => "top_section_color_top",
-							"bottomCol" => "top_section_color_bottom",
-							"bottomPos" => "top_section_color_bottom_position",
+							"direction" => "gradient_direction",
+							"topCol"    => "gradient_color_top",
+							"bottomCol" => "gradient_color_bottom",
+							"bottomPos" => "gradient_bottom_position",
 						]
 					]
 				]
@@ -568,9 +633,9 @@ class FieldsCustomizer
 			// Set the position of the first color for the background gradient of the breadcrumb
 			[
 				"type"      => "slider",
-				"settings"  => "top_section_color_top_position",
-				"label"     => esc_attr__("Top Color Position", "ahana"),
-				"section"   => "top_section",
+				"settings"  => "gradient_top_position",
+				"label"     => esc_attr__("Top Position", "ahana"),
+				"section"   => "gradients_section",
 				"default"   => 0,
 				"priority"  => 13,
 				"choices"   => [
@@ -580,14 +645,24 @@ class FieldsCustomizer
 				],
 				"output"    => [
 					[
-						"element"         => ".page-top-section:after",
+						"element" => [
+							".hero-section",
+							".back-to-top",
+							".site-btn.sb-gradient",
+							".site-btn.sb-line-gradient",
+							".site-pagination a:hover",
+							".site-pagination > span",
+							".page-top-section:after",
+							".review-section:after",
+							".search-model:after"
+						],
 						"property"        => "background",
 						"value_pattern"   => "linear-gradient(directiondeg, topCol $%,bottomCol bottomPos%)",
 						"pattern_replace" => [
-							"direction" => "top_section_gradient_direction",
-							"topCol"    => "top_section_color_top",
-							"bottomCol" => "top_section_color_bottom",
-							"bottomPos" => "top_section_color_bottom_position",
+							"direction" => "gradient_direction",
+							"topCol"    => "gradient_color_top",
+							"bottomCol" => "gradient_color_bottom",
+							"bottomPos" => "gradient_bottom_position",
 						]
 					]
 				]
@@ -597,9 +672,9 @@ class FieldsCustomizer
 			// Set the position of the second color for the background gradient of the breadcrumb
 			[
 				"type"      => "slider",
-				"settings"  => "top_section_color_bottom_position",
-				"label"     => esc_attr__("Bottom Color Position", "ahana"),
-				"section"   => "top_section",
+				"settings"  => "gradient_bottom_position",
+				"label"     => esc_attr__("Bottom Position", "ahana"),
+				"section"   => "gradients_section",
 				"default"   => 100,
 				"priority"  => 14,
 				"choices"   => [
@@ -609,14 +684,24 @@ class FieldsCustomizer
 				],
 				"output"    => [
 					[
-						"element"         => ".page-top-section:after",
+						"element" => [
+							".hero-section",
+							".back-to-top",
+							".site-btn.sb-gradient",
+							".site-btn.sb-line-gradient",
+							".site-pagination a:hover",
+							".site-pagination > span",
+							".page-top-section:after",
+							".review-section:after",
+							".search-model:after"
+						],
 						"property"        => "background",
 						"value_pattern"   => "linear-gradient(directiondeg, topCol topPos%,bottomCol $%)",
 						"pattern_replace" => [
-							"direction" => "top_section_gradient_direction",
-							"topCol"    => "top_section_color_top",
-							"topPos"    => "top_section_color_top_position",
-							"bottomCol" => "top_section_color_bottom",
+							"direction" => "gradient_direction",
+							"topCol"    => "gradient_color_top",
+							"topPos"    => "gradient_top_position",
+							"bottomCol" => "gradient_color_bottom",
 						]
 					]
 				]
