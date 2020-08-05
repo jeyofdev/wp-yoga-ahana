@@ -2,7 +2,7 @@
     {% if theme.theme_mod("topbar_header_toogle") is same as (true) %}
         <div class="header-top">
             <div class="row m-0">
-                <div class="col-md-6 d-none d-md-block p-0">
+                <div class="col-md-8 d-none d-md-block p-0">
                     <div class="header-info">
                         <i class="material-icons">map</i>
                         <p>{{ format_city(club_settings, ",") }}</p>
@@ -12,7 +12,7 @@
                         <p>{{ club_settings.phone|format_phone_number }}</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-left text-md-right p-0">
+                <div class="col-md-4 text-left text-md-right p-0">
                     <div class="header-info d-none d-md-inline-flex">
                         <i class="material-icons">alarm_on</i>
                         <p>{{ format_opening_hours() }}</p>

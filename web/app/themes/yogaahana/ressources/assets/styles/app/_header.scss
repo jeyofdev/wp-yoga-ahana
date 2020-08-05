@@ -10,14 +10,10 @@
 }
 
 .header-top {
-    padding: 0 80px;
+    padding: 0 50px;
 
     @media #{$medium_device} {
         padding: 0 30px;
-    }
-
-    @media #{$tab_device, $large_mobile, $small_mobile} {
-        padding: 0 10px;
     }
 }
 
@@ -230,31 +226,97 @@
 
     @media #{$tab_device} {
         display: block;
-        top: 70px;
     }
 
-    @media #{$large_mobile, $small_mobile} {
+    @media #{$large_mobile, $small_mobile, $tab_device} {
         display: block;
+        padding: 0;
+        position: fixed;
+        top: 0;
+
+        > a {
+            width: 40px;
+            height: 40px;
+            border: none;
+        }
     }
 }
 
 .slicknav_nav {
     background: #333;
+
+    @media #{$large_mobile, $small_mobile, $tab_device} {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            font-size: 24px;
+        }
+    }
 }
 
 .slicknav_btn {
     position: relative;
     top: -15px;
+    z-index: 1;
+
+    @media #{$large_mobile, $small_mobile, $tab_device} {
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 100%;
+        margin: 0;
+        top: 22px;
+        right: 45px;
+
+        .slicknav_icon {
+            margin-top: 5px;
+        }
+
+        .slicknav_icon-bar {
+            width: 20px;
+            height: 2px;
+            margin-bottom: 4px;
+            box-shadow: none;
+            background: #000;
+            transition: all .3s ease-in-out;
+        }
+
+        &.slicknav_open .slicknav_icon-bar {
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:first-child {
+                transform: rotate(45deg) translateX(5px) translateY(5px);
+                transition-delay: .1s;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg) translateX(4px) translateY(-4px);
+                transition-delay: .1s;
+            }
+
+        }
+    }
 
     @media #{$tab_device} {
         position: relative;
-        top: 0;
-        right: 102px;
+        top: 80px;
+        right: 50px;
     }
 
-    @media #{$large_mobile, $small_mobile} {
-        background: linear-gradient(145deg, rgba(246, 93, 93, 1) 0%, rgba(253, 176, 125, 1) 100%);
-        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#f65d5d", endColorstr="#fdb07d", GradientType=1);
+    .slicknav_menutxt {
+        display: none;;
+    }
+
+    .slicknav_icon {
+        margin-left: 0;
     }
 }
 
@@ -271,7 +333,7 @@
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 999;
+    z-index: 98;
 
     @media #{$large_mobile, $small_mobile} {
         right: 40px;
