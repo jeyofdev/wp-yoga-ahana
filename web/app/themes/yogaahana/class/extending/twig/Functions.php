@@ -271,12 +271,35 @@ class Functions
 
 
 
+    /**
+     * Get the posts number
+     *
+     * @param Environment $twig
+     * @return void
+     */
     public static function get_number_posts (Environment $twig) : void
     {
         $twig->addFunction(new TwigFunction("get_number_posts", function ($posts, string $singular, string $plural) {
             $output = sprintf(_n($singular, $plural, $posts->count(), "ahana"), $posts->count(), $posts->found_posts);
 
             return $output;
+        }));
+    }
+
+
+
+    /**
+     * add sharing buttons to posts
+     *
+     * @param Environment $twig
+     * @return void
+     */
+    public static function sharing (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("sharing", function () {
+            if (function_exists ('sharing_display')) {
+                return sharing_display (); 
+            }
         }));
     }
 }

@@ -12,9 +12,7 @@
         <div class="bi-footer">
             <div class="bi-cata">{{ category_by_post(post)|raw }}</div>
             <div class="bi-social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                {{ sharing()|raw }}
             </div>
         </div>
     </div>

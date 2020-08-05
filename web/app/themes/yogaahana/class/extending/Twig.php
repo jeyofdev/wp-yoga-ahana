@@ -58,6 +58,7 @@ class Twig extends TimberTwig
 		Functions::get_pricing_plan_taxonomy($twig);
 		Functions::get_trainer($twig);
 		Functions::get_number_posts($twig);
+		Functions::sharing($twig);
 
 		return $twig;
     }

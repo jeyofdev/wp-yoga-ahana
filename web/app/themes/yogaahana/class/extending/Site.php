@@ -16,6 +16,7 @@ use jeyofdev\wp\yoga\ahana\inc\Post;
 use jeyofdev\wp\yoga\ahana\inc\PostTypes;
 use jeyofdev\wp\yoga\ahana\inc\Queries;
 use jeyofdev\wp\yoga\ahana\inc\Settings;
+use jeyofdev\wp\yoga\ahana\inc\Share;
 use jeyofdev\wp\yoga\ahana\inc\Sidebar;
 use jeyofdev\wp\yoga\ahana\inc\Styles;
 use jeyofdev\wp\yoga\ahana\inc\Taxonomies;
@@ -47,6 +48,7 @@ class Site extends TimberSite
         Page::init();
         Styles::init();
         Admin::init();
+        Share::init();
 
         return new Customizer();
     }

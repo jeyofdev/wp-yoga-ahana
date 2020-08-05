@@ -43,3 +43,12 @@
         font-size: 18px;
     }
 }
+
+.share-icon {
+    display: none;
+}
+
+.ed-social.share-icon,
+.cd-social.share-icon {
+    display: block;
+}
