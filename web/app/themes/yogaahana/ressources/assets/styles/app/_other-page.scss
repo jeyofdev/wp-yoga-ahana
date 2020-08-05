@@ -8,6 +8,11 @@
     padding-top: 220px;
     text-align: center;
 
+    &.error {
+        height: 105px;
+        padding-top: 0;
+    }
+
     &.page-sp {
         padding-top: 200px;
     }
@@ -38,5 +43,3 @@
         font-size: 18px;
     }
 }
-
-
