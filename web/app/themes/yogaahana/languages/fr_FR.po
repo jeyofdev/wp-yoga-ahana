@@ -1,0 +1,1644 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: yogaAhana\n"
+"POT-Creation-Date: 2020-08-05 17:07+0200\n"
+"PO-Revision-Date: 2020-08-05 17:08+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_n;_e;_x;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: assets/scripts/app.js:56
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:137
+msgid "Height"
+msgstr ""
+
+#: assets/scripts/app.js:56
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:136
+msgid "Width"
+msgstr ""
+
+#: class/customize/FieldsCustomizer.php:84
+msgid "Header"
+msgstr "En-tête"
+
+#: class/customize/FieldsCustomizer.php:90
+msgid "Footer"
+msgstr "Bas de page"
+
+#: class/customize/FieldsCustomizer.php:96
+msgid "Theme options"
+msgstr "Options du thème"
+
+#: class/customize/FieldsCustomizer.php:149
+#: class/customize/FieldsCustomizer.php:250
+msgid "Topbar"
+msgstr "Barre du haut"
+
+#: class/customize/FieldsCustomizer.php:156
+#: class/customize/FieldsCustomizer.php:170
+#: class/customize/FieldsCustomizer.php:259
+#: class/customize/FieldsCustomizer.php:288
+msgid "Logo"
+msgstr "Logo"
+
+#: class/customize/FieldsCustomizer.php:163
+#: class/customize/FieldsCustomizer.php:789 class/widgets/SearchWidget.php:26
+msgid "Search"
+msgstr "Recherche"
+
+#: class/customize/FieldsCustomizer.php:177
+msgid "Colors"
+msgstr "Couleurs"
+
+#: class/customize/FieldsCustomizer.php:184
+msgid "Gradients"
+msgstr "Dégradés"
+
+#: class/customize/FieldsCustomizer.php:191
+msgid "Top section"
+msgstr ""
+
+#: class/customize/FieldsCustomizer.php:198
+msgid "What we do section"
+msgstr "Section what we do"
+
+#: class/customize/FieldsCustomizer.php:205
+msgid "Testimonial section"
+msgstr "Section témoignage"
+
+#: class/customize/FieldsCustomizer.php:212
+msgid "Classes section"
+msgstr "Section cours"
+
+#: class/customize/FieldsCustomizer.php:219
+msgid "Event section"
+msgstr "Section évènement"
+
+#: class/customize/FieldsCustomizer.php:226 class/widgets/VideoWidget.php:29
+msgid "Video"
+msgstr "Video"
+
+#: class/customize/FieldsCustomizer.php:249
+msgid "show or hide the header topbar."
+msgstr "afficher ou masquer la barre du haut."
+
+#: class/customize/FieldsCustomizer.php:303
+msgid "Primary color :"
+msgstr "Couleur principale :"
+
+#: class/customize/FieldsCustomizer.php:359
+msgid "Secondary color :"
+msgstr "Couleur secondaire :"
+
+#: class/customize/FieldsCustomizer.php:377
+msgid "Light color :"
+msgstr "Couleur blanche :"
+
+#: class/customize/FieldsCustomizer.php:426
+msgid "Headings color :"
+msgstr "Couleur des titres :"
+
+#: class/customize/FieldsCustomizer.php:449
+msgid "Paragrah color :"
+msgstr "Couleurs des paragraphes :"
+
+#: class/customize/FieldsCustomizer.php:479
+msgid "Link color :"
+msgstr "Couleur des liens :"
+
+#: class/customize/FieldsCustomizer.php:502
+msgid "Link nav color :"
+msgstr "Couleur des liens de la navigation :"
+
+#: class/customize/FieldsCustomizer.php:729 class/widgets/AboutWidget.php:27
+msgid "About"
+msgstr "A propos"
+
+#: class/customize/FieldsCustomizer.php:739 class/inc/PostTypes.php:60
+msgid "Classes"
+msgstr "Cours"
+
+#: class/customize/FieldsCustomizer.php:749 class/inc/PostTypes.php:34
+#: class/inc/PostTypes.php:36 class/inc/Taxonomies.php:55
+msgid "Trainers"
+msgstr "Entraineurs"
+
+#: class/customize/FieldsCustomizer.php:759 class/inc/PostTypes.php:85
+msgid "Events"
+msgstr "Evènements"
+
+#: class/customize/FieldsCustomizer.php:769
+msgid "Blog"
+msgstr "Blog"
+
+#: class/customize/FieldsCustomizer.php:779
+msgid "Contact"
+msgstr "Contact"
+
+#: class/customize/FieldsCustomizer.php:841
+#: class/customize/FieldsCustomizer.php:849
+#: class/widgets/AboutEventOrClassesWidget.php:33
+#: class/widgets/FeaturedClassesWidget.php:34
+#: class/widgets/LatestPostWidget.php:34
+#: class/widgets/OpeningHoursWidget.php:33
+#: class/widgets/PostCategoryWidget.php:33
+#: class/widgets/SearchClassesWidget.php:33 class/widgets/SearchWidget.php:33
+#: class/widgets/TagCloudWidget.php:33 class/widgets/TrainerWidget.php:33
+#: class/widgets/VideoWidget.php:36
+msgid "Title"
+msgstr "Titre"
+
+#: class/customize/FieldsCustomizer.php:858
+msgid "link"
+msgstr "lien"
+
+#: class/customize/FieldsCustomizer.php:860
+msgid "Youtube video"
+msgstr "Video Youtube"
+
+#: class/customize/FieldsCustomizer.php:868
+msgid "Image"
+msgstr "Image"
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:132
+msgid "No File Selected"
+msgstr "Aucun fichier sélectionné"
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:133
+#: class/customize/kirki/field/class-kirki-field-image.php:50
+msgid "Remove"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:134
+#: class/customize/kirki/field/class-kirki-field-image.php:49
+msgid "Default"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:135
+msgid "Select File"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:136
+msgid "Standard Fonts"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:137
+msgid "Google Fonts"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:138
+msgid "CSS Defaults"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-base.php:139
+msgid "Default Browser Font-Family"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimension.php:41
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:138
+msgid "Invalid Value"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:114
+msgid "Left Top"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:115
+msgid "Left Center"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:116
+msgid "Left Bottom"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:117
+msgid "Right Top"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:118
+msgid "Right Center"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:119
+msgid "Right Bottom"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:120
+msgid "Center Top"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:121
+msgid "Center Center"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:122
+msgid "Center Bottom"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:123
+msgid "Font Size"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:124
+msgid "Font Weight"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:125
+msgid "Line Height"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:126
+msgid "Font Style"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:127
+msgid "Letter Spacing"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:128
+msgid "Word Spacing"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:129
+#: class/customize/kirki/field/class-kirki-field-spacing.php:32
+msgid "Top"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:130
+#: class/customize/kirki/field/class-kirki-field-spacing.php:33
+msgid "Bottom"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:131
+#: class/customize/kirki/field/class-kirki-field-spacing.php:34
+msgid "Left"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:132
+#: class/customize/kirki/field/class-kirki-field-spacing.php:35
+msgid "Right"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:133
+msgid "Center"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:134
+msgid "Size"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:135
+msgid "Spacing"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-repeater.php:86
+#, php-format
+msgid "Add new %s"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-repeater.php:121
+msgid "Select a Page"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-repeater.php:227
+#, php-format
+msgid "Limit: %s rows"
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki-field.php:248
+#, php-format
+msgid "Typo found in field %s - setting instead of settings."
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki-field.php:257
+#: class/customize/kirki/core/class-kirki-field.php:267
+#, php-format
+msgid ""
+"Config not defined for field %1$s - See %2$s for details on how to properly "
+"add fields."
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki-field.php:358
+#, php-format
+msgid "Typo found in field %s - \"theme_mods\" vs \"theme_mod\""
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki-field.php:375
+#, php-format
+msgid "\"partial_refresh\" invalid entry in field %s"
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki-field.php:498
+#: class/customize/kirki/core/class-kirki-field.php:509
+#, php-format
+msgid ""
+"\"output\" invalid format in field %s. The \"output\" argument should be "
+"defined as an array of arrays."
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki-init.php:289
+msgid ""
+"We detected you're using Kirki_Init::get_variables(). Please use Kirki_Util::"
+"get_variables() instead."
+msgstr ""
+
+#: class/customize/kirki/core/class-kirki.php:237
+msgid ""
+"Kirki fields should not be added on customize_register. Please add them "
+"directly, or on init."
+msgstr ""
+
+#: class/customize/kirki/deprecated/functions.php:19
+#, php-format
+msgid "%1$s or %2$s"
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-color.php:52
+msgid ""
+"Do not use \"alpha\" as an argument in color controls. Use "
+"\"choices[alpha]\" instead."
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-image.php:47
+#: class/customize/kirki/field/class-kirki-field-image.php:52
+msgid "Select image"
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-image.php:48
+msgid "Change image"
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-image.php:51
+msgid "No image selected"
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-image.php:53
+msgid "Choose image"
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-radio.php:37
+#, php-format
+msgid ""
+"Error in field %1$s. The \"mode\" argument has been deprecated since Kirki "
+"v0.8. Use the \"radio-%2$s\" type instead."
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-switch.php:39
+msgid "On"
+msgstr ""
+
+#: class/customize/kirki/field/class-kirki-field-switch.php:40
+msgid "Off"
+msgstr ""
+
+#: class/customize/kirki/modules/custom-sections/sections/class-kirki-sections-nested-section.php:61
+msgid "Customizing"
+msgstr ""
+
+#: class/customize/kirki/modules/custom-sections/sections/class-kirki-sections-nested-section.php:64
+#, php-format
+msgid "Customizing &#9656; %s"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:198
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:199
+msgid "Ultra-Light 100"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:200
+msgid "Ultra-Light 100 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:201
+msgid "Light 200"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:202
+msgid "Light 200 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:203
+msgid "Book 300"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:204
+msgid "Book 300 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:205
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:206
+msgid "Normal 400"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:207
+msgid "Normal 400 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:208
+msgid "Medium 500"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:209
+msgid "Medium 500 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:210
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:211
+msgid "Semi-Bold 600"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:212
+msgid "Semi-Bold 600 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:213
+msgid "Bold 700"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:214
+msgid "Bold 700 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:215
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:216
+msgid "Extra-Bold 800"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:217
+msgid "Extra-Bold 800 Italic"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:218
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:219
+msgid "Ultra-Bold 900"
+msgstr ""
+
+#: class/customize/kirki/modules/webfonts/class-kirki-fonts.php:220
+msgid "Ultra-Bold 900 Italic"
+msgstr ""
+
+#: class/extending/twig/Functions.php:99 class/extending/twig/Functions.php:110
+#, php-format
+msgid "Mon - Fri : %s - %s"
+msgstr ""
+
+#: class/extending/twig/Functions.php:103
+#: class/extending/twig/Functions.php:111
+#, php-format
+msgid "Saturday : %s - %s"
+msgstr ""
+
+#: class/extending/twig/Functions.php:107
+#: class/extending/twig/Functions.php:112
+#, php-format
+msgid "Sunday : %s - %s"
+msgstr ""
+
+#: class/inc/Admin.php:38 class/inc/Admin.php:66 class/inc/Admin.php:104
+#: class/inc/Admin.php:143
+msgid "Thumbnail"
+msgstr "Miniature"
+
+#: class/inc/Admin.php:40 class/inc/Taxonomies.php:36
+msgid "Job"
+msgstr "Métier"
+
+#: class/inc/Admin.php:68 class/inc/Admin.php:106
+#: class/widgets/PostCategoryWidget.php:26
+#: class/widgets/PostCategoryWidget.php:53
+msgid "Categories"
+msgstr "Categories"
+
+#: class/inc/Admin.php:69 class/inc/Admin.php:107 class/inc/PostTypes.php:37
+#: class/inc/Taxonomies.php:56 class/widgets/TrainerWidget.php:26
+msgid "Trainer"
+msgstr "Entraineur"
+
+#: class/inc/Comments.php:57
+msgid "Your name *"
+msgstr "Votre nom *"
+
+#: class/inc/Comments.php:58
+msgid "Your Email *"
+msgstr "Votre email *"
+
+#: class/inc/Comments.php:59
+msgid "Your website"
+msgstr "Votre site web"
+
+#: class/inc/Comments.php:90
+msgid "Write Comment *"
+msgstr "Votre commentaire"
+
+#: class/inc/Comments.php:97
+msgid "Leave a Reply"
+msgstr "Laisser un commentaire"
+
+#: class/inc/Comments.php:103
+msgid "Send Message"
+msgstr "Ajouter un commentaire"
+
+#: class/inc/Menus.php:20
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+#: class/inc/Page.php:30
+msgid "category : "
+msgstr "catégorie : "
+
+#: class/inc/Pagination.php:41
+msgid "Previous Post"
+msgstr "Article précédent"
+
+#: class/inc/Pagination.php:69
+msgid "Next Post"
+msgstr "Article suivant"
+
+#: class/inc/PostTypes.php:38 class/inc/Taxonomies.php:60
+msgid "Edit Trainer"
+msgstr "Modifier un entraineur"
+
+#: class/inc/PostTypes.php:39
+msgid "New Trainer"
+msgstr "Nouvel entraineur"
+
+#: class/inc/PostTypes.php:40 class/inc/Taxonomies.php:61
+msgid "View Trainer"
+msgstr "Voir l’entraineur"
+
+#: class/inc/PostTypes.php:41
+msgid "View Trainers"
+msgstr "Voir les entraineurs"
+
+#: class/inc/PostTypes.php:42 class/inc/Taxonomies.php:57
+msgid "Search Trainers"
+msgstr "Rechercher des entraineurs"
+
+#: class/inc/PostTypes.php:43
+msgid "No trainers found."
+msgstr "Aucun entraineur trouvé."
+
+#: class/inc/PostTypes.php:44
+msgid "No trainers found in trash."
+msgstr "Aucun entraineur trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:45 class/inc/Taxonomies.php:59
+msgid "All Trainers"
+msgstr "Tous les entraineurs"
+
+#: class/inc/PostTypes.php:58 class/inc/PostTypes.php:61
+msgid "Class"
+msgstr "Cours"
+
+#: class/inc/PostTypes.php:62
+msgid "Edit Class"
+msgstr "Modifier un cours"
+
+#: class/inc/PostTypes.php:63
+msgid "New Class"
+msgstr "Nouveau cours"
+
+#: class/inc/PostTypes.php:64
+msgid "View Class"
+msgstr "Voir un cours"
+
+#: class/inc/PostTypes.php:65
+msgid "View Classes"
+msgstr "Voir les cours"
+
+#: class/inc/PostTypes.php:66
+msgid "Search Classes"
+msgstr "Rechecher des cours"
+
+#: class/inc/PostTypes.php:67
+msgid "No Classes found."
+msgstr "Aucun cours trouvé."
+
+#: class/inc/PostTypes.php:68
+msgid "No Classes found in trash."
+msgstr "Aucun cours trouvée dans la corbeille."
+
+#: class/inc/PostTypes.php:69
+msgid "All Classes"
+msgstr "Tous les cours"
+
+#: class/inc/PostTypes.php:83 class/inc/PostTypes.php:86
+msgid "Event"
+msgstr "Evènement"
+
+#: class/inc/PostTypes.php:87
+msgid "Edit Event"
+msgstr "Modifier un évènement"
+
+#: class/inc/PostTypes.php:88
+msgid "New Event"
+msgstr "Nouvel évènement"
+
+#: class/inc/PostTypes.php:89
+msgid "View Event"
+msgstr "Voir l’évènement"
+
+#: class/inc/PostTypes.php:90
+msgid "View Events"
+msgstr "Voir les évènements"
+
+#: class/inc/PostTypes.php:91
+msgid "Search Events"
+msgstr "Rechercher des évènements"
+
+#: class/inc/PostTypes.php:92
+msgid "No Events found."
+msgstr "Aucun évènement trouvé."
+
+#: class/inc/PostTypes.php:93
+msgid "No Events found in trash."
+msgstr "Aucun évènement trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:94
+msgid "All Events"
+msgstr "Tous les évènements"
+
+#: class/inc/PostTypes.php:108 class/inc/PostTypes.php:110
+msgid "Services"
+msgstr "Services"
+
+#: class/inc/PostTypes.php:111
+msgid "Service"
+msgstr "Service"
+
+#: class/inc/PostTypes.php:112
+msgid "Edit Service"
+msgstr "Modifier un service"
+
+#: class/inc/PostTypes.php:113
+msgid "New Service"
+msgstr "Nouveau service"
+
+#: class/inc/PostTypes.php:114
+msgid "View Service"
+msgstr "Voir le service"
+
+#: class/inc/PostTypes.php:115
+msgid "View Services"
+msgstr "Voir les services"
+
+#: class/inc/PostTypes.php:116
+msgid "Search Services"
+msgstr "Rechercher des services"
+
+#: class/inc/PostTypes.php:117
+msgid "No Services found."
+msgstr "Aucun service trouvé."
+
+#: class/inc/PostTypes.php:118
+msgid "No Services found in trash."
+msgstr "Aucun service trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:119
+msgid "All Services"
+msgstr "Tous les services"
+
+#: class/inc/PostTypes.php:132 class/inc/PostTypes.php:135
+msgid "Testimonial"
+msgstr "Témoignage"
+
+#: class/inc/PostTypes.php:134
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: class/inc/PostTypes.php:136
+msgid "Edit Testimonial"
+msgstr "Modifier un témoignage"
+
+#: class/inc/PostTypes.php:137
+msgid "New Testimonial"
+msgstr "Nouveau témoignage"
+
+#: class/inc/PostTypes.php:138
+msgid "View Testimonial"
+msgstr "Voir le témoignage"
+
+#: class/inc/PostTypes.php:139
+msgid "View Testimonials"
+msgstr "Voir les témoignages"
+
+#: class/inc/PostTypes.php:140
+msgid "Search Testimonials"
+msgstr "Rechercher des témoignages"
+
+#: class/inc/PostTypes.php:141
+msgid "No Testimonials found."
+msgstr "Aucun témoignage trouvé."
+
+#: class/inc/PostTypes.php:142
+msgid "No Testimonials found in trash."
+msgstr "Aucun témoignage trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:143
+msgid "All Testimonials"
+msgstr "Tous les témoignages"
+
+#: class/inc/PostTypes.php:156
+msgid "slide"
+msgstr "slide"
+
+#: class/inc/PostTypes.php:158
+msgid "Slides"
+msgstr "Slides"
+
+#: class/inc/PostTypes.php:159
+msgid "Slide"
+msgstr "Slide"
+
+#: class/inc/PostTypes.php:160
+msgid "Edit Slide"
+msgstr "Modifier un slide"
+
+#: class/inc/PostTypes.php:161
+msgid "New Slide"
+msgstr "Nouveau slide"
+
+#: class/inc/PostTypes.php:162
+msgid "View Slide"
+msgstr "Voir le slide"
+
+#: class/inc/PostTypes.php:163
+msgid "View Slides"
+msgstr "Voir les slides"
+
+#: class/inc/PostTypes.php:164
+msgid "Search Slides"
+msgstr "Rechercher des slides"
+
+#: class/inc/PostTypes.php:165
+msgid "No Slides found."
+msgstr "Aucun slide trouvé."
+
+#: class/inc/PostTypes.php:166
+msgid "No Slides found in trash."
+msgstr "Aucun slide trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:167
+msgid "All Slides"
+msgstr "Tous les slides"
+
+#: class/inc/PostTypes.php:180
+msgid "pricing plan"
+msgstr "plan tarifaire"
+
+#: class/inc/PostTypes.php:182
+msgid "Pricing Plans"
+msgstr "Plans tarifaires"
+
+#: class/inc/PostTypes.php:183
+msgid "Pricing Plan"
+msgstr "Plans tarifaire"
+
+#: class/inc/PostTypes.php:184
+msgid "Edit Pricing Plan"
+msgstr "Modifier un plan tarifaire"
+
+#: class/inc/PostTypes.php:185
+msgid "New Pricing Plan"
+msgstr "Nouveau plan tarifaire"
+
+#: class/inc/PostTypes.php:186
+msgid "View Pricing Plan"
+msgstr "Voir un plan tarifaire"
+
+#: class/inc/PostTypes.php:187
+msgid "View Pricing Plans"
+msgstr "Voir les plans tarifaires"
+
+#: class/inc/PostTypes.php:188
+msgid "Search Pricing Plans"
+msgstr "Rechercher des plans tarifaires"
+
+#: class/inc/PostTypes.php:189
+msgid "No Pricing Plans found."
+msgstr "Aucun plan tarifaire trouvé."
+
+#: class/inc/PostTypes.php:190
+msgid "No Pricing Plans found in trash."
+msgstr "Aucun plan tarifaire trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:191
+msgid "All Pricing Plans"
+msgstr "Tous les plans tarifaires"
+
+#: class/inc/Sidebar.php:88
+msgid "Blog sidebar"
+msgstr "Barre latéral du blog"
+
+#: class/inc/Sidebar.php:97
+msgid "Footer sidebar"
+msgstr "Barre latérale du bas de page"
+
+#: class/inc/Sidebar.php:106
+msgid "Event sidebar"
+msgstr "Barre latéral des évènements"
+
+#: class/inc/Sidebar.php:115
+msgid "Classes sidebar list"
+msgstr "Barre latéral de l’archive des cours"
+
+#: class/inc/Sidebar.php:124
+msgid "Classes single sidebar"
+msgstr "Barre lattérale des cours"
+
+#: class/inc/Styles.php:90
+#, php-format
+msgid "+ %s"
+msgstr ""
+
+#: class/inc/Taxonomies.php:35
+msgid "Jobs"
+msgstr "Métiers"
+
+#: class/inc/Taxonomies.php:37
+msgid "Search Jobs"
+msgstr "Rechercher des métiers"
+
+#: class/inc/Taxonomies.php:38
+msgid "Popular Jobs"
+msgstr "Métiers les plus utilisés"
+
+#: class/inc/Taxonomies.php:39
+msgid "All Jobs"
+msgstr "Tous les jobs"
+
+#: class/inc/Taxonomies.php:40
+msgid "Edit Job"
+msgstr "Modifier un métier"
+
+#: class/inc/Taxonomies.php:41
+msgid "View Job"
+msgstr "Voir le métier"
+
+#: class/inc/Taxonomies.php:42
+msgid "Update Job"
+msgstr "Mettre à jour un métier"
+
+#: class/inc/Taxonomies.php:43
+msgid "Add New Job"
+msgstr "Ajouter un métier"
+
+#: class/inc/Taxonomies.php:44
+msgid "No Jobs found."
+msgstr "Aucuns métier trouvé."
+
+#: class/inc/Taxonomies.php:45
+msgid "No Jobs"
+msgstr "Aucuns métier"
+
+#: class/inc/Taxonomies.php:46
+msgid "&larr; Back to Jobs"
+msgstr "&larr; Revenir à la liste des métiers"
+
+#: class/inc/Taxonomies.php:58
+msgid "Popular Trainers"
+msgstr "Entraineurs les plus utilisés"
+
+#: class/inc/Taxonomies.php:62
+msgid "Update Trainer"
+msgstr "Modifier un entraineur"
+
+#: class/inc/Taxonomies.php:63
+msgid "Add New Trainer"
+msgstr "Ajouter un entraineur"
+
+#: class/inc/Taxonomies.php:64
+msgid "No Trainers found."
+msgstr "Aucun entraineur trouvé."
+
+#: class/inc/Taxonomies.php:65
+msgid "No Trainers"
+msgstr "Aucuns entraineurs"
+
+#: class/inc/Taxonomies.php:66
+msgid "&larr; Back to Trainers"
+msgstr "&larr; Revenir à la liste des entraineurs"
+
+#: class/inc/Taxonomies.php:76
+msgid "Days"
+msgstr "Jours"
+
+#: class/inc/Taxonomies.php:77
+msgid "Day"
+msgstr "Jour"
+
+#: class/inc/Taxonomies.php:78
+msgid "Search Days"
+msgstr "Rechercher des jours"
+
+#: class/inc/Taxonomies.php:79
+msgid "Popular Days"
+msgstr "Jours les plus populaires"
+
+#: class/inc/Taxonomies.php:80
+msgid "All Days"
+msgstr "Tous les jours"
+
+#: class/inc/Taxonomies.php:81
+msgid "Edit Day"
+msgstr "Modifier un jour"
+
+#: class/inc/Taxonomies.php:82
+msgid "View Day"
+msgstr "Voir le jour"
+
+#: class/inc/Taxonomies.php:83
+msgid "Update Day"
+msgstr "Modifier un jour"
+
+#: class/inc/Taxonomies.php:84
+msgid "Add New Day"
+msgstr "Ajouter un jour"
+
+#: class/inc/Taxonomies.php:85
+msgid "No Days found."
+msgstr "Aucun jour trouvé."
+
+#: class/inc/Taxonomies.php:86
+msgid "No Days"
+msgstr "Aucuns jours"
+
+#: class/inc/Taxonomies.php:87
+msgid "&larr; Back to Days"
+msgstr "&larr; Revenir à la liste des jours"
+
+#: class/inc/Taxonomies.php:96
+msgid "Payments"
+msgstr "Paiements"
+
+#: class/inc/Taxonomies.php:97
+msgid "Payment"
+msgstr "Paiement"
+
+#: class/inc/Taxonomies.php:98
+msgid "Search Payments"
+msgstr "Rechercher des paiements"
+
+#: class/inc/Taxonomies.php:99
+msgid "Popular Payments"
+msgstr "Paiements les plus utilisés"
+
+#: class/inc/Taxonomies.php:100
+msgid "All Payments"
+msgstr "Tous les paiements"
+
+#: class/inc/Taxonomies.php:101
+msgid "Edit Payment"
+msgstr "Modifier un paiement"
+
+#: class/inc/Taxonomies.php:102
+msgid "View Payment"
+msgstr "Voir le paiements"
+
+#: class/inc/Taxonomies.php:103
+msgid "Update Payment"
+msgstr "Modifier un paiement"
+
+#: class/inc/Taxonomies.php:104
+msgid "Add New Payment"
+msgstr "Ajouter un paiement"
+
+#: class/inc/Taxonomies.php:105
+msgid "No Payments found."
+msgstr "Aucun paiement trouvé."
+
+#: class/inc/Taxonomies.php:106
+msgid "No Payments"
+msgstr "Aucuns paiements"
+
+#: class/inc/Taxonomies.php:107
+msgid "&larr; Back to Payments"
+msgstr "&larr; Retour à la liste des paiements"
+
+#: class/inc/Taxonomies.php:116
+msgid "Options"
+msgstr "Options"
+
+#: class/inc/Taxonomies.php:117
+msgid "Option"
+msgstr "Option"
+
+#: class/inc/Taxonomies.php:118
+msgid "Search Options"
+msgstr "Rechercher des options"
+
+#: class/inc/Taxonomies.php:119
+msgid "Popular Options"
+msgstr "Options les plus utilisés"
+
+#: class/inc/Taxonomies.php:120
+msgid "All Options"
+msgstr "Toutes les options"
+
+#: class/inc/Taxonomies.php:121
+msgid "Edit Option"
+msgstr "Modifier une option"
+
+#: class/inc/Taxonomies.php:122
+msgid "View Option"
+msgstr "Voir l’option"
+
+#: class/inc/Taxonomies.php:123
+msgid "Update Option"
+msgstr "Modifier une option"
+
+#: class/inc/Taxonomies.php:124
+msgid "Add New Option"
+msgstr "Ajouter une option"
+
+#: class/inc/Taxonomies.php:125
+msgid "No Options found."
+msgstr "Aucune option trouvée."
+
+#: class/inc/Taxonomies.php:126
+msgid "No Options"
+msgstr "Aucunes options"
+
+#: class/inc/Taxonomies.php:127
+msgid "&larr; Back to Options"
+msgstr "&larr; Revenir à la liste des options"
+
+#: class/inc/Taxonomies.php:136
+msgid "Levels"
+msgstr "Difficultés"
+
+#: class/inc/Taxonomies.php:137
+msgid "Level"
+msgstr "Difficulté"
+
+#: class/inc/Taxonomies.php:138
+msgid "Search Levels"
+msgstr "Rechercher des difficultés"
+
+#: class/inc/Taxonomies.php:139
+msgid "Popular Levels"
+msgstr "Difficultés les plus utilisées"
+
+#: class/inc/Taxonomies.php:140
+msgid "All Levels"
+msgstr "Toutes les difficultés"
+
+#: class/inc/Taxonomies.php:141
+msgid "Edit Level"
+msgstr "Modifier une difficulté"
+
+#: class/inc/Taxonomies.php:142
+msgid "View Level"
+msgstr "Voir la difficulté"
+
+#: class/inc/Taxonomies.php:143
+msgid "Update Level"
+msgstr "Modifier une difficulté"
+
+#: class/inc/Taxonomies.php:144
+msgid "Add New Level"
+msgstr "Ajouter une difficulté"
+
+#: class/inc/Taxonomies.php:145
+msgid "No Levels found."
+msgstr "Aucune difficulté trouvé."
+
+#: class/inc/Taxonomies.php:146
+msgid "No Levels"
+msgstr "Aucunes difficultés"
+
+#: class/inc/Taxonomies.php:147
+msgid "&larr; Back to Levels"
+msgstr "&larr; Retour à la liste des difficultés"
+
+#: class/options/ClubSettings.php:73
+msgid "Regional code"
+msgstr "Code régional"
+
+#: class/options/ClubSettings.php:93
+msgid "Regional code (ex: France: +33, United States : +1)."
+msgstr "Code régional (ex: France: +33, United States : +1)."
+
+#: class/options/ClubSettings.php:97
+msgid "Phone"
+msgstr "Téléphone"
+
+#: class/options/ClubSettings.php:100
+msgid "Club phone number (ex: 01 12 34 56 78)."
+msgstr "Numéro de téléphone du club (ex: 01 12 34 56 78)."
+
+#: class/options/ClubSettings.php:104
+msgid "Email"
+msgstr "Email"
+
+#: class/options/ClubSettings.php:107
+msgid "Club email (name@gmail.com)."
+msgstr "Adresse email du club (ex: name@gmail.com)."
+
+#: class/options/ClubSettings.php:111
+msgid "Address"
+msgstr "Adresse"
+
+#: class/options/ClubSettings.php:114
+msgid "Club address (ex: 184 Main Collins Street)."
+msgstr "Adresse du club (ex: 184 Main Collins Street)."
+
+#: class/options/ClubSettings.php:118
+msgid "City"
+msgstr "Ville"
+
+#: class/options/ClubSettings.php:121
+msgid "Club address city (ex: Paris, New York)."
+msgstr "Ville du club (ex: Paris, New York)."
+
+#: class/options/ClubSettings.php:125
+msgid "Facebook"
+msgstr "Facebook"
+
+#: class/options/ClubSettings.php:128
+msgid "Pseudo Facebook"
+msgstr "Pseudo Facebook"
+
+#: class/options/ClubSettings.php:132
+msgid "Instagram"
+msgstr "Instagram"
+
+#: class/options/ClubSettings.php:135
+msgid "Pseudo Instagram"
+msgstr "Pseudo Instagram"
+
+#: class/options/ClubSettings.php:139
+msgid "Twitter"
+msgstr "Twitter"
+
+#: class/options/ClubSettings.php:142
+msgid "Pseudo Twitter"
+msgstr "Pseudo Twitter"
+
+#: class/options/ClubSettings.php:146
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: class/options/ClubSettings.php:149
+msgid "Pseudo Linkedin"
+msgstr "Pseudo Linkedin"
+
+#: class/options/ClubSettings.php:153 class/widgets/OpeningHoursWidget.php:26
+msgid "Opening hours"
+msgstr "Horaires d’ouvertures"
+
+#: class/options/ClubSettings.php:155
+msgid "From Monday to Friday"
+msgstr "De lundi à vendredi"
+
+#: class/options/ClubSettings.php:156
+msgid "Saturday"
+msgstr "Samedi"
+
+#: class/options/ClubSettings.php:157
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: class/options/ClubSettings.php:215 class/options/ClubSettings.php:234
+msgid "Club Settings"
+msgstr "Réglages du club"
+
+#: class/options/ClubSettings.php:216
+msgid "Club"
+msgstr "Club"
+
+#: class/widgets/AboutEventOrClassesWidget.php:26
+msgid "About event or classes"
+msgstr "A propos d’un évènement ou d’un cours"
+
+#: class/widgets/AboutEventOrClassesWidget.php:28
+msgid "Display informations on an event or a classes."
+msgstr "Afficher les informations sur un évènement ou un cours."
+
+#: class/widgets/AboutEventOrClassesWidget.php:34
+msgid "Post type"
+msgstr "Type de contenu"
+
+#: class/widgets/AboutEventOrClassesWidget.php:54
+msgid "About event"
+msgstr "A propos de l’évènement"
+
+#: class/widgets/AboutWidget.php:29
+msgid "Displays the club contact informations."
+msgstr "Afficher les informations de contact sur le club."
+
+#: class/widgets/AboutWidget.php:34
+msgid "Content"
+msgstr "Contenu"
+
+#: class/widgets/FeaturedClassesWidget.php:27
+#: class/widgets/FeaturedClassesWidget.php:55
+msgid "Featured classes"
+msgstr "Cours mis en avant"
+
+#: class/widgets/FeaturedClassesWidget.php:29
+msgid "Displays the featured classes."
+msgstr "Afficher les cours mis en avants."
+
+#: class/widgets/FeaturedClassesWidget.php:35
+msgid "Number of classes to show :"
+msgstr "Nombre de cours à afficher :"
+
+#: class/widgets/LatestPostWidget.php:27 class/widgets/LatestPostWidget.php:56
+msgid "Latest Posts"
+msgstr "Derniers articles"
+
+#: class/widgets/LatestPostWidget.php:29
+msgid "Your site’s most latest Posts with thumbnail."
+msgstr "Les derniers articles de votre site avec vignette."
+
+#: class/widgets/LatestPostWidget.php:35
+msgid "Number of posts to show :"
+msgstr "Nombre d’articles à afficher :"
+
+#: class/widgets/LatestPostWidget.php:36
+msgid "Show post date ?"
+msgstr "Afficher la date des articles ?"
+
+#: class/widgets/OpeningHoursWidget.php:28
+msgid "Displays the opening hours."
+msgstr "Afficher les heures d’ouverture."
+
+#: class/widgets/OpeningHoursWidget.php:53
+msgid "Open time"
+msgstr "Heures d’ouverture"
+
+#: class/widgets/PostCategoryWidget.php:28
+msgid "A list of categories."
+msgstr "La liste des catégories."
+
+#: class/widgets/PostCategoryWidget.php:34
+msgid "Show post counts ?"
+msgstr "Afficher le nombre d’articles ?"
+
+#: class/widgets/SearchClassesWidget.php:26
+#: class/widgets/SearchClassesWidget.php:53
+msgid "Search classes"
+msgstr "Rechercher des cours"
+
+#: class/widgets/SearchClassesWidget.php:28
+msgid "Search classes according to one or more filters."
+msgstr ""
+"Rechercher des cours correspondant à un ou plusieurs critères de recherche."
+
+#: class/widgets/SearchWidget.php:28
+msgid "A search form for blog posts."
+msgstr "Un formulaire de recherche pour les articles."
+
+#: class/widgets/TagCloudWidget.php:26
+msgid "Tag Cloud"
+msgstr "Nuage de mots-clés"
+
+#: class/widgets/TagCloudWidget.php:28
+msgid "A cloud of your most used taxonomies."
+msgstr "Nuage de mots clés des taxonomies les plus utilisées."
+
+#: class/widgets/TagCloudWidget.php:34
+msgid "Show tag counts ?"
+msgstr "Afficher le nombre de post ?"
+
+#: class/widgets/TagCloudWidget.php:35
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: class/widgets/TagCloudWidget.php:61
+msgid "Category"
+msgstr "Catégorie"
+
+#: class/widgets/TagCloudWidget.php:63
+msgid "Tags"
+msgstr "Mots clés"
+
+#: class/widgets/TagCloudWidget.php:65
+msgid "Tag Clouds"
+msgstr "Nuage de mots-clés"
+
+#: class/widgets/TagCloudWidget.php:139
+msgid ""
+"The tag cloud will not be displayed since there are no taxonomies that "
+"support the tag cloud widget."
+msgstr ""
+"Le nuage de mots clé ne sera pas affiché car aucune taxonomie ne prend en "
+"charge le widget de nuage de tags."
+
+#: class/widgets/TrainerWidget.php:28
+msgid ""
+"Display informations on the trainer corresponding to an event or a class."
+msgstr ""
+"Afficher les informations sur l’entraineur correspondant à un événement ou à "
+"une classe."
+
+#: class/widgets/TrainerWidget.php:55
+msgid "About instructor"
+msgstr "A propos de l’entraineur"
+
+#: class/widgets/VideoWidget.php:31
+msgid "Displays a video YouTube."
+msgstr "Afficher une vidéo Youtube."
+
+#: class/widgets/VideoWidget.php:37
+msgid "Link"
+msgstr "Lien Youtube"
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:92
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:92
+#: ressources/node_modules/yargs/build/lib/usage.js:90
+msgid "Positionals:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:192
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:194
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:192
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:194
+#: ressources/node_modules/yargs/build/lib/usage.js:187
+#: ressources/node_modules/yargs/build/lib/usage.js:190
+msgid "command"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:203
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:203
+#: ressources/node_modules/yargs/build/lib/usage.js:198
+msgid "Commands:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:223
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:458
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:223
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:458
+#: ressources/node_modules/yargs/build/lib/usage.js:457
+msgid "default:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:225
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:225
+#: ressources/node_modules/yargs/build/lib/usage.js:215
+msgid "aliases:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:288
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:288
+#: ressources/node_modules/yargs/build/lib/usage.js:290
+msgid "boolean"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:289
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:289
+#: ressources/node_modules/yargs/build/lib/usage.js:292
+msgid "count"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:290
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:291
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:290
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:291
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+#: ressources/node_modules/yargs/build/lib/usage.js:294
+#: ressources/node_modules/yargs/build/lib/usage.js:296
+msgid "string"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:292
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:292
+#: ressources/node_modules/yargs/build/lib/usage.js:298
+msgid "array"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:293
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:293
+#: ressources/node_modules/yargs/build/lib/usage.js:300
+msgid "number"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:297
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:297
+#: ressources/node_modules/yargs/build/lib/usage.js:307
+msgid "required"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:298
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:298
+#: ressources/node_modules/yargs/build/lib/usage.js:308
+msgid "choices:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:317
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:317
+#: ressources/node_modules/yargs/build/lib/usage.js:321
+msgid "Examples:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:436
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:436
+#: ressources/node_modules/yargs/build/lib/usage.js:438
+msgid "generated-value"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:29
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:52
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:29
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:52
+#, javascript-format
+msgid "Not enough non-option arguments: got %s, need at least %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:40
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:40
+#, javascript-format
+msgid "Too many non-option arguments: got %s, maximum of %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:147
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:147
+#: ressources/node_modules/yargs/build/lib/validation.js:155
+msgid "Invalid values:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:150
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:150
+#: ressources/node_modules/yargs/build/lib/validation.js:157
+#, javascript-format
+msgid "Argument: %s, Given: %s, Choices: %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:180
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:180
+#: ressources/node_modules/yargs/build/lib/validation.js:181
+#, javascript-format
+msgid "Argument check failed: %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:256
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:256
+#: ressources/node_modules/yargs/build/lib/validation.js:248
+msgid "Implications failed:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:295
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:295
+#: ressources/node_modules/yargs/build/lib/validation.js:284
+#, javascript-format
+msgid "Arguments %s and %s are mutually exclusive"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:316
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:316
+#: ressources/node_modules/yargs/build/lib/validation.js:303
+#, javascript-format
+msgid "Did you mean %s?"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:372
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:372
+#, javascript-format
+msgid "Argument unexpected for: %s"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:382
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:392
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:446
+#: ressources/node_modules/yargs-parser/index.js:367
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:382
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:392
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:446
+#, javascript-format
+msgid "Not enough arguments following: %s"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:591
+#: ressources/node_modules/yargs-parser/index.js:541
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:591
+#, javascript-format
+msgid "Invalid JSON config file: %s"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:941
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:941
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.array."
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:944
+#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:944
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.narg."
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "big_int"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "num"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "template_head"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "comment2"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "regexp"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "operator"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "eof"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "expand"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "punc"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "arrow"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "name"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "atom"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "keyword"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "("
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ")"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ":"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ";"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ","
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "]"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "}"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "{"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "["
+msgstr ""
+
+#: ressources/node_modules/yargs/build/lib/usage.js:213
+msgid "default"
+msgstr ""
+
+#: ressources/node_modules/yargs/build/lib/usage.js:219
+#: ressources/node_modules/yargs/build/lib/usage.js:302
+#, javascript-format
+msgid "deprecated: %s"
+msgstr ""
+
+#: ressources/node_modules/yargs/build/lib/usage.js:222
+#: ressources/node_modules/yargs/build/lib/usage.js:303
+msgid "deprecated"
+msgstr ""
+
+#: ressources/node_modules/yargs/build/lib/usage.js:241
+msgid "Options:"
+msgstr ""

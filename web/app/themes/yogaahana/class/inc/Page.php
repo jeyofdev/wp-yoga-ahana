@@ -27,7 +27,7 @@ class Page {
     {
         add_filter("get_the_archive_title", function (string $title) {
             if (is_category()) {
-                $title = single_cat_title("category : ", false);
+                $title = single_cat_title(__("category : ", "ahana"), false);
             }
         
             return $title;

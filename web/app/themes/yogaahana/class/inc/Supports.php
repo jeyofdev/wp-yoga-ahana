@@ -21,5 +21,7 @@ class Supports {
             add_theme_support("menus");
             add_theme_support("post-thumbnails", ["post", "trainer", "classes", "event", "service", "testimonial", "slide"]);
         });
+
+        load_theme_textdomain("ahana", get_template_directory() . "/languages/");
     }
 }

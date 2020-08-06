@@ -70,7 +70,7 @@ class Filters
 
             unset($number[0]);
 
-            $prefix = "(+" . str_replace("code-", "", get_option(ClubSettings::PHONE_CODE)) . ")";
+            $prefix = "(+" . str_replace("code-", "", get_option(ClubSettings::REGIONAL_CODE)) . ")";
             $part_one = implode('', array_slice($number, 0, 1));
             $part_two = implode('', array_slice($number, 1, 2));
             $part_three = implode('', array_slice($number, 3, 2));

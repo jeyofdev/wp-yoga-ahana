@@ -181,7 +181,7 @@ class FieldsCustomizer
 
             // Add colors section
             "gradients_section" => [
-                "title" => esc_html__("gradients", "ahana"),
+                "title" => esc_html__("Gradients", "ahana"),
 				"panel" => "theme_option",
 				"priority" => 30
 			],
@@ -202,7 +202,7 @@ class FieldsCustomizer
 
             // Add testimonial section
             "testimonial_section" => [
-                "title" => esc_html__("testimonial section", "ahana"),
+                "title" => esc_html__("Testimonial section", "ahana"),
 				"panel" => "theme_option",
 				"priority" => 60
 			],
@@ -857,7 +857,7 @@ class FieldsCustomizer
 				"settings" => "video_link",
 				"label"    => esc_html__("link", "ahana"),
 				"section"  => "video_section",
-				"default"  => esc_html__("youtube video", "ahana"),
+				"default"  => esc_html__("Youtube video", "ahana"),
 				"priority"  => 11,
 			],
 
@@ -865,7 +865,7 @@ class FieldsCustomizer
 			[
 				"type"        => "image",
 				"settings"    => "video_image",
-				"label"       => esc_html__("image", "ahana"),
+				"label"       => esc_html__("Image", "ahana"),
 				"transport"   => "auto",
 				"section"     => "video_section",
 				"default"     => '',

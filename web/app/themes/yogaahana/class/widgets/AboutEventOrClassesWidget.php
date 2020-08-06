@@ -31,7 +31,7 @@ class AboutEventOrClassesWidget extends WP_Widget {
 
         $this->fields = [
             "title" => __("Title", "ahana"),
-            "post_type" => __("Post type")
+            "post_type" => __("Post type", "ahana")
         ];
 	}
 

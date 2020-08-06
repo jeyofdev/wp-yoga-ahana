@@ -14,7 +14,7 @@ class ClubSettings
 
     CONST ADDRESS = "club_address";
     CONST CITY = "club_city";
-    CONST PHONE_CODE = "club_phone_code";
+    CONST REGIONAL_CODE = "club_regional_code";
     CONST PHONE = "club_phone";
     CONST EMAIL = "club_email";
     CONST FACEBOOK = "club_facebook";
@@ -51,7 +51,7 @@ class ClubSettings
     {
         register_setting(self::GROUP, self::ADDRESS);
         register_setting(self::GROUP, self::CITY);
-        register_setting(self::GROUP, self::PHONE_CODE);
+        register_setting(self::GROUP, self::REGIONAL_CODE);
         register_setting(self::GROUP, self::PHONE);
         register_setting(self::GROUP, self::EMAIL);
         register_setting(self::GROUP, self::FACEBOOK);
@@ -70,27 +70,27 @@ class ClubSettings
 
         add_settings_section(self::SECTION_SLUG, null, null, self::GROUP);
 
-        add_settings_field("club_options_phone_code", __("Phone code", "ahana"), function () {
-            $phone_code = [];
+        add_settings_field("club_options_regional_code", __("Regional code", "ahana"), function () {
+            $regional_code = [];
             for ($i = 1; $i<=1876; $i++) { 
-                $phone_code[$i] = "(+$i)";
+                $regional_code[$i] = "(+$i)";
             }
 
             $options = [];
-            foreach ($phone_code as $key => $value) {
+            foreach ($regional_code as $key => $value) {
                 $codeVerif = "code-$key";
                 $selected = '';
-                if ($codeVerif === get_option(self::PHONE_CODE)) {
+                if ($codeVerif === get_option(self::REGIONAL_CODE)) {
                     $selected = " selected";
                 }
                 $options[] = '<option value="code-' . $key . '"' . $selected . '>' . $value . '</option>';
             }
 
             ?>
-                <select name="<?= self::PHONE_CODE; ?>" id="<?= self::PHONE_CODE; ?>" class="regular-text">
+                <select name="<?= self::REGIONAL_CODE; ?>" id="<?= self::REGIONAL_CODE; ?>" class="regular-text">
                     <?= implode("\n", $options); ?>
                 </select>
-                <p class="description" id="phone_code-description"><?= __("Phone code (ex: France: +33, United States : +1).", "ahana"); ?></p>
+                <p class="description" id="regional_code-description"><?= __("Regional code (ex: France: +33, United States : +1).", "ahana"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
 

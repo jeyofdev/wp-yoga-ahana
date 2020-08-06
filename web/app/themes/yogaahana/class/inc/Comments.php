@@ -100,7 +100,7 @@ class Comments {
                 '<textarea id="comment" name="comment" cols="30" rows="9" placeholder="' . $commentLabel . '" required></textarea>'
             ;
             $fields["class_submit"] = "site-btn sb-gradient";
-            $fields["label_submit"] = __("Send Message", "dingo");
+            $fields["label_submit"] = __("Send Message", "ahana");
             $fields["submit_button"] = '<button name="%1$s" type="submit" id="%2$s" class="%3$s"/>%4$s</button>';
             $fields["submit_field"] = '<div class="form-group">%1$s %2$s</div>';
 
