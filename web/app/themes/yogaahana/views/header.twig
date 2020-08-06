@@ -5,17 +5,17 @@
                 <div class="col-md-8 d-none d-md-block p-0">
                     <div class="header-info">
                         <i class="material-icons">map</i>
-                        <p>{{ format_city(club_settings, ",") }}</p>
+                        <p>{{ address(",") }}</p>
                     </div>
                     <div class="header-info">
                         <i class="material-icons">phone</i>
-                        <p>{{ club_settings.phone|format_phone_number }}</p>
+                        <p>{{ phone_number(club_settings.phone) }}</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-md-right p-0">
                     <div class="header-info d-none d-md-inline-flex">
                         <i class="material-icons">alarm_on</i>
-                        <p>{{ format_opening_hours() }}</p>
+                        <p>{{ opening_hours() }}</p>
                     </div>
                 </div>
             </div>

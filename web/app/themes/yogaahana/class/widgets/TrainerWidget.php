@@ -74,13 +74,11 @@ class TrainerWidget extends WP_Widget {
         }
 
         $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["trainer"] = $trainer;
 
-        Timber::render("widgets/trainer-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "trainer" => $trainer,
-            "theme" => $context["theme"]
-        ]);
+        Timber::render("widgets/trainer-widget.twig", $context);
     }
 
 

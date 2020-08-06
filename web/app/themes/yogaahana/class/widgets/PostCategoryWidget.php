@@ -79,12 +79,13 @@ class PostCategoryWidget extends WP_Widget {
 
         $categories = $newCategories;
 
-        Timber::render("widgets/post-category-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "categories" => $categories,
-            "count" => $instance["count"]
-        ]);
+        $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["categories"] = $categories;
+        $context["count"] = $instance["count"];
+
+        Timber::render("widgets/post-category-widget.twig", $context);
 	}
 
 

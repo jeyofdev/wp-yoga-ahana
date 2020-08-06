@@ -82,11 +82,12 @@ class FeaturedClassesWidget extends WP_Widget {
 			return;
         }
 
-        Timber::render("widgets/featured-classes-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "classes" => $classes,
-        ]);
+        $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["classes"] = $classes;
+
+        Timber::render("widgets/featured-classes-widget.twig", $context);
     }
 
 

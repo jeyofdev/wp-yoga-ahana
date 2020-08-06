@@ -54,18 +54,16 @@ class AboutWidget extends WP_Widget {
         $instance["content"] = !empty($instance["content"]) ? ($instance["content"]) : __("", "ahana");
 
         $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["club_settings"] = [
+            "phone" => get_option(ClubSettings::PHONE),
+            "address" => get_option(ClubSettings::ADDRESS),
+            "city" => get_option(ClubSettings::CITY),
+            "email" => get_option(ClubSettings::EMAIL),
+        ];
 
-        Timber::render("widgets/about-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "theme" => $context["theme"],
-            "contact" => [
-                "phone" => get_option(ClubSettings::PHONE),
-                "address" => get_option(ClubSettings::ADDRESS),
-                "city" => get_option(ClubSettings::CITY),
-                "email" => get_option(ClubSettings::EMAIL),
-            ]
-        ]);
+        Timber::render("widgets/about-widget.twig", $context);
     }
 
 

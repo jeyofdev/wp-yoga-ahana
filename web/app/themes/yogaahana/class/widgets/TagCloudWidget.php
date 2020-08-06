@@ -83,11 +83,12 @@ class TagCloudWidget extends WP_Widget {
 			return;
         }
 
-        Timber::render("widgets/tag-cloud-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "tag_cloud" => explode("\n", $tag_cloud)
-        ]);
+        $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["tag_cloud"] = explode("\n", $tag_cloud);
+
+        Timber::render("widgets/tag-cloud-widget.twig", $context);
     }
 
 

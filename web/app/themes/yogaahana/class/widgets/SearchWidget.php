@@ -53,12 +53,11 @@ class SearchWidget extends WP_Widget {
         $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : '';
 
         $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["site"] = $context["site"];
 
-        Timber::render("widgets/search-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "site" => $context["site"]
-        ]);
+        Timber::render("widgets/search-widget.twig", $context);
     }
 
 

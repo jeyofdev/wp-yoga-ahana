@@ -23,7 +23,7 @@
             <img src="{{ Image(get_trainer(post).thumbnail).src | resize("classes_trainer_thumbnail") }}" alt="">
 
             <div class="author-text">
-                <h6><a href="{{ get_trainer(post).trainer_link }}">{{ get_trainer(post).trainer_name }}</a></h6>
+                <h6><a href="{{ get_trainer(post).link }}">{{ get_trainer(post).name }}</a></h6>
                 <p>{{ get_trainer(post).job }}</p>
             </div>
         </div>

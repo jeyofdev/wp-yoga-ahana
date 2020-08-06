@@ -55,13 +55,41 @@ class Functions
      * 
      * @return void
      */
-    public static function format_city (Environment $twig) : void
+    public static function address (Environment $twig) : void
     {
-        $twig->addFunction(new TwigFunction("format_city", function (array $clubSetting = [], ?string $separator = null, ?bool $space = true) {
-            extract($clubSetting);
-            $space = $space ? " " : null;
+        $twig->addFunction(new TwigFunction("address", function (?string $separator = null) {
+            $address = get_option(ClubSettings::ADDRESS);
+            $city = get_option(ClubSettings::CITY);
 
-            return $address . $separator . $space . $city;
+            return $address . $separator . " " . $city;
+        }));
+    }
+
+
+
+    /**
+     * Format a phone number
+     *
+     * @param Environment $twig
+     * 
+     * @return void
+     */
+    public static function phone_number (Environment $twig) : void
+    {
+        $twig->addFunction(new TwigFunction("phone_number", function (string $phone) {
+            $phone_number = str_replace(' ', '', $phone);
+            $number = str_split($phone_number);
+
+            unset($number[0]);
+
+            $prefix = "(+" . str_replace("code-", "", get_option(ClubSettings::REGIONAL_CODE)) . ")";
+            $part_one = implode('', array_slice($number, 0, 1));
+            $part_two = implode('', array_slice($number, 1, 2));
+            $part_three = implode('', array_slice($number, 3, 2));
+            $part_four = implode('', array_slice($number, 5, 2));
+            $part_five = implode('', array_slice($number, 7, 2));
+
+            return "$prefix $part_one $part_two $part_three $part_four $part_five";
         }));
     }
 
@@ -73,9 +101,9 @@ class Functions
      * @param Environment $twig
      * @return void
      */
-    public static function format_opening_hours (Environment $twig) : void
+    public static function opening_hours (Environment $twig) : void
     {
-        $twig->addFunction(new TwigFunction("format_opening_hours", function ($single = true) {
+        $twig->addFunction(new TwigFunction("opening_hours", function ($single = true) {
             $hours = [
                 "weeks" => [
                     "opening" => get_option(ClubSettings::WEEK_OPENING),
@@ -261,8 +289,8 @@ class Functions
             }
 
             return [
-                "trainer_name" => $items[0]->name,
-                "trainer_link" => $items[0]->link,
+                "name" => $items[0]->name,
+                "link" => $items[0]->link,
                 "job" => $job[0]->name,
                 "thumbnail" => $items[0]->trainer_avatar
             ];

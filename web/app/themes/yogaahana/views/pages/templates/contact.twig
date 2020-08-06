@@ -13,20 +13,20 @@
 					<div class="con-info">
 						<h3>{{ post.address_title }}</h3>
 						<ul>
-							<li><i class="material-icons">map</i>{{ format_city(club_settings, ",") }}</li>
+							<li><i class="material-icons">map</i>{{ address(",") }}</li>
 						</ul>
 					</div>
 					<div class="con-info">
 						<h3>{{ post.contact_title }}</h3>
 						<ul>
-							<li><i class="material-icons">map</i>{{ club_settings.phone|format_phone_number }}</li>
+							<li><i class="material-icons">map</i>{{ phone_number(club_settings.phone) }}</li>
 							<li><i class="material-icons">map</i>{{ club_settings.email }}</li>
 						</ul>
 					</div>
 					<div class="con-info">
 						<h3>{{ post.opening_hours_title }}</h3>
 						<ul>
-                            {{ format_opening_hours(false)|raw }}
+                            {{ opening_hours(false)|raw }}
 						</ul>
 					</div>
 					<div class="contact-social">

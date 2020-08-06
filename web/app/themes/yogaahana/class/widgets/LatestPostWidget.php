@@ -88,14 +88,12 @@ class LatestPostWidget extends WP_Widget {
         }
 
         $context = Timber::get_context();
+        $context["args"] = $args;
+        $context["instance"] = $instance;
+        $context["posts"] = $posts;
+        $context["date"] = $instance["show_date"];
 
-        Timber::render("widgets/latest-posts-widget.twig", [
-            "args" => $args,
-            "instance" => $instance,
-            "posts" => $posts,
-            "theme" => $context["theme"],
-            "date" => $instance["show_date"]
-        ]);
+        Timber::render("widgets/latest-posts-widget.twig", $context);
     }
 
 

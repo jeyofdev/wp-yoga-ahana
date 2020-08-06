@@ -7,9 +7,9 @@
 
         <p>{{ instance.content }}</p>
         <ul>
-            <li><i class="material-icons">phone</i>{{ contact.phone|format_phone_number }}</li>
-            <li><i class="material-icons">email</i>{{ contact.email }}</li>
-            <li><i class="material-icons">map</i>{{ format_city(contact, ",") }}</li>
+            <li><i class="material-icons">phone</i>{{ phone_number(club_settings.phone) }}</li>
+            <li><i class="material-icons">email</i>{{ club_settings.email }}</li>
+            <li><i class="material-icons">map</i>{{ address(",") }}</li>
         </ul>
     </div>
 {{ args.after_widget|raw }}

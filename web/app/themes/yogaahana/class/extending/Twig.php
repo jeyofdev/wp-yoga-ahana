@@ -49,8 +49,9 @@ class Twig extends TimberTwig
 
         Functions::dump($twig);
 		Functions::dd($twig);
-		Functions::format_city($twig);
-		Functions::format_opening_hours($twig);
+		Functions::address($twig);
+		Functions::phone_number($twig);
+		Functions::opening_hours($twig);
 		Functions::category_by_post($twig);
 		functions::get_avatar($twig);
 		Functions::add_social($twig);
@@ -75,7 +76,6 @@ class Twig extends TimberTwig
     public function add_timber_filters($twig) {
 		Filters::chars($twig);
 		Filters::texturize($twig);
-		Filters::format_phone_number($twig);
 
 		return $twig;
 	}

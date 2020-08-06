@@ -167,6 +167,11 @@ class Queries {
 
 
 
+    /**
+     * Filters the query variables whitelist before processing.
+     *
+     * @return void
+     */
     public static function add_query_vars () : void
     {
         add_filter("query_vars", function (array $params)

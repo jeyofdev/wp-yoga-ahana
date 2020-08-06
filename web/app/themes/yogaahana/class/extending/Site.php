@@ -32,10 +32,12 @@ class Site extends TimberSite
     public function __construct ()
     {
         parent::__construct();
+        Admin::init();
         Settings::init();
-        Assets::init();
         Supports::init();
+        Assets::init();
         Menus::init();
+        Sidebar::init();
         Images::init();
         Users::init();
         Pagination::init();
@@ -44,10 +46,8 @@ class Site extends TimberSite
         PostTypes::init();
         Taxonomies::init();
         Queries::init();
-        Sidebar::init();
         Page::init();
         Styles::init();
-        Admin::init();
         Share::init();
 
         return new Customizer();
