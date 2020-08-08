@@ -331,7 +331,8 @@ class FieldsCustomizer
 							".reply",
 							".reply:hover",
 							".classes-info ul li a:hover",
-							".about-instructor-widget a:hover"
+							".about-instructor-widget a:hover",
+							".logged-in-as a"
 						],
 						"property" => "color"
 					],

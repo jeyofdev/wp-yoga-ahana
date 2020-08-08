@@ -7,14 +7,18 @@
 	<!-- Events Section -->
 	<section class="events-page-section spad">
 		<div class="container">
-			<div class="row">
-				{% for post in posts %}
-					{% include "parts/blog-list.twig" %}
-				{% endfor %}
-			</div>
+			{% if posts.count is not same as (0) %}
+				<div class="row">
+					{% for post in posts %}
+						{% include "parts/blog-list.twig" %}
+					{% endfor %}
+				</div>
 
-			<!-- Pagination -->
-            {% include "parts/pagination.twig" %}
+				<!-- Pagination -->
+				{% include "parts/pagination.twig" %}
+			{% else %}
+				<p class="alert alert-danger">{{ __("No articles for the moment. Come back later", "ahana") }}</p>
+			{% endif %}
 		</div>
 	</section>
 	<!-- Events Section end -->

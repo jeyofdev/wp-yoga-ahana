@@ -4,60 +4,66 @@
     {% include "parts/top_section.twig" with { "title": wp_title, "intro": theme.theme_mod("top_section_content_event")  } %}
 
 
-    <!-- Filter -->
-	<div class="container">
-		<div class="event-filter-warp">
-			<div class="row">
-				<div class="col-xl-3">
-					{% if posts is not empty %}
-						<p>{{ get_number_posts(posts, "Showing %d event of %d event", "Showing %d events of %d events") }}</p>
-					{% else %}
-						<p>{{ __("Your search criteria are too restrictive", "ahana") }}</p>
-					{% endif %}
-				</div>
-				<div class="col-xl-9">
-					<form action="{{ get_post_type_archive_link("event") }}" class="event-filter-form">
-						<div class="ef-item">
-							<input type="text" id="date" name="event_date" placeholder="{{ __('Event Date', 'ahana') }}" class="event-date" value="{{ query_vars.date }}">
-							<i class="material-icons">event_available</i>
-						</div>
+	{% if posts.count is not same as (0) %}
+		<!-- Filter -->
+		<div class="container">
+			<div class="event-filter-warp">
+				<div class="row">
+					<div class="col-xl-3">
+						{% if posts is not empty %}
+							<p>{{ get_number_posts(posts, "Showing %d event of %d event", "Showing %d events of %d events") }}</p>
+						{% else %}
+							<p>{{ __("Your search criteria are too restrictive", "ahana") }}</p>
+						{% endif %}
+					</div>
+					<div class="col-xl-9">
+						<form action="{{ get_post_type_archive_link("event") }}" class="event-filter-form">
+							<div class="ef-item">
+								<input type="text" id="date" name="event_date" placeholder="{{ __('Event Date', 'ahana') }}" class="event-date" value="{{ query_vars.date }}">
+								<i class="material-icons">event_available</i>
+							</div>
 
-						<div class="ef-item">
-							<input type="text" id="event_search" name="event_search" value="{{ query_vars.event_search }}" placeholder="{{ __('Search', 'ahana') }}">
-							<i class="material-icons">search</i>
-						</div>
+							<div class="ef-item">
+								<input type="text" id="event_search" name="event_search" value="{{ query_vars.event_search }}" placeholder="{{ __('Search', 'ahana') }}">
+								<i class="material-icons">search</i>
+							</div>
 
-						<div class="ef-item">
-							<select name="event_trainer" id="trainer" class="circle-select">
-								<option value="">{{ __("Choose Trainer", "ahana") }}</option>
-								{% for trainer in trainers %}
-									<option value="{{ trainer.slug }}" {{ selected(trainer.slug, query_vars.trainer) }}>{{ trainer.title }}</option>
-								{% endfor %}
-							</select>
-							<i class="material-icons">person</i>
-						</div>
+							<div class="ef-item">
+								<select name="event_trainer" id="trainer" class="circle-select">
+									<option value="">{{ __("Choose Trainer", "ahana") }}</option>
+									{% for trainer in trainers %}
+										<option value="{{ trainer.slug }}" {{ selected(trainer.slug, query_vars.trainer) }}>{{ trainer.title }}</option>
+									{% endfor %}
+								</select>
+								<i class="material-icons">person</i>
+							</div>
 
-						<button type="submit" class="site-btn sb-gradient">{{ __("Find Event", "ahana") }}</button>
-					</form>
+							<button type="submit" class="site-btn sb-gradient">{{ __("Find Event", "ahana") }}</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	{% endif %}
 
 
     <!-- Events Section -->
 	<section class="events-page-section spad">
 		<div class="container">
-			<div class="row">
-                {% for post in posts %}
-                    <div class="col-lg-6">
-                        {% include "parts/event-list.twig" with { imageSize: "event_thumbnail"} %}
-                    </div>
-                {% endfor %}
-			</div>
+			{% if posts.count is not same as (0) %}
+				<div class="row">
+					{% for post in posts %}
+						<div class="col-lg-6">
+							{% include "parts/event-list.twig" with { imageSize: "event_thumbnail"} %}
+						</div>
+					{% endfor %}
+				</div>
 
-            <!-- Pagination -->
-            {% include "parts/pagination.twig" %}
+				<!-- Pagination -->
+				{% include "parts/pagination.twig" %}
+			{% else %}
+				<p class="alert alert-danger">{{ __("No events for the moment. Come back later", "ahana") }}</p>
+			{% endif %}
 		</div>
 	</section>
 	<!-- Events Section end -->

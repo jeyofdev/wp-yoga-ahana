@@ -8,31 +8,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                    <div class="classes-top">
-                        <div class="row">
-                            <div class="col-md-6">
-                                {% if posts is not empty %}
-                                    <p>{{ get_number_posts(posts, "Showing %d class of %d class", "Showing %d classes of %d classes") }}</p>
-                                {% else %}
-                                    <p>{{ __("Your search criteria are too restrictive", "ahana") }}</p>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        {% for post in posts %}
-                            <div class="col-md-6">
-                                <div class="classes-item-warp">
-                                    {% include "parts/classes-list.twig" %}
+                    {% if posts.count is not same as (0) %}
+                        <div class="classes-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    {% if posts is not empty %}
+                                        <p>{{ get_number_posts(posts, "Showing %d class of %d class", "Showing %d classes of %d classes") }}</p>
+                                    {% else %}
+                                        <p>{{ __("Your search criteria are too restrictive", "ahana") }}</p>
+                                    {% endif %}
                                 </div>
                             </div>
-                        {% endfor %}
-                    </div>
+                        </div>
+                        
+                        <div class="row">
+                            {% for post in posts %}
+                                <div class="col-md-6">
+                                    <div class="classes-item-warp">
+                                        {% include "parts/classes-list.twig" %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
 
-                    <!-- Pagination -->
-                    {% include "parts/pagination.twig" %}
+                        <!-- Pagination -->
+                        {% include "parts/pagination.twig" %}
+                    {% else %}
+                        <p class="alert alert-danger">{{ __("No trainers available for the moment. Come back later", "ahana") }}</p>
+                    {% endif %}
                 </div>
+
 				<div class="col-lg-3 col-md-5 col-sm-8 sidebar">
                     {{ sidebar_classes_list|raw }}
 				</div>

@@ -43,7 +43,7 @@
 											<div class="hs-text">
 												<h2>{{ slide.title }}</h2>
 												<p>{{ slide.content|raw }}</p>
-												<div class="site-btn sb-white">Register now</div>
+												<a href="{{ site.url ~ '#contact' }}" class="site-btn sb-white">{{ __("Register now", "ahana") }}</a>
 											</div>
 										</div>
 									</div>
@@ -58,7 +58,7 @@
 								<div class="hs-text">
 									<h2>{{ slide.title }}</h2>
 									<p>{{ slide.content|raw }}</p>
-									<div class="site-btn sb-white">Register now</div>
+									<a href="{{ site.url ~ '#contact' }}" class="site-btn sb-white">{{ __("Register now", "ahana") }}</a>
 								</div>
 							</div>
 							<div class="hs-img">
@@ -210,7 +210,6 @@
 									<li>{{ option.title }}</li>
 								{% endfor %}
 							</ul>
-							<a href="#" class="site-btn sb-line-gradient">{{ __("Get started", "ahana") }}</a>
 						</div>
 					</div>
 				{% endfor %}
@@ -221,7 +220,7 @@
 
 
 	<!-- Sign up Section -->
-	<section class="signup-section spad">
+	<section class="signup-section spad" id="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">

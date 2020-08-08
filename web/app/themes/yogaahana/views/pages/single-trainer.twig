@@ -25,7 +25,7 @@
 							<li><strong>{{ __("Email:", "ahana") }}</strong><p>{{ post.trainer_email }}</p></li>
 							<li><strong>{{ __("Biography:", "ahana") }}</strong><p>{{ post.trainer_biography }}</p></li>
 						</ul>
-						<a href="#" class="site-btn sb-gradient">{{ __("View classes", "ahana") }}</a>
+						<a href="{{ get_post_type_archive_link("classes") ~ "?classes_trainer=" ~ post.slug }}" class="site-btn sb-gradient">{{ __("View classes", "ahana") }}</a>
 					</div>
 				</div>
 				<div class="trainer-details-text">
