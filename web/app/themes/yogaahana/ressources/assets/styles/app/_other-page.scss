@@ -48,7 +48,8 @@
     display: none;
 }
 
-.ed-social.share-icon,
-.cd-social.share-icon {
-    display: block;
+.ed-social .share-icon,
+.cd-social .share-icon,
+.bi-social .share-icon {
+    display: inline-block;
 }

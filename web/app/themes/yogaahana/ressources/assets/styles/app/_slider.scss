@@ -54,10 +54,6 @@
         &:last-child {
             margin-bottom: 0;
         }
-
-        i {
-            @include transform(rotate(-90deg));
-        }
     }
 }
 
