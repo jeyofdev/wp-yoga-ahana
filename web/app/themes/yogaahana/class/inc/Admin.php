@@ -168,7 +168,8 @@ class Admin {
         $post = Timber::get_post([
             "post_type" => $postType,
             "posts_per_page" => 1,
-            "post__in" => [$postId]
+            "post__in" => [$postId],
+            "post_status" => ["publish", "trash", "draft"]
         ]);
 
         $terms = $post->terms($taxonomy);
