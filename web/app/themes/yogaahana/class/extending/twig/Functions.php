@@ -135,9 +135,9 @@ class Functions
                     return sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]);
                 }
             } else {
-                $output = '<li><i class="material-icons">map</i>' . sprintf(esc_html__("Mon - Fri : %s - %s", "ahana"), $hours["weeks"]["opening"], $hours["weeks"]["closing"]) . '</li>';
-                $output .= '<li><i class="material-icons">map</i>' . sprintf(esc_html__("Saturday : %s - %s", "ahana"), $hours["saturday"]["opening"], $hours["saturday"]["closing"]) . '</li>';
-                $output .= '<li><i class="material-icons">map</i>' . sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]) . '</li>';
+                $output = '<li><i class="material-icons">alarm_on</i>' . sprintf(esc_html__("Mon - Fri : %s - %s", "ahana"), $hours["weeks"]["opening"], $hours["weeks"]["closing"]) . '</li>';
+                $output .= '<li><i class="material-icons">alarm_on</i>' . sprintf(esc_html__("Saturday : %s - %s", "ahana"), $hours["saturday"]["opening"], $hours["saturday"]["closing"]) . '</li>';
+                $output .= '<li><i class="material-icons">alarm_on</i>' . sprintf(esc_html__("Sunday : %s - %s", "ahana"), $hours["sunday"]["opening"], $hours["sunday"]["closing"]) . '</li>';
 
                 return $output;
             }
