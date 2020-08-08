@@ -1,0 +1,11 @@
+{
+  "name": "wp-yoga-ahana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jeyofdev/wp-yoga-ahana.git",
+  "author": "jeyofdev <jgregoire.pro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "maildev": "^1.1.0"
+  }
+}
