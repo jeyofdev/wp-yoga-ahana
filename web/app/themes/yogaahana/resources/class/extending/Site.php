@@ -21,6 +21,7 @@ use jeyofdev\wp\yoga\ahana\inc\Sidebar;
 use jeyofdev\wp\yoga\ahana\inc\Styles;
 use jeyofdev\wp\yoga\ahana\inc\Taxonomies;
 use jeyofdev\wp\yoga\ahana\inc\Theme;
+use jeyofdev\wp\yoga\ahana\inc\Title;
 use jeyofdev\wp\yoga\ahana\inc\Users;
 
 
@@ -37,6 +38,7 @@ class Site extends TimberSite
         Admin::init();
         Settings::init();
         Supports::init();
+        Title::init();
         Assets::init();
         Menus::init();
         Sidebar::init();
