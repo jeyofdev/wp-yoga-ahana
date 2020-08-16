@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: yogaAhana\n"
-"POT-Creation-Date: 2020-08-05 17:07+0200\n"
-"PO-Revision-Date: 2020-08-15 10:48+0200\n"
+"POT-Creation-Date: 2020-08-16 10:30+0200\n"
+"PO-Revision-Date: 2020-08-16 10:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,16 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_n;_e;_x;esc_html__\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#: assets/scripts/app.js:56
-#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:137
-msgid "Height"
-msgstr ""
-
-#: assets/scripts/app.js:56
-#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:136
-msgid "Width"
-msgstr ""
 
 #: class/customize/FieldsCustomizer.php:84
 msgid "Header"
@@ -50,7 +40,7 @@ msgid "Logo"
 msgstr "Logo"
 
 #: class/customize/FieldsCustomizer.php:163
-#: class/customize/FieldsCustomizer.php:789 class/widgets/SearchWidget.php:26
+#: class/customize/FieldsCustomizer.php:790 class/widgets/SearchWidget.php:26
 msgid "Search"
 msgstr "Recherche"
 
@@ -94,57 +84,57 @@ msgstr "afficher ou masquer la barre du haut."
 msgid "Primary color :"
 msgstr "Couleur principale :"
 
-#: class/customize/FieldsCustomizer.php:359
+#: class/customize/FieldsCustomizer.php:360
 msgid "Secondary color :"
 msgstr "Couleur secondaire :"
 
-#: class/customize/FieldsCustomizer.php:377
+#: class/customize/FieldsCustomizer.php:378
 msgid "Light color :"
 msgstr "Couleur blanche :"
 
-#: class/customize/FieldsCustomizer.php:426
+#: class/customize/FieldsCustomizer.php:427
 msgid "Headings color :"
 msgstr "Couleur des titres :"
 
-#: class/customize/FieldsCustomizer.php:449
+#: class/customize/FieldsCustomizer.php:450
 msgid "Paragrah color :"
 msgstr "Couleurs des paragraphes :"
 
-#: class/customize/FieldsCustomizer.php:479
+#: class/customize/FieldsCustomizer.php:480
 msgid "Link color :"
 msgstr "Couleur des liens :"
 
-#: class/customize/FieldsCustomizer.php:502
+#: class/customize/FieldsCustomizer.php:503
 msgid "Link nav color :"
 msgstr "Couleur des liens de la navigation :"
 
-#: class/customize/FieldsCustomizer.php:729 class/widgets/AboutWidget.php:27
+#: class/customize/FieldsCustomizer.php:730 class/widgets/AboutWidget.php:27
 msgid "About"
 msgstr "A propos"
 
-#: class/customize/FieldsCustomizer.php:739 class/inc/PostTypes.php:60
+#: class/customize/FieldsCustomizer.php:740 class/inc/PostTypes.php:60
 msgid "Classes"
 msgstr "Cours"
 
-#: class/customize/FieldsCustomizer.php:749 class/inc/PostTypes.php:34
+#: class/customize/FieldsCustomizer.php:750 class/inc/PostTypes.php:34
 #: class/inc/PostTypes.php:36 class/inc/Taxonomies.php:55
 msgid "Trainers"
 msgstr "Entraineurs"
 
-#: class/customize/FieldsCustomizer.php:759 class/inc/PostTypes.php:85
+#: class/customize/FieldsCustomizer.php:760 class/inc/PostTypes.php:85
 msgid "Events"
 msgstr "Evènements"
 
-#: class/customize/FieldsCustomizer.php:769
+#: class/customize/FieldsCustomizer.php:770
 msgid "Blog"
 msgstr "Blog"
 
-#: class/customize/FieldsCustomizer.php:779
+#: class/customize/FieldsCustomizer.php:780
 msgid "Contact"
 msgstr "Contact"
 
-#: class/customize/FieldsCustomizer.php:841
-#: class/customize/FieldsCustomizer.php:849
+#: class/customize/FieldsCustomizer.php:842
+#: class/customize/FieldsCustomizer.php:850
 #: class/widgets/AboutEventOrClassesWidget.php:33
 #: class/widgets/FeaturedClassesWidget.php:34
 #: class/widgets/LatestPostWidget.php:34
@@ -156,15 +146,15 @@ msgstr "Contact"
 msgid "Title"
 msgstr "Titre"
 
-#: class/customize/FieldsCustomizer.php:858
+#: class/customize/FieldsCustomizer.php:859
 msgid "link"
 msgstr "lien"
 
-#: class/customize/FieldsCustomizer.php:860
+#: class/customize/FieldsCustomizer.php:861
 msgid "Youtube video"
 msgstr "Video Youtube"
 
-#: class/customize/FieldsCustomizer.php:868
+#: class/customize/FieldsCustomizer.php:869
 msgid "Image"
 msgstr "Image"
 
@@ -297,6 +287,14 @@ msgstr ""
 
 #: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:135
 msgid "Spacing"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:136
+msgid "Width"
+msgstr ""
+
+#: class/customize/kirki/controls/php/class-kirki-control-dimensions.php:137
+msgid "Height"
 msgstr ""
 
 #: class/customize/kirki/controls/php/class-kirki-control-repeater.php:86
@@ -485,19 +483,20 @@ msgstr ""
 msgid "Ultra-Bold 900 Italic"
 msgstr ""
 
-#: class/extending/twig/Functions.php:99 class/extending/twig/Functions.php:110
+#: class/extending/twig/Functions.php:127
+#: class/extending/twig/Functions.php:138
 #, php-format
 msgid "Mon - Fri : %s - %s"
 msgstr ""
 
-#: class/extending/twig/Functions.php:103
-#: class/extending/twig/Functions.php:111
+#: class/extending/twig/Functions.php:131
+#: class/extending/twig/Functions.php:139
 #, php-format
 msgid "Saturday : %s - %s"
 msgstr ""
 
-#: class/extending/twig/Functions.php:107
-#: class/extending/twig/Functions.php:112
+#: class/extending/twig/Functions.php:135
+#: class/extending/twig/Functions.php:140
 #, php-format
 msgid "Sunday : %s - %s"
 msgstr ""
@@ -521,6 +520,10 @@ msgstr "Categories"
 #: class/inc/Taxonomies.php:56 class/widgets/TrainerWidget.php:26
 msgid "Trainer"
 msgstr "Entraineur"
+
+#: class/inc/Comments.php:40
+msgid "Reply"
+msgstr "Répondre"
 
 #: class/inc/Comments.php:57
 msgid "Your name *"
@@ -1326,7 +1329,7 @@ msgstr "Mots clés"
 msgid "Tag Clouds"
 msgstr "Nuage de mots-clés"
 
-#: class/widgets/TagCloudWidget.php:139
+#: class/widgets/TagCloudWidget.php:140
 msgid ""
 "The tag cloud will not be displayed since there are no taxonomies that "
 "support the tag cloud widget."
@@ -1352,293 +1355,3 @@ msgstr "Afficher une vidéo Youtube."
 #: class/widgets/VideoWidget.php:37
 msgid "Link"
 msgstr "Lien Youtube"
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:92
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:92
-#: ressources/node_modules/yargs/build/lib/usage.js:90
-msgid "Positionals:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:192
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:194
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:192
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:194
-#: ressources/node_modules/yargs/build/lib/usage.js:187
-#: ressources/node_modules/yargs/build/lib/usage.js:190
-msgid "command"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:203
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:203
-#: ressources/node_modules/yargs/build/lib/usage.js:198
-msgid "Commands:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:223
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:458
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:223
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:458
-#: ressources/node_modules/yargs/build/lib/usage.js:457
-msgid "default:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:225
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:225
-#: ressources/node_modules/yargs/build/lib/usage.js:215
-msgid "aliases:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:288
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:288
-#: ressources/node_modules/yargs/build/lib/usage.js:290
-msgid "boolean"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:289
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:289
-#: ressources/node_modules/yargs/build/lib/usage.js:292
-msgid "count"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:290
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:291
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:290
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:291
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-#: ressources/node_modules/yargs/build/lib/usage.js:294
-#: ressources/node_modules/yargs/build/lib/usage.js:296
-msgid "string"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:292
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:292
-#: ressources/node_modules/yargs/build/lib/usage.js:298
-msgid "array"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:293
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:293
-#: ressources/node_modules/yargs/build/lib/usage.js:300
-msgid "number"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:297
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:297
-#: ressources/node_modules/yargs/build/lib/usage.js:307
-msgid "required"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:298
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:298
-#: ressources/node_modules/yargs/build/lib/usage.js:308
-msgid "choices:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:317
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:317
-#: ressources/node_modules/yargs/build/lib/usage.js:321
-msgid "Examples:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:436
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:436
-#: ressources/node_modules/yargs/build/lib/usage.js:438
-msgid "generated-value"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:29
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:52
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:29
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:52
-#, javascript-format
-msgid "Not enough non-option arguments: got %s, need at least %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:40
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:40
-#, javascript-format
-msgid "Too many non-option arguments: got %s, maximum of %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:147
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:147
-#: ressources/node_modules/yargs/build/lib/validation.js:155
-msgid "Invalid values:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:150
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:150
-#: ressources/node_modules/yargs/build/lib/validation.js:157
-#, javascript-format
-msgid "Argument: %s, Given: %s, Choices: %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:180
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:180
-#: ressources/node_modules/yargs/build/lib/validation.js:181
-#, javascript-format
-msgid "Argument check failed: %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:256
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:256
-#: ressources/node_modules/yargs/build/lib/validation.js:248
-msgid "Implications failed:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:295
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:295
-#: ressources/node_modules/yargs/build/lib/validation.js:284
-#, javascript-format
-msgid "Arguments %s and %s are mutually exclusive"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:316
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:316
-#: ressources/node_modules/yargs/build/lib/validation.js:303
-#, javascript-format
-msgid "Did you mean %s?"
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:372
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:372
-#, javascript-format
-msgid "Argument unexpected for: %s"
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:382
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:392
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:446
-#: ressources/node_modules/yargs-parser/index.js:367
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:382
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:392
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:446
-#, javascript-format
-msgid "Not enough arguments following: %s"
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:591
-#: ressources/node_modules/yargs-parser/index.js:541
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:591
-#, javascript-format
-msgid "Invalid JSON config file: %s"
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:941
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:941
-#, javascript-format
-msgid "Invalid configuration: %s, opts.count excludes opts.array."
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:944
-#: ressources/node_modules/yargs/node_modules/yargs-parser/index.js:944
-#, javascript-format
-msgid "Invalid configuration: %s, opts.count excludes opts.narg."
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "big_int"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "num"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "template_head"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "comment2"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "regexp"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "operator"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "eof"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "expand"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "punc"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "arrow"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "name"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "atom"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "keyword"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "("
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ")"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ":"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ";"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ","
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "]"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "}"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "{"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "["
-msgstr ""
-
-#: ressources/node_modules/yargs/build/lib/usage.js:213
-msgid "default"
-msgstr ""
-
-#: ressources/node_modules/yargs/build/lib/usage.js:219
-#: ressources/node_modules/yargs/build/lib/usage.js:302
-#, javascript-format
-msgid "deprecated: %s"
-msgstr ""
-
-#: ressources/node_modules/yargs/build/lib/usage.js:222
-#: ressources/node_modules/yargs/build/lib/usage.js:303
-msgid "deprecated"
-msgstr ""
-
-#: ressources/node_modules/yargs/build/lib/usage.js:241
-msgid "Options:"
-msgstr ""

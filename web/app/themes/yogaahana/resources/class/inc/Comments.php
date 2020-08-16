@@ -37,7 +37,7 @@ class Comments {
         });
 
         add_filter("comment_reply_link_args", function ($args){
-            $args["reply_text"] = '<i class="material-icons">reply</i>Reply';
+            $args["reply_text"] = '<i class="material-icons">reply</i>' . __("Reply", "ahana");
 
             return $args;
         });
