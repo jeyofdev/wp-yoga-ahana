@@ -28,32 +28,26 @@ For this theme, I use the [Ahana](https://colorlib.com/wp/template/ahana/) templ
 
 ## Install all the dependencies :
 ```sh
-$ cd web/app/themes/estateagency/ressources
+$ cd web/app/themes/yogaahana
 $ yarn install
 $ composer install
 ```
 
-
-
 ## Generate the assets for static files
 
-Set the proxyTarget property in web/app/themes/estateagency/ressources/compiler/config.js:
-```js
-module.exports = {
-    ...
-    proxyTarget: 'http://localhost:8000/',
-    ...
-}
-```
-
-Go to resources folder
+Go to the theme folder
 ```sh
-$ cd web/app/themes/wpdingorestaurant/ressources
+$ cd web/app/themes/yogaahana
 ```
 
 Production mode :
 ```sh
 $ yarn run build
+```
+
+Production mode with the assets minified :
+```sh
+$ yarn build:production
 ```
 
 Dev mode :
