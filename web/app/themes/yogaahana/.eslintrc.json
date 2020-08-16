@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "extends": "eslint:recommended",
+  "globals": {
+    "wp": true
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "amd": true,
+    "browser": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "globalReturn": true,
+      "generators": false,
+      "objectLiteralDuplicateProperties": false,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "plugins": ["import"],
+  "settings": {
+    "import/core-modules": [],
+    "import/ignore": ["node_modules", "\\.(scss|css|svg|json)$"]
+  },
+  "rules": {
+    "indent": ["error", "tab"],
+    "no-console": 0,
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", {
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
+      "functions": "ignore"
+    }],
+    "no-empty": ["error", { "allowEmptyCatch": true }]
+  }
+}

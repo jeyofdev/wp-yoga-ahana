@@ -1,10 +1,24 @@
 {
   "name": "wp-yoga-ahana",
   "version": "1.0.0",
+  "description": "Create a wordpress theme having as subject yoga club",
   "main": "index.js",
-  "repository": "git@github.com:jeyofdev/wp-yoga-ahana.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeyofdev/wp-yoga-ahana.git"
+  },
+  "keywords": [
+    "webpack",
+    "wordpress",
+    "php",
+    "timber"
+  ],
   "author": "jeyofdev <jgregoire.pro@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeyofdev/wp-yoga-ahana/issues"
+  },
+  "homepage": "https://github.com/jeyofdev/wp-yoga-ahana#readme",
   "dependencies": {
     "maildev": "^1.1.0"
   }

@@ -23,8 +23,7 @@ web/app/themes/yogaahana/ressources/yarn.*
 
 # Dependency Manager
 /vendor
-/node_modules
-/web/app/themes/yogaahana/ressources/node_modules
+**/node_modules
 
 # WP-CLI
 wp-cli.local.yml

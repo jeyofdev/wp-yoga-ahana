@@ -1,2 +1,48 @@
-.settings_page_club_settings .form-table tbody tr td>span{display:block;margin-bottom:10px}.settings_page_club_settings .form-table tbody tr td>span .opening-hours-subtitle{display:block;margin-bottom:5px;text-transform:capitalize}.wp-customizer #customize-control-top_section_background_image .background-color{display:none}.wrap .wp-list-table.widefat.posts #the-list tr *{vertical-align:middle}.manage-column.column-thumbnail{width:9.5%}.manage-column.column-job,.manage-column.column-level,.manage-column.column-trainer,.manage-column.column-categories{width:15%}
+/* ------------------
+    Club Settings
+------------------ */
 
+/* line 4, resources/assets/styles/admin/_settings.scss */
+
+.settings_page_club_settings .form-table tbody tr td > span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 8, resources/assets/styles/admin/_settings.scss */
+
+.settings_page_club_settings .form-table tbody tr td > span .opening-hours-subtitle {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+/* line 1, resources/assets/styles/admin/_customizer.scss */
+
+.wp-customizer #customize-control-top_section_background_image .background-color {
+  display: none;
+}
+
+/* line 1, resources/assets/styles/admin/_post_type_columns.scss */
+
+.wrap .wp-list-table.widefat.posts #the-list tr * {
+  vertical-align: middle;
+}
+
+/* line 6, resources/assets/styles/admin/_post_type_columns.scss */
+
+.manage-column.column-thumbnail {
+  width: 9.5%;
+}
+
+/* line 10, resources/assets/styles/admin/_post_type_columns.scss */
+
+.manage-column.column-job,
+.manage-column.column-level,
+.manage-column.column-trainer,
+.manage-column.column-categories {
+  width: 15%;
+}
+
+
+/*# sourceMappingURL=admin.css.map*/

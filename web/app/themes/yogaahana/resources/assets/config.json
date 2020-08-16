@@ -1,0 +1,15 @@
+{
+    "entry": {
+        "app": [
+            "./scripts/app.js",
+            "./styles/app.scss"
+        ],
+        "admin": [
+            "./styles/admin.scss"
+        ]
+    },
+    "publicPath": "/app/themes/wpdingorestaurant",
+    "devUrl": "http://example.test",
+    "proxyUrl": "http://localhost:3000",
+    "cacheBusting": "[name]_[hash:8]"
+}
